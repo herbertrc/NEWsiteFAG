@@ -1,0 +1,104 @@
+/* Reset de margens e padding para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #CA0F0F; /* Cor de fundo geral */
+    color: #161515; /* Cor do texto geral */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #F4F4F4; /* Cor de fundo da navbar */
+    position: fixed; /* Fixando a navbar no topo */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Garantir que a navbar fique acima do conteúdo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribui os itens (logo e links) */
+    padding: 10px 20px; /* Espaçamento geral */
+}
+
+/* Logo na navbar */
+.navbar .logo img {
+    width: 60px;  /* Tamanho ajustado para ficar do tamanho do texto */
+    height: auto; /* Mantém a proporção da logo */
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center; /* Garante que os links fiquem centralizados */
+    width: 80%; /* Controle de largura do container de links */
+    gap: 50px; /* Aumenta o espaçamento entre os links */
+}
+
+/* Estilo dos links na navbar */
+.navbar-links a {
+    color: #000; /* Cor do texto dos links */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center; /* Alinha o texto e logo verticalmente */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adiciona a transição */
+}
+
+/* Mudar a cor do link ao passar o mouse */
+.navbar-links a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Estilo do link ativo */
+.navbar-links a.active {
+    color: rgb(0, 0, 0);
+}
+
+/* Estilo do link 'Inscreva-se' */
+.inscrever {
+    background-color: #CA0F0F; /* Fundo vermelho */
+    color: white; /* Texto branco */
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+/* Mudar a cor do 'Inscreva-se' ao passar o mouse */
+.inscrever:hover {
+    background-color: darkred;
+}
+
+/* Estilo das seções */
+.section {
+    padding: 20px;
+    text-align: flex-start;
+    height: 100vh; /* Cada seção ocupa toda a altura da tela */
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo de forma vertical */
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: background-color 0.3s ease; /* Suaviza a mudança de cor */
+}
+
+/* Definir rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo do cabeçalho de cada seção */
+.section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
