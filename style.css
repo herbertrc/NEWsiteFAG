@@ -1,0 +1,141 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #CA0F0F;
+    color: #161515;
+    scroll-behavior: smooth; /* Ativa o efeito de deslizamento suave */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #F4F4F4;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navbar .logo img {
+    width: 60px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 50px;
+}
+
+.navbar-links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 14px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.navbar-links a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.inscrever {
+    background-color: #CA0F0F;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.inscrever:hover {
+    background-color: darkred;
+}
+
+/* Seções */
+.section {
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    scroll-margin-top: 80px; /* Ajusta o espaço superior ao descer para a seção */
+}
+
+.section h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+/* Carrossel */
+.carousel {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 500px;
+    margin: 80px auto; /* Espaçamento da navbar */
+    perspective: 1500px;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 300px;
+    height: 400px;
+    margin: 0 15px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
