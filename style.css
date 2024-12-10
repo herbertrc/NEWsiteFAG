@@ -1,104 +1,356 @@
-/* Reset de margens e padding para garantir consistência */
+/* RESET E ESTILOS GLOBAIS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Estilo do body */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #CA0F0F; /* Cor de fundo geral */
-    color: #161515; /* Cor do texto geral */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #CA0F0F;
+  color: #161515;
+  overflow-x: hidden;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
-    background-color: #F4F4F4; /* Cor de fundo da navbar */
-    position: fixed; /* Fixando a navbar no topo */
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Garantir que a navbar fique acima do conteúdo */
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribui os itens (logo e links) */
-    padding: 10px 20px; /* Espaçamento geral */
+  background-color: #F4F4F4;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
 }
 
-/* Logo na navbar */
+.navbar.scrolled {
+  background-color: rgba(244, 244, 244, 0.9); /* Navbar ao rolar */
+}
+
 .navbar .logo img {
-    width: 60px;  /* Tamanho ajustado para ficar do tamanho do texto */
-    height: auto; /* Mantém a proporção da logo */
+  width: 60px;
+  height: auto;
 }
 
 .navbar-links {
-    display: flex;
-    justify-content: center; /* Garante que os links fiquem centralizados */
-    width: 80%; /* Controle de largura do container de links */
-    gap: 50px; /* Aumenta o espaçamento entre os links */
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
-/* Estilo dos links na navbar */
 .navbar-links a {
-    color: #000; /* Cor do texto dos links */
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    display: flex;
-    align-items: center; /* Alinha o texto e logo verticalmente */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Adiciona a transição */
+  color: #000;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Mudar a cor do link ao passar o mouse */
 .navbar-links a:hover {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 }
 
-/* Estilo do link ativo */
-.navbar-links a.active {
-    color: rgb(0, 0, 0);
-}
-
-/* Estilo do link 'Inscreva-se' */
 .inscrever {
-    background-color: #CA0F0F; /* Fundo vermelho */
-    color: white; /* Texto branco */
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 10px;
+  background-color: #CA0F0F;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
 }
 
-/* Mudar a cor do 'Inscreva-se' ao passar o mouse */
 .inscrever:hover {
-    background-color: darkred;
+  background-color: darkred;
 }
 
-/* Estilo das seções */
-.section {
-    padding: 20px;
-    text-align: flex-start;
-    height: 100vh; /* Cada seção ocupa toda a altura da tela */
+/* RESPONSIVIDADE DA NAVBAR */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar-links.active {
     display: flex;
-    flex-direction: column; /* Alinha o conteúdo de forma vertical */
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    transition: background-color 0.3s ease; /* Suaviza a mudança de cor */
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
 }
 
-/* Definir rolagem suave */
-html {
-    scroll-behavior: smooth;
+.menu-toggle {
+  display: none;
 }
 
-/* Estilo do cabeçalho de cada seção */
+/* SEÇÕES */
+.section {
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  scroll-margin-top: 80px;
+}
+
 .section h2 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 36px;
+  color: #333;
+}
+
+/* HEADER */
+.section-header {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* CARROSSEL */
+.section-carrousel {
+  height: 100vh; /* Ocupa toda a altura da seção */
+  width: 100%; /* Ocupa toda a largura da seção */
+  display: flex;
+  justify-content: center; /* Centraliza o carrossel horizontalmente */
+  align-items: center; /* Centraliza o carrossel verticalmente */
+  background-color: #CA0F0F; /* Cor de fundo da seção */
+  padding: 0; /* Remove qualquer espaçamento extra */
+}
+
+.swiper-container {
+  width: 100vw; /* Ocupa 100% da largura da viewport */
+  height: auto; /* Ajusta a altura automaticamente */
+}
+
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.7s ease-in-out; /* Suaviza a transição dos slides */
+}
+
+.swiper-slide {
+  display: flex; /* Garante que o conteúdo do slide seja centralizado */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  background: none; /* Remove qualquer fundo branco */
+  overflow: visible; /* Remove qualquer limite de overflow */
+}
+
+.swiper-slide img {
+  width: 100%; /* Permite que a imagem ocupe toda a largura */
+  height: auto; /* Ajusta a altura proporcionalmente */
+  object-fit: cover; /* Faz com que a imagem preencha o slide sem distorção */
+  background-color: transparent; /* Remove fundo branco */
+  border: none; /* Remove bordas */
+}
+
+
+.swiper-slide img:hover {
+  transform: scale(1.05); /* Zoom suave ao passar o mouse */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    padding: 5px; /* Reduz espaçamento em telas menores */
+  }
+
+  .swiper-slide img {
+    max-width: 100%; /* Ocupa a largura disponível */
+    max-height: 100%; /* Ocupa a altura disponível */
+  }
+}
+
+/* CARDS */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  display: grid;
+  place-items: center;
+  width: 80vw;
+  max-width: 21.875rem;
+  height: 28.125rem;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.card__background {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
+
+.card__content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 10%,
+    hsl(0, 0%, 0%) 100%
+  );
+  color: white;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card__description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card__button {
+  padding: 0.75em 1.6em;
+  font-variant: small-caps;
+  font-weight: bold;
+  border-radius: 0.45em;
+  border: none;
+  background-color: hsl(46, 100%, 50%);
+  font-family: Arial, sans-serif;
+  font-size: 1.125rem;
+  color: black;
+}
+
+.card__button:hover {
+  background-color: hsl(46, 80%, 45%);
+  transition: background-color 0.3s ease;
+}
+
+/* BOX DE BUSCA */
+.search-box {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, #a19393, #9b1717);
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: white;
+}
+
+.search-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: white;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.search-button {
+  background: #5b0808;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #510707;
+  transform: scale(1.1);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+
+  .search-box {
+    padding: 1.5rem;
+  }
+
+  .search-title {
+    font-size: 1.5rem;
+  }
 }

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculdade Guerra</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Carrossel</title>
 </head>
 <body>
-
     <!-- Navbar -->
     <div class="navbar">
         <a href="#home" class="logo">
@@ -23,25 +24,167 @@
         </div>
     </div>
 
-    <!-- Sections of the page -->
+    <!-- Seção Carrossel -->
+    <section id="carrosel" class="section-carrousel">
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <div class="slide-content">
+                      <img src="images/pos1.jpeg" alt="Imagem 1">
+                      <h3>Lorem Dummy</h3>
+                      <span>Software Developer</span>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="slide-content">
+                      <img src="images/pos3.jpeg" alt="Imagem 2">
+                      <h3>Lorem Dummy</h3>
+                      <span>Software Developer</span>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="slide-content">
+                      <img src="images/pos4.jpeg" alt="Imagem 3">
+                      <h3>Lorem Dummy</h3>
+                      <span>Software Developer</span>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Botões de navegação -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+  
+          <!-- Paginação -->
+          <div class="swiper-pagination"></div>
+      </div>
+  </section>  
+
+    <div class="section-header">
+        <h1 class="section-title">VENHA ESTUDAR NA GUERRA</h1>
+    </div>
+    
+    <div class="search-box">
+        <h2 class="search-title">O QUE VOCÊ PROCURA?</h2>
+        <form action="/buscar" method="GET" class="search-form">
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    name="q" 
+                    class="search-input" 
+                    placeholder="Digite aqui sua pesquisa..." 
+                    required 
+                />
+                <button type="submit" class="search-button">
+                    <i class="bx bx-search"></i> <!-- Ícone de pesquisa -->
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    
+
+    <!-- Sections -->
     <div id="cursos" class="section">
-        <h2>Cursos Section</h2>
+        <article class="card">
+            <img
+              class="card__background"
+              src="images/pos5.jpeg"
+              alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+              width="1920"
+              height="2193"
+            />
+            <div class="card__content | flow">
+              <div class="card__content--container | flow">
+                <h2 class="card__title">Pós Graduação</h2>
+                <p class="card__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
+                  labore laudantium deserunt fugiat numquam.
+                </p>
+              </div>
+              <button class="card__button">Read more</button>
+            </div>
+          </article>
+
+          
+        <article class="card">
+            <img
+              class="card__background"
+              src="images/bolsas/4.png"
+              alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+              width="1920"
+              height="2193"
+            />
+            <div class="card__content | flow">
+              <div class="card__content--container | flow">
+                <h2 class="card__title">Bolsas</h2>
+                <p class="card__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
+                  labore laudantium deserunt fugiat numquam.
+                </p>
+              </div>
+              <button class="card__button">Read more</button>
+            </div>
+          </article>
+
+          
+        <article class="card">
+            <img
+              class="card__background"
+              src="images/bolsas/2.png"
+              alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+              width="1920"
+              height="2193"
+            />
+            <div class="card__content | flow">
+              <div class="card__content--container | flow">
+                <h2 class="card__title">Colombia</h2>
+                <p class="card__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
+                  labore laudantium deserunt fugiat numquam.
+                </p>
+              </div>
+              <button class="card__button">Read more</button>
+            </div>
+          </article>
+
+          
+        <article class="card">
+            <img
+              class="card__background"
+              src="images/lightbox/7.jpg"
+              alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+              width="1920"
+              height="2193"
+            />
+            <div class="card__content | flow">
+              <div class="card__content--container | flow">
+                <h2 class="card__title">Colombia</h2>
+                <p class="card__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
+                  labore laudantium deserunt fugiat numquam.
+                </p>
+              </div>
+              <button class="card__button">Read more</button>
+            </div>
+
+    </div>
     </div>
     <div id="contato" class="section">
         <h2>Contato Section</h2>
     </div>
-
     <div id="Guerra" class="section">
         <h2>Guerra Section</h2>
     </div>
-    
     <div id="Sou-Aluno" class="section">
-        <h2>Aluno Section</h2>
+        <h2>Sou-Aluno Section</h2>
     </div>
-
     <div id="Bolsas" class="section">
         <h2>Bolsas Section</h2>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="swiper-config.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
