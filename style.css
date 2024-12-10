@@ -13,7 +13,6 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #CA0F0F;
   color: #161515;
   overflow-x: hidden;
 }
@@ -121,7 +120,9 @@ body {
   font-size: 24px;
   scroll-margin-top: 80px;
 }
-
+.section-carrousel {
+  background-color: #CA0F0F; /* Cor específica para a seção do carrossel */
+}
 .section h2 {
   font-size: 36px;
   color: #333;
@@ -215,31 +216,64 @@ body {
   }
 }
 
+
+/* Section Busca */
+.section-busca {
+  background-color: #CA0F0F; /* Cor de fundo vermelho */
+  padding: 40px 20px; /* Espaçamento interno */
+  text-align: center;
+  color: #FFF; /* Texto branco */
+}
+
+.section-busca .section-header {
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.section-busca .section-title {
+  font-size: 36px; /* Tamanho do título */
+  font-weight: bold;
+  color: #FFFFFF; /* Texto branco */
+}
 /* CARDS */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
+
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* CARD COMPONENT */
+
+.section-card {
+  background: linear-gradient(
+    to bottom, /* Direção do gradiente */
+    #CA0F0F 30%, /* Parte superior com 40% vermelho */
+    #FFFFFF 40% /* Parte inferior com branco */
+  );
+}
 .cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  padding: 1rem;
+  display: flex; /* Ativa o layout em linha */
+  flex-wrap: wrap; /* Permite quebra de linha se necessário */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  align-items: center; /* Centraliza os cards verticalmente */
+  gap: 2rem; /* Espaçamento entre os cards */
+  padding: 2rem; /* Espaçamento interno */
 }
 
 .card {
-  display: flex;
-  flex-direction: column; /* Layout interno do card */
-  align-items: center;
-  justify-content: space-between;
-  width: 350px; /* Define largura fixa para os cards */
-  height: 450px; /* Define altura fixa */
-  padding: 20px; /* Espaçamento interno do card */
-  border-radius: 10px; /* Bordas arredondadas */
-  background-color: none; /* Fundo branco */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: grid;
+  place-items: center;
+  width: 80vw;
+  max-width: 21.875rem;
+  height: 28.125rem;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
 }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.05);
-  transition: transform 0.3s ease;
+.card > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .card__background {
@@ -249,45 +283,126 @@ body {
 }
 
 .card__content {
-  padding: 1rem;
+  --flow-space: 0.9375rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-self: flex-end;
+  height: 55%;
+  padding: 12% 1.25rem 1.875rem;
   background: linear-gradient(
     180deg,
     hsla(0, 0%, 0%, 0) 0%,
     hsla(0, 0%, 0%, 0.3) 10%,
     hsl(0, 0%, 0%) 100%
   );
-  color: white;
+}
+
+.card__content--container {
+  --flow-space: 1.25rem;
 }
 
 .card__title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
 }
 
-.card__description {
-  font-size: 1rem;
-  line-height: 1.5;
+.card__title::after {
+  content: "";
+  position: absolute;
+  height: 0.3125rem;
+  width: calc(100% + 1.25rem);
+  bottom: calc((1.25rem - 0.5rem) * -1);
+  left: -1.25rem;
+  background-color: var(--brand-color);
 }
 
 .card__button {
   padding: 0.75em 1.6em;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
   font-variant: small-caps;
   font-weight: bold;
   border-radius: 0.45em;
   border: none;
-  background-color: hsl(46, 100%, 50%);
-  font-family: Arial, sans-serif;
+  background-color: var(--brand-color);
+  font-family: var(--font-title);
   font-size: 1.125rem;
-  color: black;
+  color: var(--black);
 }
 
-.card__button:hover {
-  background-color: hsl(46, 80%, 45%);
-  transition: background-color 0.3s ease;
+.card__button:focus {
+  outline: 2px solid black;
+  outline-offset: -5px;
 }
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .card__content {
+    transform: translateY(62%);
+    transition: transform 500ms ease-out;
+    transition-delay: 500ms;
+  }
+
+  .card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+    transition-delay: 500ms;
+    transform-origin: right;
+  }
+
+  .card__background {
+    transition: transform 500ms ease-in;
+  }
+
+  .card__content--container > :not(.card__title),
+  .card__button {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: scale(1.05);
+    transition: transform 500ms ease-in;
+  }
+
+  .card:hover .card__content,
+  .card:focus-within .card__content {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+  }
+
+  .card:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .card:hover .card__background,
+  .card:focus-within .card__background {
+    transform: scale(1.3);
+  }
+
+  .card:hover .card__content--container > :not(.card__title),
+  .card:hover .card__button,
+  .card:focus-within .card__content--container > :not(.card__title),
+  .card:focus-within .card__button {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    transition-delay: 1000ms;
+  }
+
+  .card:hover .card__title::after,
+  .card:focus-within .card__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+    transition-delay: 500ms;
+  }
+}
+
+
 
 /* BOX DE BUSCA */
 .search-box {
@@ -365,51 +480,110 @@ body {
 }
 
 
+/* Estilo para o banner */
+.highlight-banner {
+  background-color: #CA0F0F; /* Fundo vermelho */
+  color: #FFFFFF; /* Texto branco */
+  text-align: center;
+  font-size: 24px; /* Tamanho do texto */
+  font-weight: bold; /* Negrito */
+  padding: 20px 0; /* Espaçamento interno */
+  margin-top: 20px; /* Espaçamento superior para distanciar dos cards */
+}
+
+.highlight-banner span {
+  font-weight: bold; /* Negrito para "DIFERENÇA" */
+  text-transform: uppercase; /* Letras maiúsculas */
+}
+
+
+
 /*---- Guerra section ----*/
 
-/* Estilização do card na seção Guerra */
-.card-guerra {
-  display: flex; /* Cria um layout flexível */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  width: 100%; /* Largura do card */
-  max-width: 800px; /* Largura máxima */
-  margin: 0 auto; /* Centraliza horizontalmente na tela */
+/* Seção principal - Ajuste de cor e centralização */
+.section-Guerra {
+  background-color: #F4F4F4; /* Cor de fundo da seção */
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  height: 100vh; /* Faz a seção ocupar a altura total da janela */
   padding: 20px; /* Espaçamento interno */
-  background-color: #fff; /* Fundo branco */
-  border-radius: 15px; /* Bordas arredondadas */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  gap: 20px; /* Espaçamento entre o texto e o vídeo */
+  position: relative; /* Para ajustes futuros, se necessário */
 }
 
-/* Estilização do texto no card */
-.card-guerra-text {
-  flex: 1; /* Ocupa 50% do espaço */
-  padding: 10px; /* Espaçamento interno */
+/* Card centralizado */
+.centered-card {
+  display: flex;
+  flex-direction: column; /* Empilha o texto e o vídeo */
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  background-color: #CA0F0F; /* Cor do card */
+  border-radius: 20px; /* Bordas arredondadas */
+  padding: 30px;
+  max-width: 800px; /* Define largura máxima */
+  width: 100%; /* Ocupa todo o espaço disponível */
+  color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  text-align: center; /* Centraliza o texto */
+  position: relative; /* Remove qualquer herança que afete posicionamento */
+  margin: 0 auto; /* Garante centralização horizontal */
+  isolation: isolate; /* Previne influência de outros elementos */
 }
 
-.card-guerra-text h2 {
-  font-size: 24px; /* Tamanho do título */
-  margin-bottom: 10px; /* Espaçamento abaixo do título */
+/* Texto no card */
+.centered-card .card-text {
+  font-size: 18px;
+  margin-bottom: 20px; /* Espaçamento entre o texto e o vídeo */
 }
 
-.card-guerra-text p {
-  font-size: 16px; /* Tamanho do texto */
-  line-height: 1.5; /* Altura da linha */
-  color: #333; /* Cor do texto */
+.centered-card .card-text h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-/* Estilização do vídeo no card */
-.card-guerra-video {
-  flex: 1; /* Ocupa 50% do espaço */
-  display: flex; /* Mantém o vídeo centralizado no espaço */
+.centered-card .card-text h2 span {
+  color: #FFFFFF;
+}
+
+.centered-card .card-text p {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+/* Vídeo no card */
+.centered-card .card-video {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.centered-card .video-placeholder {
+  width: 400px;
+  height: 250px;
+  background-color: #CA0F0F; /* Fundo do vídeo */
+  border-radius: 15px;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  position: relative;
 }
 
-.card-guerra-video video {
-  width: 100%; /* Largura do vídeo */
-  height: auto; /* Altura ajustada automaticamente */
-  border-radius: 10px; /* Bordas arredondadas no vídeo */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave no vídeo */
+.centered-card .video-placeholder .play-button {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  mask: url('play-icon.svg') no-repeat center;
+  mask-size: cover;
+  -webkit-mask: url('play-icon.svg') no-repeat center;
+  -webkit-mask-size: cover;
+}
+
+.centered-card .card-video p {
+  margin-top: 15px;
+  font-size: 18px;
 }
