@@ -248,7 +248,7 @@ body {
   background: linear-gradient(
     to bottom, /* Direção do gradiente */
     #CA0F0F 30%, /* Parte superior com 40% vermelho */
-    #FFFFFF 40% /* Parte inferior com branco */
+    #F4F4F4 40% /* Parte inferior com branco */
   );
 }
 .cards-container {
@@ -499,8 +499,6 @@ body {
 
 
 /*---- Guerra section ----*/
-
-/* Seção principal - Ajuste de cor e centralização */
 .section-Guerra {
   background-color: #F4F4F4; /* Cor de fundo da seção */
   display: flex;
@@ -508,36 +506,51 @@ body {
   justify-content: center; /* Centraliza horizontalmente o conteúdo */
   height: 100vh; /* Faz a seção ocupar a altura total da janela */
   padding: 20px; /* Espaçamento interno */
-  position: relative; /* Para ajustes futuros, se necessário */
+  position: relative; /* Para incluir elementos de fundo */
+  overflow: hidden; /* Garante que os elementos de fundo fiquem dentro da seção */
+}
+
+/* Estrelas de fundo */
+.section-Guerra::before {
+  content: "";
+  position: absolute;
+  background-image: url('star-icon.png'); /* Substitua pelo caminho da sua imagem de estrela */
+  background-repeat: repeat; /* Repete as estrelas */
+  background-size: 100px 100px; /* Tamanho das estrelas */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1; /* Torna as estrelas discretas */
+  z-index: 0; /* Fica atrás do conteúdo principal */
 }
 
 /* Card centralizado */
 .centered-card {
   display: flex;
-  flex-direction: column; /* Empilha o texto e o vídeo */
-  justify-content: center; /* Centraliza o conteúdo verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
-  background-color: #CA0F0F; /* Cor do card */
+  flex-direction: row; /* Alinha o texto e o vídeo lado a lado */
+  justify-content: space-between; /* Espaço entre texto e vídeo */
+  align-items: center; /* Alinha verticalmente */
+  background-color: #B71C1C; /* Cor do card */
   border-radius: 20px; /* Bordas arredondadas */
-  padding: 30px;
-  max-width: 800px; /* Define largura máxima */
-  width: 100%; /* Ocupa todo o espaço disponível */
+  padding: 150px;
+  max-width: 1000px; /* Define largura máxima */
+  width: 90%; /* Ocupa a maior parte da largura disponível */
   color: white;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  text-align: center; /* Centraliza o texto */
-  position: relative; /* Remove qualquer herança que afete posicionamento */
-  margin: 0 auto; /* Garante centralização horizontal */
-  isolation: isolate; /* Previne influência de outros elementos */
+  text-align: left; /* Texto alinhado à esquerda */
+  position: relative; /* Para o conteúdo dentro do card */
+  z-index: 1; /* Fica acima das estrelas */
 }
 
 /* Texto no card */
 .centered-card .card-text {
-  font-size: 18px;
-  margin-bottom: 20px; /* Espaçamento entre o texto e o vídeo */
+  flex: 1; /* O texto ocupa metade do card */
+  margin-right: 20px; /* Espaço entre texto e vídeo */
 }
 
 .centered-card .card-text h2 {
-  font-size: 26px;
+  font-size: 52px;
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -553,37 +566,16 @@ body {
 
 /* Vídeo no card */
 .centered-card .card-video {
-  text-align: center;
+  flex: 1; /* O vídeo ocupa metade do card */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
-.centered-card .video-placeholder {
-  width: 400px;
-  height: 250px;
-  background-color: #CA0F0F; /* Fundo do vídeo */
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  position: relative;
-}
-
-.centered-card .video-placeholder .play-button {
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  mask: url('play-icon.svg') no-repeat center;
-  mask-size: cover;
-  -webkit-mask: url('play-icon.svg') no-repeat center;
-  -webkit-mask-size: cover;
-}
-
-.centered-card .card-video p {
-  margin-top: 15px;
-  font-size: 18px;
+.centered-card .card-video iframe {
+  border-radius: 15px; /* Arredonda as bordas do iframe */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao iframe */
+  width: 100%; /* O vídeo ocupa toda a largura disponível */
+  max-width: 450px; /* Define largura máxima */
+  height: 250px; /* Altura do vídeo */
 }
