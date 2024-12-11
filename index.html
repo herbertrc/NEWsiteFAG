@@ -26,192 +26,147 @@
 
     <!-- Seção Carrossel -->
     <section id="carrosel" class="section-carrousel">
-      <div class="swiper-container">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                  <div class="slide-content">
-                      <img src="images/pos1.jpeg" alt="Imagem 1">
-                      <h3>Lorem Dummy</h3>
-                      <span>Software Developer</span>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                  <div class="slide-content">
-                      <img src="images/pos3.jpeg" alt="Imagem 2">
-                      <h3>Lorem Dummy</h3>
-                      <span>Software Developer</span>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                  <div class="slide-content">
-                      <img src="images/pos4.jpeg" alt="Imagem 3">
-                      <h3>Lorem Dummy</h3>
-                      <span>Software Developer</span>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Botões de navegação -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-  
-          <!-- Paginação -->
-          <div class="swiper-pagination"></div>
-      </div>
-  </section>  
-  <section class="section-busca">
-    <div class="section-header">
-        <h1 class="section-title">VENHA ESTUDAR NA GUERRA</h1>
-    </div>
-    
-    <div class="search-box">
-        <h2 class="search-title">O QUE VOCÊ PROCURA?</h2>
-        <form action="/buscar" method="GET" class="search-form">
-            <div class="input-container">
-                <input 
-                    type="text" 
-                    name="q" 
-                    class="search-input" 
-                    placeholder="Digite aqui sua pesquisa..." 
-                    required 
-                />
-                <button type="submit" class="search-button">
-                    <i class="bx bx-search"></i> <!-- Ícone de pesquisa -->
-                </button>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/pos1.jpeg" alt="Imagem 1">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/pos3.jpeg" alt="Imagem 2">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/pos4.jpeg" alt="Imagem 3">
+                    </div>
+                </div>
             </div>
-        </form>
-    </div>
-  </section>
 
-    <!-- Sections -->
+            <!-- Botões de navegação -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- Paginação -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Seção Busca -->
+    <section class="section-busca">
+        <div class="section-header">
+            <h1 class="section-title">VENHA ESTUDAR NA GUERRA</h1>
+        </div>
+
+        <div class="search-box">
+            <h2 class="search-title">O QUE VOCÊ PROCURA?</h2>
+            <form action="/buscar" method="GET" class="search-form">
+                <div class="input-container">
+                    <input type="text" name="q" class="search-input" placeholder="Digite aqui sua pesquisa..." required />
+                    <button type="submit" class="search-button">
+                        <i class="bx bx-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Seção Cursos -->
     <section id="cursos" class="section-card">
-      <div class="cards-container">
-          <article class="card">
-              <img
-                class="card__background"
-                src="images/pos5.jpeg"
-                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-                width="1920"
-                height="2193"
-              />
-              <div class="card__content | flow">
-                <div class="card__content--container | flow">
-                  <h2 class="card__title">Pós Graduação</h2>
-                  <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
-                    labore laudantium deserunt fugiat numquam.
-                  </p>
+        <div class="cards-container">
+            <article class="card">
+                <img class="card__background" src="images/pos5.jpeg" alt="Imagem 1" width="1920" height="2193" />
+                <div class="card__content | flow">
+                    <div class="card__content--container | flow">
+                        <h2 class="card__title">Pós Graduação</h2>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                    <button class="card__button">Read more</button>
                 </div>
-                <button class="card__button">Read more</button>
-              </div>
-          </article>
-  
-          <article class="card">
-              <img
-                class="card__background"
-                src="images/bolsas/4.png"
-                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-                width="1920"
-                height="2193"
-              />
-              <div class="card__content | flow">
-                <div class="card__content--container | flow">
-                  <h2 class="card__title">Bolsas</h2>
-                  <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
-                    labore laudantium deserunt fugiat numquam.
-                  </p>
+            </article>
+
+            <article class="card">
+                <img class="card__background" src="images/bolsas/4.png" alt="Imagem 2" width="1920" height="2193" />
+                <div class="card__content | flow">
+                    <div class="card__content--container | flow">
+                        <h2 class="card__title">Bolsas</h2>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                    <button class="card__button">Read more</button>
                 </div>
-                <button class="card__button">Read more</button>
-              </div>
-          </article>
-  
-          <article class="card">
-              <img
-                class="card__background"
-                src="images/bolsas/2.png"
-                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-                width="1920"
-                height="2193"
-              />
-              <div class="card__content | flow">
-                <div class="card__content--container | flow">
-                  <h2 class="card__title">Colombia</h2>
-                  <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
-                    labore laudantium deserunt fugiat numquam.
-                  </p>
+            </article>
+
+            <article class="card">
+                <img class="card__background" src="images/bolsas/2.png" alt="Imagem 3" width="1920" height="2193" />
+                <div class="card__content | flow">
+                    <div class="card__content--container | flow">
+                        <h2 class="card__title">Colombia</h2>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                    <button class="card__button">Read more</button>
                 </div>
-                <button class="card__button">Read more</button>
-              </div>
-          </article>
-  
-          <article class="card">
-              <img
-                class="card__background"
-                src="images/lightbox/7.jpg"
-                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-                width="1920"
-                height="2193"
-              />
-              <div class="card__content | flow">
-                <div class="card__content--container | flow">
-                  <h2 class="card__title">Colombia</h2>
-                  <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
-                    labore laudantium deserunt fugiat numquam.
-                  </p>
+            </article>
+
+            <article class="card">
+                <img class="card__background" src="images/lightbox/7.jpg" alt="Imagem 4" width="1920" height="2193" />
+                <div class="card__content | flow">
+                    <div class="card__content--container | flow">
+                        <h2 class="card__title">Colombia</h2>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                    <button class="card__button">Read more</button>
                 </div>
-                <button class="card__button">Read more</button>
-              </div>
-          </article>
+            </article>
+        </div>
+    </section>
+
+    <!-- Banner -->
+    <div class="highlight-banner">
+        Chegou a hora de fazer a <span>DIFERENÇA</span> na sua vida!
+    </div>
+
+    <!-- Seção Guerra -->
+    <div id="Guerra" class="section-Guerra">
+        <div class="centered-card">
+            <div class="card-text">
+                <h2>CONHEÇA A <span>FACULDADE GUERRA</span></h2>
+                <p>Certificada pelo MEC para instalações reconhecidas com notas máximas no MEC.</p>
+                <p>Conteúdo claro e corpo docente altamente capacitado, composto por especialistas, mestres e doutores ativos no mercado.</p>
+                <p>Certificada pelo MEC para instalações reconhecidas com notas máximas no MEC.</p>
+            </div>
+
+            <div class="card-video">
+                <iframe src="https://www.youtube.com/embed/poa_QBvtIBA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <section id="Bolsas" class="section-bolsa">
+      <div class="ingresso-container">
+        <div class="ingresso-text">
+          <h2>CONHEÇA AS<br>FORMAS DE<br>INGRESSO</h2>
+        </div>
+        <div class="ingresso-cards">
+          <div class="card-ingresso vestibular">
+            <p>VESTIBULAR</p>
+          </div>
+          <div class="card-ingresso enem">
+            <p>NOTA DO<br>ENEM</p>
+          </div>
+          <div class="card-ingresso outra">
+            <p>OUTRA</p>
+          </div>
+        </div>
+        <div class="botao-container">
+          <a href="#" class="botao-formas">Ver todas as formas &rarr;</a>
+        </div>
       </div>
-  </section>
-  
-  <div class="highlight-banner">
-    Chegou a hora de fazer a <span>DIFERENÇA</span> na sua vida!
-  </div>
-   
-<!---Guerra section ---->
-<div id="Guerra" class="section-Guerra">
-  <div class="centered-card">
-    <!-- Texto no card -->
-    <div class="card-text">
-      <h2>CONHEÇA A <span>FACULDADE GUERRA</span></h2>
-      <p>
-        Certificada pelo MEC para instalações reconhecidas com notas máximas no MEC.
-      </p>
-      <p>
-        Conteúdo claro e corpo docente altamente capacitado, composto por especialistas,
-        mestres e doutores ativos no mercado.
-      </p>
-      <p>
-        Certificada pelo MEC para instalações reconhecidas com notas máximas no MEC.
-      </p>
-    </div>
-
-    <!-- Vídeo no card -->
-    <div class="card-video">
-      <iframe 
-        src="https://www.youtube.com/embed/poa_QBvtIBA" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</div>
-
-
-    <div id="contato" class="section">
-      <h2>Contato Section</h2>
-  </div>    
-    <div id="Sou-Aluno" class="section">
-        <h2>Sou-Aluno Section</h2>
-    </div>
-    <div id="Bolsas" class="section">
-        <h2>Bolsas Section</h2>
-    </div>
+    </section>
+    
+    
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="swiper-config.js"></script>
