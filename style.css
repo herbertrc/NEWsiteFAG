@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "inter", sans-serif,;
   margin: 0;
   padding: 0;
   color: #161515;
@@ -51,7 +51,7 @@ body {
   color: #000;
   padding: 14px 20px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 24px;
   display: flex;
   align-items: center;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -65,7 +65,7 @@ body {
 
 .navbar .inscrever {
   margin-left: auto; /* Empurra o botão para o lado direito */
-  margin-right: 700px; /* Espaço entre o botão e a borda direita */
+  margin-right: 900px; /* Espaço entre o botão e a borda direita */
 }
 
 .inscrever {
@@ -73,7 +73,7 @@ body {
   color: white;
   padding: 14px 20px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 24px;
   border-radius: 10px;
   transition: background-color 0.3s ease;
 }
@@ -485,7 +485,7 @@ body {
   background-color: #CA0F0F; /* Fundo vermelho */
   color: #FFFFFF; /* Texto branco */
   text-align: center;
-  font-size: 24px; /* Tamanho do texto */
+  font-size: 42px; /* Tamanho do texto */
   font-weight: bold; /* Negrito */
   padding: 20px 0; /* Espaçamento interno */
   margin-top: 20px; /* Espaçamento superior para distanciar dos cards */
@@ -534,8 +534,8 @@ body {
   background-color: #CA0F0F; /* Cor do card */
   border-radius: 20px; /* Bordas arredondadas */
   padding: 150px;
-  max-width: 1000px; /* Define largura máxima */
   width: 90%; /* Ocupa a maior parte da largura disponível */
+  height: 70%;
   color: white;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
   text-align: left; /* Texto alinhado à esquerda */
@@ -550,18 +550,25 @@ body {
 }
 
 .centered-card .card-text h2 {
-  font-size: 52px;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-size: 64px; /* Mantém o tamanho da fonte */
+  font-weight: bold; /* Garante negrito */
+  margin-bottom: 15px; /* Espaçamento inferior */
+  margin-top: -200px; /* Ajusta para subir o texto */
+  position: relative; /* Garante que o ajuste do top funcione */
+  top: -10px; /* Sobe o texto em 10px */
 }
 
+
 .centered-card .card-text h2 span {
-  color: #FFFFFF;
+  color: #FFFFFF; 
 }
 
 .centered-card .card-text p {
-  margin: 15px 0;
-  line-height: 1.6;
+  font-size: 24px; /* Aumenta o tamanho do texto */
+  line-height: 1.8; /* Aumenta o espaçamento entre linhas */
+  position: relative; /* Permite o uso de top */
+  top: 100px; /* Move os parágrafos para baixo */
+  margin-bottom: 10px; /* Espaçamento adicional inferior, se necessário */
 }
 
 /* Vídeo no card */
@@ -575,9 +582,8 @@ body {
 .centered-card .card-video iframe {
   border-radius: 15px; /* Arredonda as bordas do iframe */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao iframe */
-  width: 100%; /* O vídeo ocupa toda a largura disponível */
-  max-width: 450px; /* Define largura máxima */
-  height: 250px; /* Altura do vídeo */
+  width: 750px; /* O vídeo ocupa toda a largura disponível */
+  height: 450px; /* Altura do vídeo */
 }
 
 /* Formas de ingresso */
@@ -585,7 +591,7 @@ body {
   background-color: #504040; /* Cor de fundo */
   padding: 60px 20px; /* Espaçamento interno */
   display: flex;
-  height: 100vh;
+  height:70vh;
   justify-content: space-between; /* Espaçamento entre texto e cards */
   align-items: center; /* Alinha os itens verticalmente */
 }
@@ -599,25 +605,27 @@ body {
 }
 
 .ingresso-text h2 {
-  color: white;
-  font-size: 36px; /* Tamanho do texto */
-  font-weight: bold;
-  line-height: 1.3;
-  margin: 0;
+  font-family: "Just Another Hand", cursive; /* Aplica a fonte */
+  font-size: 40px; /* Ajusta o tamanho do texto */
+  line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+  position: relative;
+  top: 5px; /* Move para cima */
+  left: 200px; /* Move para a direita */
+  text-align: left; /* Mantém o texto alinhado à esquerda */
+  color: white; /* Cor do texto */
 }
-
 .botao-formas {
+  font-family: "Just Another Hand", cursive; /* Aplica a fonte ao botão */
   background-color: #CA0F0F; /* Vermelho vibrante */
   color: white;
   text-decoration: none;
   padding: 20px 50px;
-  font-size: 18px; /* Ajusta o tamanho do texto */
+  font-size: 24px; /* Ajusta o tamanho do texto */
   position: relative;
   transition: background-color 0.3s ease;
   left: 200px; /* Move para a direita */
   top: -200px; /* Move para cima */
 }
-
 .botao-formas:hover {
   background-color: #A50C0C; /* Vermelho mais escuro */
 }
