@@ -553,7 +553,7 @@ body {
   font-size: 64px; /* Mantém o tamanho da fonte */
   font-weight: bold; /* Garante negrito */
   margin-bottom: 15px; /* Espaçamento inferior */
-  margin-top: -200px; /* Ajusta para subir o texto */
+  margin-top: -150px; /* Ajusta para subir o texto */
   position: relative; /* Garante que o ajuste do top funcione */
   top: -10px; /* Sobe o texto em 10px */
 }
@@ -564,11 +564,13 @@ body {
 }
 
 .centered-card .card-text p {
-  font-size: 24px; /* Aumenta o tamanho do texto */
-  line-height: 1.8; /* Aumenta o espaçamento entre linhas */
-  position: relative; /* Permite o uso de top */
-  top: 100px; /* Move os parágrafos para baixo */
-  margin-bottom: 10px; /* Espaçamento adicional inferior, se necessário */
+  font-family: "Arial", sans-serif; /* Altere para a fonte desejada */
+  font-size: 30px; /* Ajuste o tamanho do texto */
+  line-height: 1.6; /* Ajuste o espaçamento entre linhas */
+  position: relative;
+  top: 70px; /* Move o texto para baixo */
+  color: #F0F0F0; /* Altere a cor, se necessário */
+  margin-bottom: 10px; /* Adicione espaçamento inferior */
 }
 
 /* Vídeo no card */
@@ -582,8 +584,8 @@ body {
 .centered-card .card-video iframe {
   border-radius: 15px; /* Arredonda as bordas do iframe */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao iframe */
-  width: 750px; /* O vídeo ocupa toda a largura disponível */
-  height: 450px; /* Altura do vídeo */
+  width: 800px; /* O vídeo ocupa toda a largura disponível */
+  height: 500px; /* Altura do vídeo */
 }
 
 /* Formas de ingresso */
@@ -605,8 +607,7 @@ body {
 }
 
 .ingresso-text h2 {
-  font-family: "Just Another Hand", cursive; /* Aplica a fonte */
-  font-size: 40px; /* Ajusta o tamanho do texto */
+  font-size: 10px; /* Ajusta o tamanho do texto */
   line-height: 1.4; /* Ajusta o espaçamento entre linhas */
   position: relative;
   top: 5px; /* Move para cima */
@@ -614,16 +615,16 @@ body {
   text-align: left; /* Mantém o texto alinhado à esquerda */
   color: white; /* Cor do texto */
 }
+
 .botao-formas {
-  font-family: "Just Another Hand", cursive; /* Aplica a fonte ao botão */
   background-color: #CA0F0F; /* Vermelho vibrante */
   color: white;
   text-decoration: none;
   padding: 20px 50px;
-  font-size: 24px; /* Ajusta o tamanho do texto */
+  font-size: 48px; /* Ajusta o tamanho do texto */
   position: relative;
   transition: background-color 0.3s ease;
-  left: 200px; /* Move para a direita */
+  left: 175px; /* Move para a direita */
   top: -200px; /* Move para cima */
 }
 .botao-formas:hover {
@@ -637,10 +638,10 @@ body {
   margin-left: 700px;
 }
 .ingresso-text h2 {
-  font-size: 40px; /* Ajusta o tamanho do texto */
+  font-size: 72px; /* Ajusta o tamanho do texto */
   line-height: 1.4; /* Ajusta o espaçamento entre linhas */
   position: relative;
-  top: 5px; /* Move para cima */
+  top: 150px; /* Move para cima */
   left: 200px; /* Move para a direita */
   text-align: left; /* Mantém o texto alinhado à esquerda */
 }
@@ -648,12 +649,14 @@ body {
 .card-ingresso {
   background-color: #8B0E0E; /* Vermelho escuro padrão */
   color: white;
-  font-size: 20px; /* Tamanho do texto */
+  font-size: 50px; /* Tamanho do texto */
   font-weight: bold;
   text-align: center;
   border-radius: 20px;
   padding: 40px 20px;
   display: flex;
+  margin-left: 100px;
+  margin-top: -100px;
   align-items: center; /* Centraliza verticalmente o conteúdo */
   justify-content: center; /* Centraliza horizontalmente o conteúdo */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
