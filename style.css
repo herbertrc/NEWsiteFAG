@@ -681,3 +681,91 @@ body {
 .outra {
   background-color: #C05353; /* Vermelho mais claro */
 }
+
+/* Section de matricula */
+/* Seção de matrícula */
+.section-matricula {
+  background: linear-gradient(to bottom, #000000, #333333); /* Fundo gradiente */
+  height: 70vh;
+  padding: 50px 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.matricula-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px;
+}
+
+.matricula-text {
+  flex: 1;
+  font-family: 'Arial', sans-serif;
+}
+
+.matricula-text h2 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.matricula-text h2 span {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.matricula-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.matricula-form {
+  flex: 1;
+}
+
+.matricula-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.matricula-form input[type="text"],
+.matricula-form input[type="email"] {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.matricula-form .checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.matricula-form button {
+  background-color: #000000;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.matricula-form button:hover {
+  background-color: #444444;
+}
+
