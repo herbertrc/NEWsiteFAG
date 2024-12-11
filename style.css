@@ -26,7 +26,7 @@ body {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Mantém os elementos nos extremos */
+  justify-content: flex; /* Mantém os elementos nos extremos */
   padding: 10px 20px;
   transition: background-color 0.3s ease;
 }
@@ -41,9 +41,11 @@ body {
 }
 
 .navbar-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza os links */
   display: flex;
-  gap: 50px; /* Espaçamento entre os links */
-  margin-left: auto; /* Move os links para a direita */
+  gap: 15px; /* Espaçamento entre os links */
 }
 
 
@@ -54,6 +56,7 @@ body {
   font-size: 24px;
   display: flex;
   align-items: center;
+  margin-right: 100px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -65,7 +68,7 @@ body {
 
 .navbar .inscrever {
   margin-left: auto; /* Empurra o botão para o lado direito */
-  margin-right: 900px; /* Espaço entre o botão e a borda direita */
+  margin-right: 2000px; /* Espaço entre o botão e a borda direita */
 }
 
 .inscrever {
@@ -147,10 +150,14 @@ body {
 }
 
 .swiper-container {
-  width: 100vw; /* Ocupa 100% da largura da viewport */
+  width: 90vw; /* Ocupa 100% da largura da viewport */
   height: auto; /* Ajusta a altura automaticamente */
+  padding-bottom: 100px; /* Adiciona espaço para a paginação */
 }
 
+.swiper-pagination {
+  margin-top: 20px; /* Move as bolinhas para baixo */
+}
 
 .swiper-wrapper {
   display: flex;
@@ -163,6 +170,7 @@ body {
   justify-content: center; /* Centraliza horizontalmente */
   background: none; /* Remove qualquer fundo branco */
   overflow: visible; /* Remove qualquer limite de overflow */
+  margin: 0 10px; /* Espaçamento horizontal entre slides */
 }
 
 .swiper-slide img {
@@ -410,7 +418,7 @@ body {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem 1.5rem;
-  background: linear-gradient(135deg, #a19393, #9b1717);
+  background: linear-gradient(135deg, #CFCFCF, #CA0F0F);
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -450,7 +458,7 @@ body {
 }
 
 .search-button {
-  background: #5b0808;
+  background: #CA0F0F;
   color: white;
   border: none;
   border-radius: 50%;
@@ -460,7 +468,7 @@ body {
 }
 
 .search-button:hover {
-  background: #510707;
+  background: #CA0F0F;
   transform: scale(1.1);
 }
 
@@ -569,7 +577,7 @@ body {
   line-height: 1.6; /* Ajuste o espaçamento entre linhas */
   position: relative;
   top: 70px; /* Move o texto para baixo */
-  color: #F0F0F0; /* Altere a cor, se necessário */
+  color: #F4F4F4; /* Altere a cor, se necessário */
   margin-bottom: 10px; /* Adicione espaçamento inferior */
 }
 
@@ -628,7 +636,7 @@ body {
   top: -200px; /* Move para cima */
 }
 .botao-formas:hover {
-  background-color: #A50C0C; /* Vermelho mais escuro */
+  background-color: #CA0F0F; /* Vermelho mais escuro */
 }
 
 .ingresso-cards {
@@ -647,7 +655,7 @@ body {
 }
 
 .card-ingresso {
-  background-color: #8B0E0E; /* Vermelho escuro padrão */
+  background-color: #CA0F0F; /* Vermelho escuro padrão */
   color: white;
   font-size: 50px; /* Tamanho do texto */
   font-weight: bold;
@@ -685,7 +693,7 @@ body {
 /* Section de matricula */
 /* Seção de matrícula */
 .section-matricula {
-  background: linear-gradient(to bottom, #000000, #333333); /* Fundo gradiente */
+  background: linear-gradient(to bottom, #000000, #666666); /* Fundo gradiente */
   height: 70vh;
   padding: 50px 20px;
   color: white;
@@ -698,7 +706,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   width: 100%;
   gap: 50px;
 }
@@ -709,21 +716,23 @@ body {
 }
 
 .matricula-text h2 {
-  font-size: 48px;
+  font-size: 64px;
   font-weight: bold;
   line-height: 1.5;
   margin-bottom: 20px;
+  margin-left: 150px;
 }
 
 .matricula-text h2 span {
-  font-size: 36px;
+  font-size: 72px;
   font-weight: bold;
 }
 
 .matricula-text p {
-  font-size: 18px;
+  font-size: 32px;
   line-height: 1.6;
   font-style: italic;
+  margin-left: 150px;
 }
 
 .matricula-form {
@@ -738,7 +747,7 @@ body {
 
 .matricula-form input[type="text"],
 .matricula-form input[type="email"] {
-  padding: 15px;
+  padding: 20px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
@@ -750,13 +759,13 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 14px;
+  font-size: 24px;
 }
 
 .matricula-form button {
   background-color: #000000;
   color: white;
-  padding: 15px;
+  padding: 25px;
   font-size: 18px;
   font-weight: bold;
   border: none;
