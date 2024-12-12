@@ -19,7 +19,6 @@ body {
 }
 
 
-/* NAVBAR */
 .navbar {
   background-color: #F4F4F4;
   position: fixed;
@@ -28,13 +27,13 @@ body {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: flex; /* Mantém os elementos nos extremos */
+  justify-content: space-between;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
 }
 
 .navbar.scrolled {
-  background-color: rgba(244, 244, 244, 0.9); /* Navbar ao rolar */
+  background-color: rgba(244, 244, 244, 0.9);
 }
 
 .navbar .logo img {
@@ -43,22 +42,20 @@ body {
 }
 
 .navbar-links {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%); /* Centraliza os links */
   display: flex;
-  gap: 15px; /* Espaçamento entre os links */
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
 
 .navbar-links a {
   color: #000;
-  padding: 14px 20px;
+  padding: 10px 15px;
   text-decoration: none;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  margin-right: 100px;
+  font-size: 16px;
+  white-space: nowrap;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -67,52 +64,26 @@ body {
   color: black;
 }
 
-
 .navbar .inscrever {
-  margin-left: auto; /* Empurra o botão para o lado direito */
-  margin-right: 2000px; /* Espaço entre o botão e a borda direita */
-}
-
-.inscrever {
   background-color: #CA0F0F;
   color: white;
-  padding: 14px 20px;
+  padding: 10px 20px;
   text-decoration: none;
-  font-size: 18px;
-  border-radius: 10px;
+  font-size: 16px;
+  border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
-.inscrever:hover {
+.navbar .inscrever:hover {
   background-color: darkred;
-}
-
-/* RESPONSIVIDADE DA NAVBAR */
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .navbar-links.active {
-    display: flex;
-    background-color: #f4f4f4;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-  }
 }
 
 .menu-toggle {
   display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* SEÇÕES */
@@ -560,10 +531,10 @@ body {
 }
 
 .centered-card .card-text h2 {
-  font-size: 64px; /* Mantém o tamanho da fonte */
+  font-size: 48px; /* Mantém o tamanho da fonte */
   font-weight: bold; /* Garante negrito */
   margin-bottom: 15px; /* Espaçamento inferior */
-  margin-top: -150px; /* Ajusta para subir o texto */
+  margin-top: 50px; /* Ajusta para subir o texto */
   position: relative; /* Garante que o ajuste do top funcione */
   top: -10px; /* Sobe o texto em 10px */
 }
@@ -575,10 +546,10 @@ body {
 
 .centered-card .card-text p {
   font-family: "Arial", sans-serif; /* Altere para a fonte desejada */
-  font-size: 30px; /* Ajuste o tamanho do texto */
+  font-size: 24px; /* Ajuste o tamanho do texto */
   line-height: 1.6; /* Ajuste o espaçamento entre linhas */
   position: relative;
-  top: 70px; /* Move o texto para baixo */
+  top: 25px; /* Move o texto para baixo */
   color: #F4F4F4; /* Altere a cor, se necessário */
   margin-bottom: 10px; /* Adicione espaçamento inferior */
 }
@@ -631,7 +602,7 @@ body {
   color: white;
   text-decoration: none;
   padding: 20px 50px;
-  font-size: 48px; /* Ajusta o tamanho do texto */
+  font-size: 28px; /* Ajusta o tamanho do texto */
   position: relative;
   transition: background-color 0.3s ease;
   left: 175px; /* Move para a direita */
@@ -644,11 +615,11 @@ body {
 .ingresso-cards {
   display: flex; /* Organiza os cards em linha */
   justify-content: center;
-  gap: 20px; /* Espaçamento entre os cards */
-  margin-left: 700px;
+  gap: 5px; /* Espaçamento entre os cards */
+  margin-left: 650px;
 }
 .ingresso-text h2 {
-  font-size: 72px; /* Ajusta o tamanho do texto */
+  font-size: 48px; /* Ajusta o tamanho do texto */
   line-height: 1.4; /* Ajusta o espaçamento entre linhas */
   position: relative;
   top: 150px; /* Move para cima */
@@ -659,7 +630,7 @@ body {
 .card-ingresso {
   background-color: #CA0F0F; /* Vermelho escuro padrão */
   color: white;
-  font-size: 50px; /* Tamanho do texto */
+  font-size: 30px; /* Tamanho do texto */
   font-weight: bold;
   text-align: center;
   border-radius: 20px;
@@ -670,7 +641,7 @@ body {
   align-items: center; /* Centraliza verticalmente o conteúdo */
   justify-content: center; /* Centraliza horizontalmente o conteúdo */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  width: 400px; /* Largura do card */
+  width: 275px; /* Largura do card */
   height: 500px; /* Altura do card */
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -718,7 +689,7 @@ body {
 }
 
 .matricula-text h2 {
-  font-size: 64px;
+  font-size: 48px;
   font-weight: bold;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -726,7 +697,7 @@ body {
 }
 
 .matricula-text h2 span {
-  font-size: 72px;
+  font-size: 64px;
   font-weight: bold;
 }
 
@@ -749,7 +720,7 @@ body {
 
 .matricula-form input[type="text"],
 .matricula-form input[type="email"] {
-  padding: 20px;
+  padding: 10px 10px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
@@ -790,3 +761,87 @@ body {
   border: none; /* Remove qualquer borda padrão */
 }
 
+
+
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 15px;
+  }
+
+  .navbar .logo img {
+      width: 50px;
+  }
+
+  .menu-toggle {
+      display: block;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: #CA0F0F;
+      cursor: pointer;
+  }
+
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      gap: 10px;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  .navbar-links a {
+      padding: 10px 5px;
+      font-size: 14px;
+  }
+
+  .inscrever {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  /* Swiper */
+  .swiper-slide img {
+      width: 100%;
+      height: auto;
+  }
+
+  /* Cards */
+  .cards-container {
+      flex-direction: column;
+  }
+
+  .card {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+
+  /* Footer */
+  footer {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  footer .col-md-3 img {
+      max-width: 80%;
+      margin: 0 auto;
+  }
+
+  footer .row {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .social-icon {
+      font-size: 20px;
+      margin: 5px;
+  }
+}
