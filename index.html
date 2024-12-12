@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&display=swap" rel="stylesheet">
-
-    <title>Carrossel</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Links de Estilo -->
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        <style>
+            /* Sobrescrevendo as fontes do Bootstrap */
+            :root {
+                --bs-body-font-family: 'Inter', sans-serif; /* Define a fonte padrão do Bootstrap */
+            }
+    
+            /* Garantia de que a fonte seja aplicada globalmente */
+            body, html, * {
+                font-family: 'Inter', sans-serif !important;
+            }
+        </style>
+    
+        <title>Carrossel</title>
+    </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
@@ -192,7 +207,110 @@
           </div>
         </div>
       </section>
+      <div class="horizontal-line"></div>
       
+      <footer class="bg-dark text-red pt-5 pb-4">
+        <div class="row text-center text-md-left">
+            <!-- Seção Faculdade Guerra -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <img src="images/Logo_Guerra_Red.png" alt="Faculdade Guerra" class="img-fluid" style="max-width: 60%; height: auto;">
+                <img src="images/tag01.png" alt="Tagline" class="img-fluid mt-3" style="max-width: 70%; height: auto;">
+            </div>
+    
+            <!-- Seção Products -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #CA0F0F;">Products</h5>
+                <p><a href="#" class="text-white" style="text-decoration: none;">TheProviders</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Creativy</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Sourcefiles</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Bootstrap 5 alpha</a></p>
+            </div>
+    
+            <!-- Seção Useful Links -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #CA0F0F;">Useful Links</h5>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Your account</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Become an Affiliate</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Shipping Rates</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Help</a></p>
+            </div>
+    
+            <!-- Seção Campus Principal -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #CA0F0F;">Campus Principal</h5>
+                <address class="text-white">
+                    <strong>Endereço:</strong><br>
+                    Q QSA 7 Lotes 15 a 22<br>
+                    Taguatinga Sul<br>
+                    Distrito Federal<br>
+                </address>
+                <p class="text-white"><abbr title="Phone Number"><strong>Telefone:</strong></abbr> (61) 3263-0463</p>
+                <p class="text-white"><abbr title="Fax"><strong>Wpp:</strong></abbr> (61) 9 8147-2249</p>
+                <p class="text-white"><abbr title="Email Address"><strong>Email:</strong></abbr> contato@faculdadeguerra.edu.br</p>
+                <div class="d-flex mt-3">
+                    <a href="https://www.facebook.com/faculdadeguerra/" class="social-icon si-small text-white bg-facebook me-2" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/FaculdadeGuerra" class="social-icon si-small text-white bg-twitter me-2" title="Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/faculdade_guerra/" class="social-icon si-small text-white bg-instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <hr class="mb-4">
+    </footer>
+    >
+
+        <!-- Seção de Copyright e Redes Sociais -->
+        <div class="row justify-content-center align-items-end">
+            <!-- Redes sociais alinhadas à esquerda -->
+            <div class="col-md-6 text-center text-md-left">
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                            <i class="fab fa-google-plus"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+    
+            <!-- Copyright centralizado -->
+            <div class="col-12 text-center mt-4">
+                <p style="margin-bottom: 0;">Copyright 2020 All Rights Reserved by:
+                    <a href="#" style="text-decoration: none;">
+                        <strong style="color: #CA0F0F;">The Providers</strong>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    
     
     
 

@@ -1,5 +1,6 @@
 /* RESET E ESTILOS GLOBAIS */
 * {
+  font-family: "Inter", sans-serif !important; /* Fonte global */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,12 +11,13 @@ html {
 }
 
 body {
-  font-family: "inter", sans-serif,;
+  font-family: "Inter", sans-serif !important; /* Confirmação global */
   margin: 0;
   padding: 0;
   color: #161515;
   overflow-x: hidden;
 }
+
 
 /* NAVBAR */
 .navbar {
@@ -53,7 +55,7 @@ body {
   color: #000;
   padding: 14px 20px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   margin-right: 100px;
@@ -76,7 +78,7 @@ body {
   color: white;
   padding: 14px 20px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   border-radius: 10px;
   transition: background-color 0.3s ease;
 }
@@ -776,5 +778,15 @@ body {
 
 .matricula-form button:hover {
   background-color: #444444;
+}
+
+/*--- Linha Horizontal de divisão ---*/
+
+.horizontal-line {
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 4px; /* Altura da linha */
+  background: linear-gradient(to right, #E60B0B, #FFF5F5); /* Degradê da linha */
+  margin: 0px 0; /* Espaçamento acima e abaixo da linha */
+  border: none; /* Remove qualquer borda padrão */
 }
 
