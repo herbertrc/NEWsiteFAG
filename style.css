@@ -22,14 +22,14 @@ body {
 .navbar {
   background-color: #F4F4F4;
   position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
+  flex-wrap: wrap;
+  z-index: 1000;
 }
 
 .navbar.scrolled {
@@ -43,8 +43,9 @@ body {
 
 .navbar-links {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   flex: 1;
   justify-content: center;
   flex-wrap: wrap;
@@ -78,6 +79,16 @@ body {
   background-color: darkred;
 }
 
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Esconde os links inicialmente */
+    flex-direction: column; /* Alinha os links verticalmente */
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -96,65 +107,75 @@ body {
   font-size: 24px;
   scroll-margin-top: 80px;
 }
-.section-carrousel {
-  background-color: #CA0F0F; /* Cor específica para a seção do carrossel */
-}
-.section h2 {
-  font-size: 36px;
-  color: #333;
-}
-
-/* HEADER */
-.section-header {
-  color: #fff;
-  text-align: center;
-  font-size: 30px;
-}
-
 /* CARROSSEL */
 .section-carrousel {
-  height: 100vh; /* Ocupa toda a altura da seção */
+  height: auto; /* Permite altura dinâmica */
   width: 100%; /* Ocupa toda a largura da seção */
   display: flex;
   justify-content: center; /* Centraliza o carrossel horizontalmente */
-  align-items: center; /* Centraliza o carrossel verticalmente */
+  align-items: center;
   background-color: #CA0F0F; /* Cor de fundo da seção */
-  padding: 0; /* Remove qualquer espaçamento extra */
+  padding-top: 120px; /* Espaçamento superior */
+  padding-bottom: 50px; /* Espaçamento inferior */
+  position: relative;
+  z-index: 1;
+}
+
+.swiper-slide{
+  display: flex;
+  justify-content:center;
+  align-items: center;
 }
 
 .swiper-container {
-  width: 90vw; /* Ocupa 100% da largura da viewport */
+  width: 100%; /* Ocupa 100% da largura da viewport */
+  max-width: 100%; /* Garante que não ultrapasse os limites */
   height: auto; /* Ajusta a altura automaticamente */
-  padding-bottom: 100px; /* Adiciona espaço para a paginação */
-}
-
-.swiper-pagination {
-  margin-top: 20px; /* Move as bolinhas para baixo */
-}
-
-.swiper-wrapper {
-  display: flex;
-  transition: transform 0.7s ease-in-out; /* Suaviza a transição dos slides */
-}
-
-.swiper-slide {
-  display: flex; /* Garante que o conteúdo do slide seja centralizado */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  background: none; /* Remove qualquer fundo branco */
-  overflow: visible; /* Remove qualquer limite de overflow */
-  margin: 0 10px; /* Espaçamento horizontal entre slides */
+  margin: auto; /* Centraliza o contêiner dentro da seção */
+  padding-bottom: 100px; /* Espaço para a paginação */
 }
 
 .swiper-slide img {
-  width: 100%; /* Permite que a imagem ocupe toda a largura */
-  height: auto; /* Ajusta a altura proporcionalmente */
+  width: 70%; /* Ajusta tamanho padrão */
+  height: auto; /* Mantém proporções */
   object-fit: cover; /* Faz com que a imagem preencha o slide sem distorção */
-  background-color: transparent; /* Remove fundo branco */
-  border: none; /* Remove bordas */
+  display: block;
+  margin: auto;
 }
 
+/* Telas menores que 768px */
+@media (max-width: 768px) {
+  .section-carrousel {
+    padding-top: 100px; /* Espaço maior para navbar */
+    padding-bottom: 30px; /* Ajusta o espaçamento inferior */
+  }
 
+  .swiper-slide img {
+    width: 95%; /* Aumenta o tamanho da imagem no slide */
+  }
+}
+
+/* Telas menores que 480px */
+@media (max-width: 480px) {
+  .section-carrousel {
+    padding-top: 100px; /* Ajusta o espaçamento superior */
+    padding-bottom: 20px; /* Ajusta o espaçamento inferior */
+  }
+
+  .swiper-slide img {
+    width: 150%; /* Faz a imagem ocupar toda a largura do slide */
+  }
+
+  .swiper-container {
+    max-width: 100%; /* Remove limite de largura */
+  }
+
+  .swiper-slide img:hover {
+    transform: none; /* Remove o efeito de zoom em dispositivos móveis */
+  }
+}
+
+/* Hover */
 .swiper-slide img:hover {
   transform: scale(1.05); /* Zoom suave ao passar o mouse */
 }
@@ -187,17 +208,20 @@ body {
 }
 
 @media (max-width: 768px) {
-  .swiper-slide {
-    padding: 5px; /* Reduz espaçamento em telas menores */
-  }
-
-  .swiper-slide img {
-    max-width: 100%; /* Ocupa a largura disponível */
-    max-height: 100%; /* Ocupa a altura disponível */
+  .swiper-pagination-bullet,
+  .swiper-pagination-bullet-active {
+    width: 8px; /* Diminui para dispositivos móveis */
+    height: 8px;
   }
 }
 
-
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px; /* Reduz para dispositivos móveis */
+    height: 30px;
+  }
+}
 /* Section Busca */
 .section-busca {
   background-color: #CA0F0F; /* Cor de fundo vermelho */
@@ -235,7 +259,7 @@ body {
 .cards-container {
   display: flex; /* Ativa o layout em linha */
   flex-wrap: wrap; /* Permite quebra de linha se necessário */
-  justify-content: center; /* Centraliza os cards horizontalmente */
+  justify-content: space-around; /* Centraliza os cards horizontalmente */
   align-items: center; /* Centraliza os cards verticalmente */
   gap: 2rem; /* Espaçamento entre os cards */
   padding: 2rem; /* Espaçamento interno */
@@ -244,12 +268,31 @@ body {
 .card {
   display: grid;
   place-items: center;
-  width: 80vw;
-  max-width: 21.875rem;
-  height: 28.125rem;
+  width: 100%; /* Ocupa 100% do contêiner pai */
+  max-width: 21.875rem; /* Limite máximo de largura */
+  height: auto; /* Ajusta a altura proporcionalmente */
+  aspect-ratio: 4 / 5; /* Mantém uma proporção fixa */
   overflow: hidden;
   border-radius: 0.625rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 20%; /* Ocupa toda a largura em telas menores */
+    max-width: none; /* Remove o limite de largura */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    aspect-ratio: 3 / 4; /* Ajusta a proporção em telas menores */
+  }
+
+  .cards-container {
+    gap: 10px; /* Reduz o espaçamento entre os cards */
+  }
 }
 
 .card > * {
@@ -763,85 +806,3 @@ body {
 
 
 
-
-@media (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-      flex-direction: column;
-      height: auto;
-      padding: 10px 15px;
-  }
-
-  .navbar .logo img {
-      width: 50px;
-  }
-
-  .menu-toggle {
-      display: block;
-      font-size: 24px;
-      background: none;
-      border: none;
-      color: #CA0F0F;
-      cursor: pointer;
-  }
-
-  .navbar-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-      gap: 10px;
-  }
-
-  .navbar-links.active {
-      display: flex;
-  }
-
-  .navbar-links a {
-      padding: 10px 5px;
-      font-size: 14px;
-  }
-
-  .inscrever {
-      width: 100%;
-      text-align: center;
-      margin: 10px 0;
-  }
-
-  /* Swiper */
-  .swiper-slide img {
-      width: 100%;
-      height: auto;
-  }
-
-  /* Cards */
-  .cards-container {
-      flex-direction: column;
-  }
-
-  .card {
-      max-width: 100%;
-      margin-bottom: 20px;
-  }
-
-  /* Footer */
-  footer {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  footer .col-md-3 img {
-      max-width: 80%;
-      margin: 0 auto;
-  }
-
-  footer .row {
-      flex-direction: column;
-      gap: 15px;
-  }
-
-  .social-icon {
-      font-size: 20px;
-      margin: 5px;
-  }
-}
