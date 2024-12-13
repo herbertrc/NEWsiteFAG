@@ -16,23 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Alternar menu para telas menores
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbarLinksContainer = document.querySelector('.navbar-links');
-
-    if (menuToggle && navbarLinksContainer) {
-        menuToggle.addEventListener('click', () => {
-            navbarLinksContainer.classList.toggle('active');
-        });
-
-        // Fecha o menu ao clicar em um link
-        navbarLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navbarLinksContainer.classList.remove('active');
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbarLinksContainer = document.querySelector('.navbar-links');
+    
+        if (menuToggle && navbarLinksContainer) {
+            menuToggle.addEventListener('click', () => {
+                navbarLinksContainer.classList.toggle('active'); // Mostra/esconde os links
             });
-        });
-    }
+        }
+    });
 
     // Configuração do Swiper (carrossel)
     const swiper = new Swiper('.swiper', {

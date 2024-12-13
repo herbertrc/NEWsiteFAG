@@ -19,43 +19,38 @@ body {
 }
 
 
+/* Navbar */
 .navbar {
   background-color: #F4F4F4;
   position: fixed;
+  top: 0;
   width: 100%;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-  flex-wrap: wrap;
+  padding: 0 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
-.navbar.scrolled {
-  background-color: rgba(244, 244, 244, 0.9);
-}
-
 .navbar .logo img {
-  width: 60px;
-  height: auto;
+  height: 50px;
+  width: auto;
 }
 
 .navbar-links {
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 10px;
-  flex: 1;
-  justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
 .navbar-links a {
   color: #000;
-  padding: 10px 15px;
   text-decoration: none;
   font-size: 16px;
+  padding: 10px 15px;
   white-space: nowrap;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -79,22 +74,47 @@ body {
   background-color: darkred;
 }
 
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none; /* Esconde os links inicialmente */
-    flex-direction: column; /* Alinha os links verticalmente */
+/* Responsividade */
+@media (max-width: 912px) {
+  .menu-toggle {
+      display: block; /* Mostra o botão de menu em telas pequenas */
   }
+
+  .navbar-links {
+      display: none; /* Oculta os links por padrão */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #F4F4F4;
+      padding: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      z-index: 9999;
+  }
+
   .navbar-links.active {
-    display: flex;
+      display: flex; /* Mostra os links ao ativar */
+  }
+
+  .navbar-links a {
+      text-align: right; /* Alinha os links à direita */
+  }
+
+  .navbar .inscrever {
+      display: none; /* Oculta o botão "Inscreva-se" em telas menores */
   }
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
+/* Responsividade para telas maiores */
+@media (min-width: 913px) {
+  .navbar-links {
+      display: flex; /* Mostra os links normalmente no desktop */
+  }
+
+  .menu-toggle {
+      display: none; /* Esconde o botão de menu no desktop */
+  }
 }
 
 /* SEÇÕES */
