@@ -19,95 +19,177 @@ body {
 }
 
 
-/* Navbar */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #F4F4F4;
-  padding: 10px 20px;
-  color: white;
+  background-color: #f8f9fa; /* Fundo claro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  padding: 0.5rem 1rem;
 }
 
-.navbar .logo {
-  font-size: 1.5em;
-  font-weight: bold;
+.navbar-toggler {
+  border: none; /* Remove a borda */
 }
 
-.navbar .search-box {
-  flex: 1;
-  margin: 0 20px;
+.navbar-nav {
   display: flex;
   justify-content: center;
-}
-
-.navbar .search-box input {
   width: 100%;
-  max-width: 400px;
-  padding: 5px;
-  font-size: 1em;
+}
+
+.nav-link {
+  color: #212529; /* Cor padrão */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff; /* Cor ao passar o mouse */
+}
+
+/* Dropdown */
+.navbar .dropdown-menu {
+  background-color: #F4F4F4; /* Fundo branco */
+  border: 1px solid #ddd; /* Borda leve */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #f8f9fa; /* Fundo ao passar o mouse */
+  color: #007bff; /* Cor do texto */
+}
+
+/* Submenu */
+.with-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none; /* Esconde por padrão */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff; /* Fundo branco */
+  border: 1px solid #ddd; /* Borda leve */
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.submenu iframe {
+  width: 300px;
+  height: 200px;
   border: none;
-  border-radius: 5px;
 }
 
-.navbar .nav-links {
+.with-submenu:hover .submenu {
+  display: block; /* Exibe o submenu ao passar o mouse */
+  animation: fadeIn 0.3s ease-in-out; /* Animação suave */
+}
+
+/* Animação ao exibir o submenu */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Layout de colunas no dropdown */
+.dropdown-columns {
   display: flex;
-  gap: 15px;
+  flex-direction: row; /* Alinhamento horizontal */
+  gap: 20px;
+  padding: 10px 25px;
 }
 
-.navbar .nav-links a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  padding: 5px 10px;
-  transition: background 0.3s;
+.dropdown-item {
+  text-decoration: underline; /* Adiciona sublinhado */
+  color: inherit; /* Herda a cor do texto */
+  background-color: transparent; /* Remove fundo adicional */
+  font-size: 14px; /* Tamanho do texto */
+  padding: 5px 10px; /* Ajusta o espaçamento */
+  border: none; /* Remove borda extra */
+  cursor: default; /* Remove o ponteiro de "mãozinha" */
+  pointer-events: none; /* Remove a interatividade (não clicável) */
 }
 
-.navbar .nav-links a:hover {
-  background-color: #575757;
-  border-radius: 5px;
+.dropdown-item:hover {
+  color: inherit; /* Garante que a cor não mude */
+  background-color: transparent; /* Mantém o fundo transparente ao hover */
+  text-decoration: underline; /* Garante o sublinhado ao hover */
 }
 
-.navbar .menu-toggle {
-  display: none;
+.column {
+  display: flex;
   flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+  align-items: flex-start;
+  min-width: 150px;
 }
 
-.navbar .menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: rgb(0, 0, 0);
+.column iframe {
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+  border: none;
 }
 
+.column li {
+  list-style: none; /* Remove os marcadores de lista */
+}
+
+.column a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: #333; /* Cor padrão */
+  padding: 5px 0; /* Espaçamento vertical */
+  display: block;
+}
+
+.column a:hover {
+  color: #007bff; /* Cor ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
-  .navbar .search-box {
-      display: none;
+  .dropdown-columns {
+      flex-direction: column; /* Colunas verticais */
+      gap: 10px;
   }
 
-  .navbar .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: #333;
-      border-radius: 5px;
-      overflow: hidden;
+  .column iframe {
+      width: 100%;
+      height: 150px; /* Reduz altura do iframe */
   }
+}
 
-  .navbar .nav-links a {
-      padding: 10px 20px;
-      text-align: center;
-  }
+/* Estilo base do botão */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  background-color: #f8f9fa; /* Cor de fundo clara */
+  border: 1px solid #ccc; /* Borda leve */
+  border-radius: 8px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de clique */
+  transition: all 0.3s ease-in-out; /* Animação suave */
+}
 
-  .navbar .menu-toggle {
-      display: flex;
-  }
+/* Ajuste específico para ícones dentro do botão */
+.btn i {
+  font-size: 20px; /* Tamanho do ícone */
+  color: #333; /* Cor do ícone */
+}
 
-  .navbar .nav-links.active {
-      display: flex;
-  }
+/* Estilo ao passar o mouse */
+.btn:hover {
+  background-color: #e9ecef; /* Cor de fundo mais escura */
+  border-color: #aaa; /* Cor da borda mais destacada */
+}
+.fa-solid {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900; /* Estilo sólido */
 }
 
 
@@ -121,121 +203,108 @@ body {
   font-size: 24px;
   scroll-margin-top: 80px;
 }
-/* CARROSSEL */
-.section-carrousel {
-  height: auto; /* Permite altura dinâmica */
-  width: 100%; /* Ocupa toda a largura da seção */
+
+
+/* Carrossel */
+.carousel-container {
+  background-color: #CA0F0F;
   display: flex;
-  justify-content: center; /* Centraliza o carrossel horizontalmente */
   align-items: center;
-  background-color: #CA0F0F; /* Cor de fundo da seção */
-  padding-top: 120px; /* Espaçamento superior */
-  padding-bottom: 50px; /* Espaçamento inferior */
+  justify-content: center;
+  gap: 10px; /* Espaçamento entre as imagens */
   position: relative;
-  z-index: 1;
+  overflow: hidden; /* Evita que a imagem saia da tela */
 }
 
-.swiper-slide{
-  display: flex;
-  justify-content:center;
-  align-items: center;
-}
-
-.swiper-container {
-  width: 100%; /* Ocupa 100% da largura da viewport */
-  max-width: 100%; /* Garante que não ultrapasse os limites */
-  height: auto; /* Ajusta a altura automaticamente */
-  margin: auto; /* Centraliza o contêiner dentro da seção */
-  padding-bottom: 100px; /* Espaço para a paginação */
-}
-
-.swiper-slide img {
-  width: 70%; /* Ajusta tamanho padrão */
-  height: auto; /* Mantém proporções */
-  object-fit: cover; /* Faz com que a imagem preencha o slide sem distorção */
-  display: block;
-  margin: auto;
-}
-
-/* Telas menores que 768px */
-@media (max-width: 768px) {
-  .section-carrousel {
-    padding-top: 100px; /* Espaço maior para navbar */
-    padding-bottom: 30px; /* Ajusta o espaçamento inferior */
-  }
-
-  .swiper-slide img {
-    width: 95%; /* Aumenta o tamanho da imagem no slide */
-  }
-}
-
-/* Telas menores que 480px */
-@media (max-width: 480px) {
-  .section-carrousel {
-    padding-top: 100px; /* Ajusta o espaçamento superior */
-    padding-bottom: 20px; /* Ajusta o espaçamento inferior */
-  }
-
-  .swiper-slide img {
-    width: 150%; /* Faz a imagem ocupar toda a largura do slide */
-  }
-
-  .swiper-container {
-    max-width: 100%; /* Remove limite de largura */
-  }
-
-  .swiper-slide img:hover {
-    transform: none; /* Remove o efeito de zoom em dispositivos móveis */
-  }
-}
-
-/* Hover */
-.swiper-slide img:hover {
-  transform: scale(1.05); /* Zoom suave ao passar o mouse */
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+.main-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #333;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  width: 600px; /* Largura fixa */
+  height: 400px; /* Altura fixa */
+  position: relative;
+  overflow: none; /* Garante que a imagem não saia do contêiner */
 }
 
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção preenchendo o espaço */
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out; /* Suaviza a transição */
+  transform: translate(0, 0); /* Posição inicial */
 }
 
-.swiper-pagination-bullet,
-.swiper-pagination-bullet-active {
-  background: white;
+.right-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaçamento entre as imagens */
 }
 
+.small-image {
+  width: 300px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(0, 0); /* Posição inicial */
+}
+
+/* Animações */
+.to-bottom-right {
+  transform: scale(0.5) translate(850px, 50px); /* Move para a posição da bottom-right */
+}
+
+.to-top {
+  transform: translateY(-150px) scale(0.8); /* Move suavemente para cima */
+}
+
+.to-main {
+  transform: scale(1.5) translate(-200px, 100px); /* Aumenta a imagem suavemente */
+}
+
+.no-transition {
+  transition: none !important; /* Remove qualquer transição durante a reposição */
+}
+
+/* Layout Responsivo */
 @media (max-width: 768px) {
-  .swiper-pagination-bullet,
-  .swiper-pagination-bullet-active {
-    width: 8px; /* Diminui para dispositivos móveis */
-    height: 8px;
+  .carousel-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-image-container {
+    width: 90%;
+    height: auto;
+  }
+
+  .main-image {
+    width: 100%;
+    height: auto;
+    transform: none; /* Sem transformações */
+  }
+
+  .right-images {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .small-image {
+    width: 100px;
+    height: auto;
+    transform: none; /* Sem transformações */
+  }
+
+  .to-main, .to-bottom, .to-top {
+    transform: none !important; /* Desabilita animações em mobile */
   }
 }
 
-@media (max-width: 768px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    width: 30px; /* Reduz para dispositivos móveis */
-    height: 30px;
-  }
-}
+
+
 /* Section Busca */
 .section-busca {
   background-color: #CA0F0F; /* Cor de fundo vermelho */
