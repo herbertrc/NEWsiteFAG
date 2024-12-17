@@ -605,189 +605,67 @@ body {
 
 
 
-/*---- Guerra section ----*/
+/* Fundo da seção com estrelas */
 .section-Guerra {
-  background-color: #F4F4F4; /* Cor de fundo da seção */
-  display: flex;
-  align-items: center; /* Centraliza verticalmente o conteúdo */
-  justify-content: center; /* Centraliza horizontalmente o conteúdo */
-  height: 100vh; /* Faz a seção ocupar a altura total da janela */
-  padding: 20px; /* Espaçamento interno */
-  position: relative; /* Para incluir elementos de fundo */
-  overflow: hidden; /* Garante que os elementos de fundo fiquem dentro da seção */
+  position: relative;
+  background-color: #F4F4F4;
+  overflow: hidden;
 }
 
-/* Estrelas de fundo */
 .section-Guerra::before {
   content: "";
   position: absolute;
-  background-image: url('star-icon.png'); /* Substitua pelo caminho da sua imagem de estrela */
-  background-repeat: repeat; /* Repete as estrelas */
-  background-size: 100px 100px; /* Tamanho das estrelas */
+  background-image: url('star-icon.png'); /* Substitua pelo caminho da sua imagem */
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  opacity: 0.1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.1; /* Torna as estrelas discretas */
-  z-index: 0; /* Fica atrás do conteúdo principal */
+  z-index: 0;
 }
 
-/* Card centralizado */
-.centered-card {
-  display: flex;
-  flex-direction: row; /* Alinha o texto e o vídeo lado a lado */
-  justify-content: space-between; /* Espaço entre texto e vídeo */
-  align-items: center; /* Alinha verticalmente */
-  background-color: #CA0F0F; /* Cor do card */
-  border-radius: 20px; /* Bordas arredondadas */
-  padding: 150px;
-  width: 90%; /* Ocupa a maior parte da largura disponível */
-  height: 70%;
-  color: white;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  text-align: left; /* Texto alinhado à esquerda */
-  position: relative; /* Para o conteúdo dentro do card */
-  z-index: 1; /* Fica acima das estrelas */
-}
-
-/* Texto no card */
-.centered-card .card-text {
-  flex: 1; /* O texto ocupa metade do card */
-  margin-right: 20px; /* Espaço entre texto e vídeo */
-}
-
-.centered-card .card-text h2 {
-  font-size: 48px; /* Mantém o tamanho da fonte */
-  font-weight: bold; /* Garante negrito */
-  margin-bottom: 15px; /* Espaçamento inferior */
-  margin-top: 50px; /* Ajusta para subir o texto */
-  position: relative; /* Garante que o ajuste do top funcione */
-  top: -10px; /* Sobe o texto em 10px */
-}
-
-
-.centered-card .card-text h2 span {
-  color: #FFFFFF; 
-}
-
-.centered-card .card-text p {
-  font-family: "Arial", sans-serif; /* Altere para a fonte desejada */
-  font-size: 24px; /* Ajuste o tamanho do texto */
-  line-height: 1.6; /* Ajuste o espaçamento entre linhas */
+.section-Guerra .container {
   position: relative;
-  top: 25px; /* Move o texto para baixo */
-  color: #F4F4F4; /* Altere a cor, se necessário */
-  margin-bottom: 10px; /* Adicione espaçamento inferior */
+  z-index: 1; /* Coloca o conteúdo acima das estrelas */
 }
 
-/* Vídeo no card */
-.centered-card .card-video {
-  flex: 1; /* O vídeo ocupa metade do card */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+h2 {
+  font-size: 2rem; /* Ajusta tamanho do título */
 }
 
-.centered-card .card-video iframe {
-  border-radius: 15px; /* Arredonda as bordas do iframe */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao iframe */
-  width: 800px; /* O vídeo ocupa toda a largura disponível */
-  height: 500px; /* Altura do vídeo */
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
-/* Formas de ingresso */
+/* Fundo da seção Formas de Ingresso */
 .section-bolsa {
-  background-color: #504040; /* Cor de fundo */
-  padding: 60px 20px; /* Espaçamento interno */
-  display: flex;
-  height:70vh;
-  justify-content: space-between; /* Espaçamento entre texto e cards */
-  align-items: center; /* Alinha os itens verticalmente */
+  background-color: #504040;
+  padding-top: 100px; /* Mais espaço vertical superior */
+  padding-bottom: 100px; /* Mais espaço vertical inferior */
 }
 
-.formas-ingresso {
-  display: flex;
-  flex-direction: column; /* Organiza o texto e o botão em coluna */
-  justify-content: space-between; /* Espaça verticalmente o texto e botão */
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  gap: 20px;
-}
-
-.ingresso-text h2 {
-  font-size: 10px; /* Ajusta o tamanho do texto */
-  line-height: 1.4; /* Ajusta o espaçamento entre linhas */
-  position: relative;
-  top: 5px; /* Move para cima */
-  left: 200px; /* Move para a direita */
-  text-align: left; /* Mantém o texto alinhado à esquerda */
+.custom-btn {
+  background-color: #CA0F0F; /* Cor do botão */
   color: white; /* Cor do texto */
-}
-
-.botao-formas {
-  background-color: #CA0F0F; /* Vermelho vibrante */
-  color: white;
-  text-decoration: none;
-  padding: 20px 50px;
-  font-size: 28px; /* Ajusta o tamanho do texto */
-  position: relative;
+  padding: 10px 15px; /* Aumenta tamanho do botão */
+  font-size: 1.5rem; /* Tamanho da fonte maior */
+  border: none;
   transition: background-color 0.3s ease;
-  left: 175px; /* Move para a direita */
-  top: -200px; /* Move para cima */
-}
-.botao-formas:hover {
-  background-color: #CA0F0F; /* Vermelho mais escuro */
 }
 
-.ingresso-cards {
-  display: flex; /* Organiza os cards em linha */
-  justify-content: center;
-  gap: 5px; /* Espaçamento entre os cards */
-  margin-left: 650px;
-}
-.ingresso-text h2 {
-  font-size: 48px; /* Ajusta o tamanho do texto */
-  line-height: 1.4; /* Ajusta o espaçamento entre linhas */
-  position: relative;
-  top: 150px; /* Move para cima */
-  left: 200px; /* Move para a direita */
-  text-align: left; /* Mantém o texto alinhado à esquerda */
-}
-
-.card-ingresso {
-  background-color: #CA0F0F; /* Vermelho escuro padrão */
+.custom-btn:hover {
+  background-color: #9e0d0d; /* Cor do botão ao passar o mouse */
   color: white;
-  font-size: 30px; /* Tamanho do texto */
-  font-weight: bold;
-  text-align: center;
-  border-radius: 20px;
-  padding: 40px 20px;
-  display: flex;
-  margin-left: 100px;
-  margin-top: -100px;
-  align-items: center; /* Centraliza verticalmente o conteúdo */
-  justify-content: center; /* Centraliza horizontalmente o conteúdo */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  width: 275px; /* Largura do card */
-  height: 500px; /* Altura do card */
-  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.card-ingresso:hover {
-  transform: translateY(-10px);
+.card p {
+  margin: 0; /* Remove margem dos parágrafos nos cards */
 }
 
-/* Estilos específicos para cada card */
-.vestibular {
-  background-color: #520808; /* Vermelho mais escuro */
-}
-
-.enem {
-  background-color: #6F0C0C; /* Vermelho médio */
-}
-
-.outra {
-  background-color: #C05353; /* Vermelho mais claro */
-}
 
 /* Section de matricula */
 /* Seção de matrícula */
