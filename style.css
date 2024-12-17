@@ -18,135 +18,164 @@ body {
   overflow-x: hidden;
 }
 
-
-.navbar {
-  background-color: #f8f9fa; /* Fundo claro */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  padding: 0.5rem 1rem;
+/* Top Bar */
+.top-bar {
+  background-color: #CA0F0F; /* Cor de fundo escura */
+  color: #f4f4f4; /* Cor do texto */
+  font-size: 14px;
+  padding: 8px 0;
 }
 
-.navbar-toggler {
-  border: none; /* Remove a borda */
-}
-
-.navbar-nav {
+.top-bar .container {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav-link {
-  color: #212529; /* Cor padrão */
+.top-bar .contact-info span,
+.top-bar .social-icons a {
+  display: flex;
+  align-items: center;
+  margin-right: 15px; /* Espaçamento entre os elementos */
+  text-decoration: none;
+  color: #f4f4f4;
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #007bff; /* Cor ao passar o mouse */
+.top-bar .divider {
+  margin: 0 10px; /* Espaço antes e depois do separador */
+  color: #f4f4f4;
 }
 
-/* Dropdown */
+/* Ícones */
+.top-bar .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px; /* Espaço entre ícone e texto */
+}
+
+/* Hover Effects */
+.top-bar .contact-info span:hover,
+.top-bar .social-icons a:hover {
+  color: #ffffff; /* Altera a cor ao passar o mouse */
+  filter: brightness(0.8); /* Efeito de escurecimento */
+}
+
+.top-bar .social-icons a:hover img {
+  filter: brightness(0.8); /* Efeito hover apenas no ícone */
+}
+/* Responsividade: Esconder Top Bar em dispositivos móveis */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
+
+/* Navbar Geral */
+.navbar {
+  background-color: #f8f9fa; /* Fundo claro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+.navbar-nav {
+  display: flex; /* Flexbox para controle de layout */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  width: 100%; /* Garante o espaço total */
+  align-items: center; /* Centraliza verticalmente */
+  text-align: center; /* Alinha o texto ao centro */
+}
 .navbar .dropdown-menu {
-  background-color: #F4F4F4; /* Fundo branco */
-  border: 1px solid #ddd; /* Borda leve */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center; /* Centraliza os itens do dropdown */
 }
 
-.navbar .dropdown-item:hover {
-  background-color: #f8f9fa; /* Fundo ao passar o mouse */
-  color: #007bff; /* Cor do texto */
+.nav-link {
+  color: #333; /* Cor padrão do texto */
+  transition: color 0.3s ease; /* Suaviza o hover */
 }
 
-/* Submenu */
-.with-submenu {
-  position: relative;
+.nav-link:hover {
+  color: #555; /* Tom mais escuro ao passar o mouse */
 }
 
-.submenu {
-  display: none; /* Esconde por padrão */
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff; /* Fundo branco */
-  border: 1px solid #ddd; /* Borda leve */
-  padding: 10px;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+/* Botão Inscreva-se */
+.btn-inscreva {
+  background-color: #f4f4f4; /* Cor de fundo vermelha */
+  color: #CA0F0F; /* Cor do texto branca */
+  font-weight: bold; /* Texto em negrito */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 8px 16px; /* Espaçamento interno */
+  text-transform: uppercase; /* Texto em maiúsculo */
+  text-align: center; /* Alinhamento do texto */
+  transition: background-color 0.3s ease-in-out; /* Transição suave */
 }
 
-.submenu iframe {
-  width: 300px;
-  height: 200px;
-  border: none;
+/* Efeito hover */
+.btn-inscreva:hover {
+  background-color: #f4f4f4; /* Cor vermelha mais escura ao passar o mouse */
+  color: #f4f4f4; /* Garante que a cor do texto continue branca */
+  text-decoration: none; /* Remove sublinhado */
 }
 
-.with-submenu:hover .submenu {
-  display: block; /* Exibe o submenu ao passar o mouse */
-  animation: fadeIn 0.3s ease-in-out; /* Animação suave */
+/* Ajuste do botão à direita da logo */
+.navbar-nav .btn-inscreva {
+  margin-right: auto; /* Empurra o botão para a direita */
 }
 
-/* Animação ao exibir o submenu */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(-10px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-/* Layout de colunas no dropdown */
-.dropdown-columns {
-  display: flex;
-  flex-direction: row; /* Alinhamento horizontal */
-  gap: 20px;
-  padding: 10px 25px;
+/* Dropdown Geral */
+.dropdown-menu {
+  background-color: #ffffff; /* Fundo branco */
+  border: 1px solid #ddd; /* Borda sutil */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .dropdown-item {
-  text-decoration: underline; /* Adiciona sublinhado */
-  color: inherit; /* Herda a cor do texto */
-  background-color: transparent; /* Remove fundo adicional */
+  color: #333; /* Cor padrão */
   font-size: 14px; /* Tamanho do texto */
-  padding: 5px 10px; /* Ajusta o espaçamento */
-  border: none; /* Remove borda extra */
-  cursor: default; /* Remove o ponteiro de "mãozinha" */
+  padding: 10px 15px; /* Espaçamento interno */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
 }
 
 .dropdown-item:hover {
-  color: inherit; /* Garante que a cor não mude */
-  background-color: transparent; /* Mantém o fundo transparente ao hover */
-  text-decoration: underline; /* Garante o sublinhado ao hover */
+  background-color: #f8f9fa; /* Fundo leve ao hover */
+  color: #333; /* Cor do texto fixa */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+.dropdown-item:focus, .dropdown-item:active {
+  background-color: #f8f9fa; /* Fundo ao focar/clicar */
+  color: #333; /* Cor fixa */
+}
+
+/* Layout das colunas do dropdown */
+.dropdown-columns {
+  display: flex;
+  flex-direction: row; /* Alinha horizontalmente */
+  gap: 20px;
+  padding: 10px 15px;
 }
 
 .column {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 150px;
+  min-width: 200px;
 }
 
-.column iframe {
-  margin-top: 10px;
-  width: 100%;
-  height: 200px;
-  border: none;
+.column span, .column p {
+  margin-top: 5px;
+  color: #555;
+  font-size: 14px;
 }
 
-.column li {
-  list-style: none; /* Remove os marcadores de lista */
-}
-
-.column a {
-  text-decoration: none; /* Remove o sublinhado */
-  color: #333; /* Cor padrão */
-  padding: 5px 0; /* Espaçamento vertical */
+/* Search Button */
+.btn-outline-secondary img {
   display: block;
 }
 
-.column a:hover {
-  color: #007bff; /* Cor ao passar o mouse */
+/* Responsividade */
+@media (max-width: 768px) {
+  .dropdown-columns {
+      flex-direction: column; /* Empilha colunas no mobile */
+  }
 }
 
 /* Responsividade para telas menores */
@@ -295,11 +324,11 @@ body {
 }
 
 .arrow#rotateArrowLeft {
-  left: 10px; /* Distância da borda esquerda */
+  left: 75px; /* Distância da borda esquerda */
 }
 
 .arrow#rotateArrowRight {
-  right: 10px; /* Distância da borda direita */
+  right: 80px; /* Distância da borda direita */
 }
 
 /* Layout Responsivo */
@@ -307,6 +336,13 @@ body {
   .arrow {
     background-color: none;
   }
+  .arrow#rotateArrowLeft {
+    left: 10px; /* Distância da borda esquerda */
+  }
+  .arrow#rotateArrowRight {
+    right: 10px; /* Distância da borda esquerda */
+  }
+  
   .carousel-container {
     flex-direction: column;
     gap: 15px;
@@ -643,66 +679,89 @@ body {
 
 
 
-/* Fundo da seção com estrelas */
-.section-Guerra {
-  position: relative;
-  background-color: #F4F4F4;
-  overflow: hidden;
-}
-
-.section-Guerra::before {
-  content: "";
-  position: absolute;
-  background-image: url('star-icon.png'); /* Substitua pelo caminho da sua imagem */
-  background-repeat: repeat;
-  background-size: 100px 100px;
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.section-Guerra .container {
-  position: relative;
-  z-index: 1; /* Coloca o conteúdo acima das estrelas */
-}
-
-h2 {
-  font-size: 2rem; /* Ajusta tamanho do título */
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
 /* Fundo da seção Formas de Ingresso */
 .section-bolsa {
-  background-color: #504040;
-  padding-top: 100px; /* Mais espaço vertical superior */
-  padding-bottom: 100px; /* Mais espaço vertical inferior */
+  background-color: #504040; /* Cor de fundo */
+  padding-top: 100px; /* Aumentei o espaço superior */
+  padding-bottom: 60px; /* Aumentei o espaço inferior */
 }
 
+/* Estilo do botão */
 .custom-btn {
   background-color: #CA0F0F; /* Cor do botão */
   color: white; /* Cor do texto */
-  padding: 10px 15px; /* Aumenta tamanho do botão */
-  font-size: 1.5rem; /* Tamanho da fonte maior */
+  padding: 4px 6px; /* Reduz tamanho horizontal e vertical */
+  font-size: 0.7rem; /* Tamanho da fonte menor */
   border: none;
-  transition: background-color 0.3s ease;
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .custom-btn:hover {
-  background-color: #9e0d0d; /* Cor do botão ao passar o mouse */
+  background-color: #9e0d0d; /* Efeito hover */
   color: white;
+  transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
 }
 
-.card p {
-  margin: 0; /* Remove margem dos parágrafos nos cards */
+/* Container dos cards */
+.card-container {
+  display: flex;
+  justify-content: flex-end; /* Move os cards para a direita */
+  gap: 20px; /* Espaçamento entre os cards */
+  flex-wrap: wrap; /* Quebra os cards em várias linhas se necessário */
 }
+
+/* Cards */
+.custom-card {
+  width: 180px; /* Largura fixa */
+  height: 300px; /* Altura fixa */
+  border-radius: 16px;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Aumenta a sombra */
+}
+
+.custom-card p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem; /* Tamanho do texto */
+  line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .custom-card {
+    width: calc(50% - 15px); /* 2 cards por linha em telas médias */
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-card {
+    width: 100%; /* 1 card por linha em telas pequenas */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    justify-content: center; /* Centraliza em telas menores */
+  }
+
+  .custom-btn {
+    font-size: 0.6rem; /* Reduz ainda mais o tamanho do botão */
+    padding: 2px 4px; /* Ajusta padding */
+  }
+}
+
 
 
 /* Estilo do fundo */
@@ -745,6 +804,5 @@ p {
   margin: 0px 0; /* Espaçamento acima e abaixo da linha */
   border: none; /* Remove qualquer borda padrão */
 }
-
 
 
