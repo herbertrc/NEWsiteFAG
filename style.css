@@ -396,6 +396,175 @@ body {
   font-weight: bold;
   color: #FFFFFF; /* Texto branco */
 }
+/* Container da imagem */
+.image-banner {
+  position: relative;
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 60vh; /* Altura fixa (60% da altura da tela) */
+  overflow: hidden; /* Garante que a imagem não extrapole */
+}
+
+/* Imagem responsiva */
+.banner-img {
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  object-fit: cover; /* Preenche o container sem distorcer */
+  object-position: center 35%; /* Ajuste vertical (ligeiramente acima) */
+  filter: brightness(50%); /* Escurecimento */
+}
+
+/* Texto sobre a imagem */
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 0; /* Texto alinhado à esquerda */
+  transform: translateY(-50%);
+  width: 100%;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: 1rem;
+}
+
+.text-content {
+  text-align: left; /* Garante alinhamento à esquerda */
+}
+
+.text-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.text-content p {
+  font-size: 4  rem;
+  margin: 0;
+}
+
+.text-content span {
+  font-weight: bold;
+}
+
+/* Estilo do Card */
+.fixed-card {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.fixed-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price #price {
+  font-size: 28px;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.subscribe-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.subscribe-btn:hover {
+  background-color: darkred;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .fixed-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .subscribe-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .text-content h1 {
+      font-size: 2.5rem;
+  }
+
+  .text-content p {
+      font-size: 1.5rem;
+  }
+  .image-banner{
+    height: 30vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-content h1 {
+      font-size: 2rem;
+  }
+
+  .text-content p {
+      font-size: 1.2rem;
+  }
+}
+
+
+.card {
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.card-body img {
+  width: 40px; /* Ícones nos cards */
+  height: auto;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #6c757d; /* Cinza claro */
+}
+
+.btn-danger {
+  font-weight: bold;
+}
+
+
 /* CARDS */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
 
@@ -682,21 +851,25 @@ body {
 /* Fundo da seção Formas de Ingresso */
 .section-bolsa {
   background-color: #504040; /* Cor de fundo */
-  padding-top: 100px; /* Aumentei o espaço superior */
-  padding-bottom: 60px; /* Aumentei o espaço inferior */
+  padding-top: 100px; /* Espaço superior */
+  padding-bottom: 60px; /* Espaço inferior */
 }
 
 /* Estilo do botão */
 .custom-btn {
   background-color: #CA0F0F; /* Cor do botão */
   color: white; /* Cor do texto */
-  padding: 4px 6px; /* Reduz tamanho horizontal e vertical */
-  font-size: 0.7rem; /* Tamanho da fonte menor */
+  padding: 10px 20px; /* Ajuste no tamanho */
+  font-size: 1rem; /* Tamanho da fonte */
+  width: 375px; /* Largura fixa do botão */
+  max-width: 100%; /* Largura máxima para telas pequenas */
+  text-align: center; /* Garante centralização do texto */
   border: none;
   border-radius: 5px; /* Bordas arredondadas */
+  box-sizing: border-box;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0 0; /* Centraliza o botão */
 }
-
 .custom-btn:hover {
   background-color: #9e0d0d; /* Efeito hover */
   color: white;
@@ -713,11 +886,12 @@ body {
 
 /* Cards */
 .custom-card {
-  width: 180px; /* Largura fixa */
-  height: 300px; /* Altura fixa */
+  width: calc(33.333% - 20px); /* Cards ocupam 3 por linha */
+  max-width: 300px; /* Largura máxima */
+  height: 400px; /* Altura fixa */
   border-radius: 16px;
   text-align: center;
-  padding: 20px;
+  padding: 20px; /* Padding reduzido */
   color: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -727,40 +901,67 @@ body {
 }
 
 .custom-card:hover {
-  transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Aumenta a sombra */
+  transform: scale(1.05); /* Pequeno zoom */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .custom-card p {
   margin: 0;
   font-weight: bold;
-  font-size: 1.2rem; /* Tamanho do texto */
-  line-height: 1.5; /* Espaçamento entre linhas */
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 /* Responsividade */
 @media (max-width: 992px) {
   .custom-card {
-    width: calc(50% - 15px); /* 2 cards por linha em telas médias */
+    width: calc(50% - 20px); /* 2 cards por linha em telas médias */
+    height: 250px; /* Reduz altura */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-bolsa {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .card-container {
+    justify-content: center; /* Centraliza os cards */
+  }
+
+  .custom-card {
+    width: calc(50% - 10px); /* 2 cards por linha */
+    height: 220px; /* Altura menor */
+    padding: 15px; /* Padding ajustado */
+  }
+
+  .custom-btn {
+    font-size: 0.9rem; /* Tamanho ajustado */
+    padding: 8px 12px; /* Padding ajustado */
+    width: 90%; /* Ocupa quase toda a largura */
+    margin: 0 auto; /* Centraliza */
   }
 }
 
 @media (max-width: 576px) {
   .custom-card {
-    width: 100%; /* 1 card por linha em telas pequenas */
+    width: 90%; /* 1 card por linha */
+    height: 200px; /* Altura menor */
+    padding: 10px;
   }
-}
 
-@media (max-width: 768px) {
-  .card-container {
-    justify-content: center; /* Centraliza em telas menores */
+  .custom-card p {
+    font-size: 1rem; /* Texto menor */
   }
 
   .custom-btn {
-    font-size: 0.6rem; /* Reduz ainda mais o tamanho do botão */
-    padding: 2px 4px; /* Ajusta padding */
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    width: 100%; /* Ocupa toda a largura */
   }
 }
+
 
 
 

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Faculdade Guerra - Conheça nossos cursos, programas de bolsas e outras formas de ingresso. Estude com excelência!">
+
+    <!-- Ícone da Página -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+    <!-- Fontes e Estilos -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome Local -->
+    <link rel="stylesheet" href="images/css/all.css"> <!-- Corrija o caminho se necessário -->
+
+    <!-- Estilo Personalizado -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <title>Faculdade Guerra - Bacharel em Direito</title>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <!-- Logo na esquerda -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/logo.png" alt="Logo" class="img-fluid me-2" style="height: 40px;">
+        </a>
+  
+        <!-- Botão Toggler para mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+  
+  
+          <!-- Navbar -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <!-- Links centralizados -->
+              <ul class="navbar-nav mx-auto">
+                  <!-- Botão Inscreva-se -->
+                  <li class="nav-item">
+                      <a class="nav-link btn btn-inscreva ms-3" href="#inscricao">Inscreva-se</a>
+                  </li>
+  
+                <!-- Cursos Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contactDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cursos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="contactDropdown3">
+                        <div class="dropdown-columns">
+                            <div class="column">
+                                <li><a class="dropdown-item" href="direito.html">Direito</a></li>
+                                <li><a class="dropdown-item" href="#">Segurança Pública</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <!-- Contatos Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contactDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Contatos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="contactDropdown1">
+                        <div class="dropdown-columns">
+                            <div class="column">
+                                <li><a class="dropdown-item" href="#">Localização</a></li>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15353.740277293968!2d-48.0537159!3d-15.8337148!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a332d78d5295f%3A0x894e489ea4be0fd4!2sFaculdade%20Guerra!5e0!3m2!1spt-BR!2sbr!4v1704773280569!5m2!1spt-BR!2sbr" 
+                                        width="400" height="200" allowfullscreen></iframe>
+                            </div>
+                            <div class="column">
+                                <li><a class="dropdown-item" href="#">Campus Principal</a></li>
+                                <li><a class="dropdown-item" href="#">Endereço</a></li>
+                                <span>Q QSA 7 Lotes 15 a 22<br>Taguatinga Sul<br>Distrito Federal</span>
+                                <li><a class="dropdown-item" href="#">Email</a></li>
+                                <span>contato@faculdadeguerra.edu.br</span>
+                                <li><a class="dropdown-item" href="#">Telefone</a></li>
+                                <p>(61) 3977-1272</p>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <!-- Guerra -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#Guerra">Guerra</a>
+                </li>
+                <!-- Sou Aluno Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contactDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sou Aluno
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="contactDropdown2">
+                        <div class="dropdown-columns">
+                            <div class="column">
+                                <li><a class="dropdown-item" href="http://educacional.usecerbrum.net/inicio.aspx">CERBRUM</a></li>
+                                <li><a class="dropdown-item" href="https://faculdadeguerra.com.br/ava/">Ambiente Virtual de Aprendizagem</a></li>
+                                <li><a class="dropdown-item" href="#">Calendário</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <!-- Bolsas -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#Bolsas">Bolsas</a>
+                </li>
+            </ul>
+  
+            <!-- Search Box no toggle -->
+            <form class="d-flex ms-lg-auto mt-2 mt-lg-0">
+                <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Search">
+                <button class="btn btn-outline-secondary" type="submit">
+                    <img src="images/lopa.png" alt="Lupa" style="width: 16px; height: 16px;">
+                </button>
+            </form>
+        </div>
+    </div>
+  </nav>
+
+    <!-- Banner com Texto -->
+    <div class="image-banner">
+        <img src="images/direito.jpg" alt="Bacharel em Direito" class="banner-img">
+        <div class="text-overlay container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 text-content">
+                    <h1>BACHAREL</h1>
+                    <p>EM 
+                    <span>DIREITO</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container Principal -->
+    <div class="container my-5">
+        <!-- Linha para os 5 Cards -->
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-2 col-sm-6">
+                <div class="card text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <img src="images/formacao.png" alt="" class="mb-2" style="width: 40px;">
+                        <h6 class="card-title">Formação</h6>
+                        <p class="card-text small">Bacharelado</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-2 col-sm-6">
+                <div class="card text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <img src="images/aula.png" alt="" class="mb-2" style="width: 40px;">
+                        <h6 class="card-title">Aula</h6>
+                        <p class="card-text small">Presencial</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-2 col-sm-6">
+                <div class="card text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <img src="images/campus.png" alt="" class="mb-2" style="width: 40px;">
+                        <h6 class="card-title">Campus</h6>
+                        <p class="card-text small">Taguatinga Centro</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-2 col-sm-6">
+                <div class="card text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <img src="images/turnos.png" alt="" class="mb-2" style="width: 40px;">
+                        <h6 class="card-title">Turnos</h6>
+                        <p class="card-text small">Matutino <br> Vespertino</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-md-2 col-sm-6">
+                <div class="card text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <img src="images/duracao.png" alt="" class="mb-2" style="width: 40px;">
+                        <h6 class="card-title">Duração</h6>
+                        <p class="card-text small">10 Semestres</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Exemplo de Conteúdo</h1>
+            <p>Role a página para ver o card fixo acompanhando.</p>
+            <!-- Conteúdo extra para rolagem -->
+            <div style="height: 1500px;"></div>
+        </div>
+        
+
+  <!-- Card Fixo -->
+  <div class="fixed-card" id="card">
+    <div class="options">
+      <input type="radio" name="mode" id="presencial" checked>
+      <label for="presencial"> <b>Presencial</b></label>
+      <input type="radio" name="mode" id="hibrido">
+      <label for="hibrido"> <b>Híbrido</b></label>
+    </div>
+
+    <h2>⭐ Últimas vagas ⭐</h2>
+    <p>Comece a estudar com <strong>64,06%</strong> de desconto!</p>
+    <h2>Graduação</h2>
+    <p id="original-price"><s>De R$ 1599,85/mês</s></p>
+    <p class="price">Por apenas <span id="price">R$ 575,00/mês</span></p>
+
+    <!-- Detalhes Presencial -->
+    <ul id="details-presencial" class="details">
+      <li>🗓️ Início Imediato</li>
+      <li>🎓 Professores mestre e doutores</li>
+      <li>👨‍🎓 Presencial</li>
+      <li>⏳ Duração de 5 semestres</li>
+      <li>✅ Autorizado por MEC</li>
+    </ul>
+
+    <!-- Detalhes Híbrido -->
+    <ul id="details-hibrido" class="details" style="display: none;">
+      <li>📅 Início Flexível</li>
+      <li>💻 Professores Online e Presenciais</li>
+      <li>🏠 Híbrido</li>
+      <li>⏳ Duração de 5 semestres</li>
+      <li>✅ Autorizado por MEC</li>
+    </ul>
+
+    <!-- Botão -->
+    <a href="#" class="subscribe-btn">Fazer Inscrição</a>
+  </div>
+
+        
+          <!-- Linha Horizontal -->
+  <div class="horizontal-line"></div>
+
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

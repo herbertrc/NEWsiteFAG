@@ -87,3 +87,22 @@ document.querySelectorAll('.nav-item.dropdown').forEach(function (dropdown) {
     }, 300);
   });
 });
+
+const presencialRadio = document.getElementById("presencial");
+const hibridoRadio = document.getElementById("hibrido");
+const detailsPresencial = document.getElementById("details-presencial");
+const detailsHibrido = document.getElementById("details-hibrido");
+
+presencialRadio.addEventListener("change", () => {
+  if (presencialRadio.checked) {
+    detailsPresencial.style.display = "block";
+    detailsHibrido.style.display = "none";
+  }
+});
+
+hibridoRadio.addEventListener("change", () => {
+  if (hibridoRadio.checked) {
+    detailsPresencial.style.display = "none";
+    detailsHibrido.style.display = "block";
+  }
+});
