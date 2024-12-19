@@ -330,7 +330,18 @@ body {
 .arrow#rotateArrowRight {
   right: 80px; /* Distância da borda direita */
 }
-
+@media (max-width: 1366px) {
+  .main-image {
+    max-width: 90%; /* Reduz a largura da imagem em telas menores */
+    margin: 0 auto; /* Centraliza a imagem no contêiner */
+  }
+}
+@media (max-width: 1024px) {
+  .main-image {
+    max-width: 80%; /* Reduz mais a largura */
+    margin: 0 auto; /* Centraliza no contêiner */
+  }
+}
 /* Layout Responsivo */
 @media (max-width: 768px) {
   .arrow {
