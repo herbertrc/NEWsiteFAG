@@ -436,7 +436,7 @@ body {
 }
 
 .text-content p {
-  font-size: 4  rem;
+  font-size: 4rem;
   margin: 0;
 }
 
@@ -470,7 +470,7 @@ body {
 }
 
 .price #price {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: bold;
   animation: blink 1s infinite;
 }

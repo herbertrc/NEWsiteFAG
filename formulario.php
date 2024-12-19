@@ -10,8 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nome = htmlspecialchars(trim($_POST['nome']));
     $whatsapp = htmlspecialchars(trim($_POST['whatsapp']));
     $email = htmlspecialchars(trim($_POST['email']));
+    $curso = htmlspecialchars(trim($_POST['curso'])); // Captura o curso selecionado
 
-    if (empty($nome) || empty($whatsapp) || empty($email)) {
+    if (empty($nome) || empty($whatsapp) || empty($email) || empty($curso)) {
         echo "Por favor, preencha todos os campos.";
         exit;
     }
@@ -43,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <p><strong>Nome:</strong> $nome</p>
             <p><strong>WhatsApp:</strong> $whatsapp</p>
             <p><strong>Email:</strong> $email</p>
+            <p><strong>Curso de Interesse:</strong> $curso</p> <!-- Adicionado o curso -->
         ";
 
         // Enviar o e-mail

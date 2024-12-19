@@ -322,18 +322,31 @@
       <!-- Formulário -->
       <div class="col-md-5">
         <form action="formulario.php" method="POST">
+          <!-- Nome -->
           <div class="mb-3">
             <input type="text" name="nome" class="form-control form-control-lg" placeholder="Seu nome" required />
           </div>
+          <!-- WhatsApp -->
           <div class="mb-3">
             <input type="text" name="whatsapp" class="form-control form-control-lg" placeholder="Seu WhatsApp com DDD" required />
           </div>
+          <!-- E-mail -->
           <div class="mb-3">
             <input type="email" name="email" class="form-control form-control-lg" placeholder="Seu e-mail" required />
           </div>
-          <!-- Checkbox -->
+          <!-- Cursos Disponíveis -->
+          <div class="mb-3">
+            <label for="cursos" class="form-label">Escolha o curso de interesse:</label>
+            <select class="form-select form-select-lg" name="curso" id="cursos" required>
+              <option value="" disabled selected>Selecione um curso</option>
+              <option value="Direito">Direito</option>
+              <option value="Tecnólogo em Segurança Pública">Tecnólogo em Segurança Pública</option>
+              <!-- Espaço para mais opções no futuro -->
+            </select>
+          </div>
+          <!-- Checkbox Política de Privacidade -->
           <div class="form-check mb-3">
-            <input type="checkbox" name="aceite_politica" class="form-check-input" id="privacy-policy" />
+            <input type="checkbox" name="aceite_politica" class="form-check-input" id="privacy-policy" required />
             <label class="form-check-label" for="privacy-policy">
               Concordo com a Política de privacidade e desejo receber informações adicionais sobre os produtos da Faculdade Guerra.
             </label>
