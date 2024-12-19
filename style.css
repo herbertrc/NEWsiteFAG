@@ -969,6 +969,7 @@ body {
 .section-matricula {
   background: linear-gradient(to bottom, #000000, #333333); /* Gradiente preto */
   color: #FFFFFF; /* Texto branco */
+  scroll-margin-top: 80px;
 }
 
 /* Formulário */

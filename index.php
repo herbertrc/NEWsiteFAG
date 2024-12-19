@@ -78,7 +78,7 @@
             <ul class="navbar-nav mx-auto">
                 <!-- Botão Inscreva-se -->
                 <li class="nav-item">
-                    <a class="nav-link btn btn-inscreva ms-3" href="#inscricao">Inscreva-se</a>
+                  <a class="nav-link btn btn-inscreva ms-3" href="#Matricula">Inscreva-se</a>
                 </li>
 
               <!-- Cursos Dropdown -->
@@ -306,7 +306,7 @@
 
 
 <!-- Seção Matrícula -->
-<section class="section-matricula py-5" style="background: linear-gradient(to bottom, #000000, #333333); color: white;">
+<section id="Matricula" class="section-matricula py-5" style="background: linear-gradient(to bottom, #000000, #333333); color: white;">
   <div class="container">
     <div class="row align-items-center justify-content-between">
       <!-- Texto -->
