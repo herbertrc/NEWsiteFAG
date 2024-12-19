@@ -258,8 +258,9 @@ body {
 }
 
 .main-image {
-  width: 150%;
-  height: 100%;
+  width: 100%;
+  max-width: 1366px; /* Define um limite máximo para monitores maiores */
+  height: auto;
   object-fit: cover; /* Mantém a proporção preenchendo o espaço */
   border-radius: 10px;
   transition: transform 0.5s ease-in-out; /* Suaviza a transição */
@@ -332,13 +333,15 @@ body {
 }
 @media (max-width: 1366px) {
   .main-image {
-    max-width: 90%; /* Reduz a largura da imagem em telas menores */
-    margin: 0 auto; /* Centraliza a imagem no contêiner */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto; /* Ajusta a altura proporcionalmente */
   }
 }
+
+/* Ajuste para telas menores, como notebooks de 14 polegadas */
 @media (max-width: 1024px) {
   .main-image {
-    max-width: 80%; /* Reduz mais a largura */
+    max-width: 90%; /* Reduz levemente o tamanho */
     margin: 0 auto; /* Centraliza no contêiner */
   }
 }
@@ -481,7 +484,7 @@ body {
 }
 
 .price #price {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
   animation: blink 1s infinite;
 }
@@ -496,7 +499,7 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: red;
+  background-color: #CA0F0F;
   border: none;
   border-radius: 5px;
   text-align: center;
@@ -841,16 +844,18 @@ body {
 }
 
 
-/* Estilo para o banner */
 .highlight-banner {
-  background-color: #CA0F0F; /* Fundo vermelho */
+  width: 100vw; /* Garante que ocupe toda a largura da tela */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  padding: 20px 0; /* Ajuste do espaçamento interno */
+  text-align: center; /* Centraliza o texto dentro do banner */
+  background-color: #CA0F0F; /* Cor de fundo vermelho */
   color: #FFFFFF; /* Texto branco */
-  text-align: center;
   font-size: 42px; /* Tamanho do texto */
   font-weight: bold; /* Negrito */
-  padding: 20px 0; /* Espaçamento interno */
-  margin-top: 20px; /* Espaçamento superior para distanciar dos cards */
+  box-sizing: border-box; /* Inclui padding no tamanho total */
 }
+
 
 .highlight-banner span {
   font-weight: bold; /* Negrito para "DIFERENÇA" */
@@ -1018,4 +1023,226 @@ body {
   border: none; /* Remove qualquer borda padrão */
 }
 
+.content {
+  max-width: 1400px; /* Limite a largura máxima */
+  margin: 0; /* Remove a centralização */
+  padding: 0 200px; /* Adiciona espaçamento interno para alinhar com o market-container */
+  text-align: left; /* Garante o alinhamento à esquerda */
+}
 
+.content p {
+  font-size: 1rem; /* Tamanho do texto */
+  line-height: 1.5; /* Espaçamento entre linhas */
+  word-wrap: break-word; /* Permite quebra de palavras grandes */
+}
+
+.market-container {
+  max-width: 1000px; /* Mesma largura do content */
+  margin: 0; /* Remove centralização horizontal */
+  margin-left: 50px;
+  padding: 0 200px; /* Mesmo padding do content */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.market-title {
+  color: #CA0F0F; /* Vermelho para o título */
+  font-size: 2rem; /* Tamanho do título */
+  font-weight: bold; /* Negrito */
+  text-align: left; /* Alinhado à esquerda */
+  margin-bottom: 1rem; /* Espaçamento inferior */
+}
+
+.market-description,
+.market-extra,
+.market-call-to-action {
+  font-size: 1rem; /* Tamanho da fonte do texto */
+  line-height: 1.5; /* Espaçamento entre linhas */
+  color: #333; /* Cor do texto */
+  margin-bottom: 1rem; /* Espaçamento entre parágrafos */
+}
+
+.market-opportunities {
+  list-style-type: disc; /* Marcadores para a lista */
+  padding-left: 20px; /* Espaçamento da lista */
+  margin-bottom: 1rem; /* Espaçamento inferior */
+}
+
+.market-opportunities li {
+  font-size: 1rem; /* Tamanho do texto da lista */
+  line-height: 1.5; /* Espaçamento entre linhas */
+  color: #333; /* Cor do texto */
+  margin-bottom: 0.5rem; /* Espaçamento entre os itens */
+}
+
+.market-call-to-action {
+  font-size: 1rem;
+  font-weight: bold; /* Destaque para a chamada */
+  color: #000; /* Preto para contraste */
+}
+
+/* Ajuste para mais à esquerda */
+@media (min-width: 1200px) {
+  .market-container,
+  .content {
+    padding-left: 200px; /* Ajuste para alinhar ambos */
+    padding-right: 20px; /* Mantém o espaço nas laterais */
+  }
+}
+
+.row.g-4 {
+  display: flex;
+  justify-content: center; /* Centraliza os cards */
+  align-items: flex-start;
+  gap: 1rem; /* Espaçamento entre os cards */
+}
+
+.col-md-2 {
+  flex: 1; /* Faz os cards ocuparem o mesmo espaço */
+  max-width: 200px; /* Limita a largura máxima de cada card */
+}
+
+@media (max-width: 768px) {
+  .content,
+  .market-container {
+    max-width: 100%; /* Ocupa a largura inteira da tela em dispositivos menores */
+    padding: 0 15px; /* Reduz o padding para telas pequenas */
+  }
+
+  .content p,
+  .market-description {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte em dispositivos menores */
+    line-height: 1.4; /* Reduz o espaçamento entre linhas */
+  }
+}
+
+/* Ajuste para mais à esquerda */
+@media (min-width: 1200px) {
+  .market-container {
+    padding-left: 20px; /* Ajuste para mais próximo da esquerda */
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    padding-left: 200px; /* Empurra o texto para alinhar com os cards */
+    padding-right: 20px; /* Mantém espaço nas laterais */
+  }
+}
+.row.g-4 {
+  display: flex;
+  justify-content: center; /* Centraliza os cards */
+  align-items: flex-start;
+  gap: 1rem; /* Espaçamento entre os cards */
+}
+
+.col-md-2 {
+  flex: 1; /* Faz os cards ocuparem o mesmo espaço */
+  max-width: 200px; /* Limita a largura máxima de cada card */
+}
+
+@media (max-width: 768px) {
+  .content {
+    max-width: 100%; /* Ocupa a largura inteira da tela em dispositivos menores */
+    padding: 0 15px; /* Reduz o padding para telas pequenas */
+  }
+
+  .content p {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte em dispositivos menores */
+    line-height: 1.4; /* Reduz o espaçamento entre linhas */
+  }
+}
+
+.docent-container {
+  background-color: #f4f4f4; /* Fundo claro */
+  padding: 40px 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+.docent-container h1 {
+  color: #CA0F0F; /* Cor do título */
+  font-weight: bold;
+}
+
+.card {
+  border: none; /* Remove a borda padrão */
+  border-radius: 8px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante que a imagem fique dentro das bordas */
+  transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Zoom ao passar o mouse */
+}
+
+.card-img-top {
+  height: 200px; /* Altura fixa para as imagens */
+  object-fit: cover; /* Ajusta a imagem sem distorcer */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Tamanho do título */
+  color: #CA0F0F; /* Cor do título */
+}
+
+.card-text {
+  font-size: 0.9rem; /* Tamanho do texto */
+  color: #333; /* Cor do texto */
+}
+
+.btn-outline-danger {
+  border-color: #CA0F0F;
+  color: #CA0F0F;
+}
+
+.btn-outline-danger:hover {
+  background-color: #CA0F0F;
+  color: #fff;
+}
+
+
+.docent-container {
+  background-color: #f8f9fa; /* Fundo claro */
+  padding: 40px 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+.docent-container h1 {
+  color: #CA0F0F; /* Cor do título */
+  font-weight: bold;
+}
+
+.card {
+  border: none; /* Remove a borda padrão */
+  border-radius: 8px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante que a imagem fique dentro das bordas */
+  transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Zoom ao passar o mouse */
+}
+
+.card-img-top {
+  height: 200px; /* Altura fixa para as imagens */
+  object-fit: cover; /* Ajusta a imagem sem distorcer */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Tamanho do título */
+  color: #CA0F0F; /* Cor do título */
+}
+
+.card-text {
+  font-size: 0.9rem; /* Tamanho do texto */
+  color: #333; /* Cor do texto */
+}
+
+.btn-outline-danger {
+  border-color: #CA0F0F;
+  color: #CA0F0F;
+}
+
+.btn-outline-danger:hover {
+  background-color: #CA0F0F;
+  color: #fff;
+}
