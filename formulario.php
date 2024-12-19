@@ -6,6 +6,7 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
+// Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nome = htmlspecialchars(trim($_POST['nome']));
     $whatsapp = htmlspecialchars(trim($_POST['whatsapp']));
@@ -13,7 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $curso = htmlspecialchars(trim($_POST['curso'])); // Captura o curso selecionado
 
     if (empty($nome) || empty($whatsapp) || empty($email) || empty($curso)) {
-        echo "Por favor, preencha todos os campos.";
+        echo "<script>
+                alert('Por favor, preencha todos os campos.');
+                window.history.back();
+              </script>";
         exit;
     }
 
@@ -44,16 +48,49 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <p><strong>Nome:</strong> $nome</p>
             <p><strong>WhatsApp:</strong> $whatsapp</p>
             <p><strong>Email:</strong> $email</p>
-            <p><strong>Curso de Interesse:</strong> $curso</p> <!-- Adicionado o curso -->
+            <p><strong>Curso de Interesse:</strong> $curso</p>
         ";
 
         // Enviar o e-mail
         $mail->send();
-        echo "E-mail enviado com sucesso!";
+
+        // Alerta de sucesso e redirecionamento
+        echo "<!DOCTYPE html>
+              <html lang='pt-BR'>
+              <head>
+                  <meta charset='UTF-8'>
+                  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                  <title>Formulário Enviado</title>
+                  <script>
+                      alert('E-mail enviado com sucesso!');
+                      window.location.href = 'index.php';
+                  </script>
+              </head>
+              <body>
+              </body>
+              </html>";
+        exit;
     } catch (Exception $e) {
-        echo "Erro ao enviar o e-mail: {$mail->ErrorInfo}";
+        // Alerta de erro e redirecionamento
+        echo "<!DOCTYPE html>
+              <html lang='pt-BR'>
+              <head>
+                  <meta charset='UTF-8'>
+                  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                  <title>Erro ao Enviar</title>
+                  <script>
+                      alert('Erro ao enviar o e-mail: {$mail->ErrorInfo}');
+                      window.location.href = 'index.php';
+                  </script>
+              </head>
+              <body>
+              </body>
+              </html>";
+        exit;
     }
 } else {
-    echo "Método de requisição inválido.";
+    // Se o script for acessado diretamente, redireciona para a página inicial
+    header('Location: index.php');
+    exit;
 }
 ?>

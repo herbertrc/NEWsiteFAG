@@ -106,3 +106,4 @@ hibridoRadio.addEventListener("change", () => {
     detailsHibrido.style.display = "block";
   }
 });
+
