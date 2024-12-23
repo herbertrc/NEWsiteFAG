@@ -128,7 +128,7 @@ body {
 }
 
 .dropdown-item {
-  color: #333; /* Cor padrão */
+  color: #000000; /* Cor padrão */
   font-size: 14px; /* Tamanho do texto */
   padding: 10px 15px; /* Espaçamento interno */
   transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
@@ -136,7 +136,7 @@ body {
 
 .dropdown-item:hover {
   background-color: #f8f9fa; /* Fundo leve ao hover */
-  color: #333; /* Cor do texto fixa */
+  color: #3d3b3b; /* Cor do texto fixa */
   text-decoration: none; /* Remove sublinhado */
 }
 
@@ -162,7 +162,7 @@ body {
 
 .column span, .column p {
   margin-top: 5px;
-  color: #555;
+  color: #333;
   font-size: 14px;
 }
 
@@ -1039,8 +1039,9 @@ body {
 .market-container {
   max-width: 1000px; /* Mesma largura do content */
   margin: 0; /* Remove centralização horizontal */
-  margin-left: 50px;
-  padding: 0 200px; /* Mesmo padding do content */
+  margin-left: 180px;
+  padding: 0 500px; /* Mesmo padding do content */
+  color: #F4F4F4;
   text-align: left; /* Alinha o texto à esquerda */
 }
 
@@ -1105,7 +1106,7 @@ body {
   .content,
   .market-container {
     max-width: 100%; /* Ocupa a largura inteira da tela em dispositivos menores */
-    padding: 0 15px; /* Reduz o padding para telas pequenas */
+    padding: 0 5px; /* Reduz o padding para telas pequenas */
   }
 
   .content p,
@@ -1152,41 +1153,36 @@ body {
   }
 }
 
-.docent-container {
-  background-color: #f4f4f4; /* Fundo claro */
-  padding: 40px 20px; /* Espaçamento interno */
-  border-radius: 8px; /* Bordas arredondadas */
-}
 
-.docent-container h1 {
-  color: #CA0F0F; /* Cor do título */
-  font-weight: bold;
+.docent-container {
+  padding: 40px 20px;
+  border-radius: 8px;
 }
 
 .card {
-  border: none; /* Remove a borda padrão */
-  border-radius: 8px; /* Bordas arredondadas */
-  overflow: hidden; /* Garante que a imagem fique dentro das bordas */
-  transition: transform 0.3s ease; /* Animação ao passar o mouse */
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.05); /* Zoom ao passar o mouse */
+  transform: scale(1.05);
 }
 
 .card-img-top {
-  height: 200px; /* Altura fixa para as imagens */
-  object-fit: cover; /* Ajusta a imagem sem distorcer */
+  height: 200px;
+  object-fit: cover;
 }
 
 .card-title {
-  font-size: 1.25rem; /* Tamanho do título */
-  color: #CA0F0F; /* Cor do título */
+  font-size: 1.25rem;
+  color: #CA0F0F;
 }
 
 .card-text {
-  font-size: 0.9rem; /* Tamanho do texto */
-  color: #333; /* Cor do texto */
+  font-size: 0.9rem;
+  color: #333;
 }
 
 .btn-outline-danger {
@@ -1199,50 +1195,16 @@ body {
   color: #fff;
 }
 
-
-.docent-container {
-  background-color: #f8f9fa; /* Fundo claro */
-  padding: 40px 20px; /* Espaçamento interno */
-  border-radius: 8px; /* Bordas arredondadas */
+@media (min-width: 992px) { /* Aplica a margem apenas em telas grandes */
+  .docent-container .row .col-md-4:nth-child(4),
+  .docent-container .row .col-md-4:nth-child(5) {
+    margin-left: 150px; /* Ajuste apenas para telas grandes */
+  }
 }
-
-.docent-container h1 {
-  color: #CA0F0F; /* Cor do título */
-  font-weight: bold;
-}
-
-.card {
-  border: none; /* Remove a borda padrão */
-  border-radius: 8px; /* Bordas arredondadas */
-  overflow: hidden; /* Garante que a imagem fique dentro das bordas */
-  transition: transform 0.3s ease; /* Animação ao passar o mouse */
-}
-
-.card:hover {
-  transform: scale(1.05); /* Zoom ao passar o mouse */
-}
-
-.card-img-top {
-  height: 200px; /* Altura fixa para as imagens */
-  object-fit: cover; /* Ajusta a imagem sem distorcer */
-}
-
-.card-title {
-  font-size: 1.25rem; /* Tamanho do título */
-  color: #CA0F0F; /* Cor do título */
-}
-
-.card-text {
-  font-size: 0.9rem; /* Tamanho do texto */
-  color: #333; /* Cor do texto */
-}
-
-.btn-outline-danger {
-  border-color: #CA0F0F;
-  color: #CA0F0F;
-}
-
-.btn-outline-danger:hover {
-  background-color: #CA0F0F;
-  color: #fff;
+/* Ajuste responsivo: para telas menores */
+@media (max-width: 991px) { /* Para telas médias e pequenas */
+  .docent-container .row .col-md-4:nth-child(4),
+  .docent-container .row .col-md-4:nth-child(5) {
+    margin-left: 0; /* Remove o deslocamento em telas pequenas */
+  }
 }

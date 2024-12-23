@@ -90,7 +90,7 @@
                       <div class="dropdown-columns">
                           <div class="column">
                               <li><a class="dropdown-item" href="direito.php">Direito</a></li>
-                              <li><a class="dropdown-item" href="#">Segurança Pública</a></li>
+                              <li><a class="dropdown-item" href="tsp.php">Segurança Pública</a></li>
                           </div>
                       </div>
                   </ul>
@@ -387,7 +387,7 @@
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
           <h5 class="text-uppercase mb-4" style="color: #CA0F0F;">Nossos Cursos</h5>
           <p><a href="direito.php" class="text-white text-decoration-none">Direito</a></p>
-          <p><a href="#" class="text-white text-decoration-none">Segurança Pública</a></p>
+          <p><a href="tsp.php" class="text-white text-decoration-none">Segurança Pública</a></p>
           <p><a href="#" class="text-white text-decoration-none">Pós Graduação</a></p>
           <p><a href="#" class="text-white text-decoration-none">Extensão</a></p>
           <p><a href="#" class="text-white text-decoration-none">Preparatório OAB</a></p>
