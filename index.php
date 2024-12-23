@@ -160,13 +160,13 @@
 <div class="carousel-container">
     <!-- Imagem Principal -->
     <div class="main-image-container">
-        <img id="mainImage" src="images/teste6.jpg" alt="Imagem Principal" class="main-image">
+        <img id="mainImage" src="images/Prancheta 1.png" alt="Imagem Principal" class="main-image">
     </div>
 
     <!-- Imagens Laterais Direitas -->
     <div class="right-images">
-        <img id="topRightImage" src="images/teste6.jpg" alt="Imagem Superior" class="small-image">
-        <img id="bottomRightImage" src="images/teste6.jpg" alt="Imagem Inferior" class="small-image">
+        <img id="topRightImage" src="images/Prancheta 2.png" alt="Imagem Superior" class="small-image">
+        <img id="bottomRightImage" src="images/Prancheta 3.png" alt="Imagem Inferior" class="small-image">
     </div>
 
     <!-- Seta Esquerda -->
@@ -397,7 +397,7 @@
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
           <h5 class="text-uppercase mb-4" style="color: #CA0F0F;">Acesso Rápido</h5>
           <p><a href="https://faculdadeguerra.com.br/ava/" class="text-white text-decoration-none">Acesso ao AVA</a></p>
-          <p><a href="#" class="text-white text-decoration-none">Matrícula</a></p>
+          <p><a href="graduação.php" class="text-white text-decoration-none">Matrícula</a></p>
           <p><a href="#" class="text-white text-decoration-none">Calendário</a></p>
         </div>
   

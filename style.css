@@ -279,7 +279,7 @@ body {
   max-width: 500px; /* Largura máxima */
   height: auto; /* Ajusta a altura proporcionalmente */
   aspect-ratio: 16 / 10; /* Mantém a proporção da imagem */
-  object-fit: cover; /* Mantém a proporção e corta o excesso */
+  object-fit: contain; /* Mantém a proporção e corta o excesso */
   border-radius: 10px; /* Bordas arredondadas */
   transition: transform 0.5s ease-in-out; /* Transição suave */
 }
@@ -1207,4 +1207,99 @@ body {
   .docent-container .row .col-md-4:nth-child(5) {
     margin-left: 0; /* Remove o deslocamento em telas pequenas */
   }
+}
+
+
+.course-card {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.course-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.course-card .card-body {
+  padding: 15px;
+  background-color: #fff;
+}
+
+.course-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.course-card .card-text {
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Estilização das Badges */
+.badge {
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 20px;
+  color: #fff;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.bg-primary {
+  background-color: #0d6efd;
+}
+
+.bg-secondary {
+  background-color: #6c757d;
+}
+
+.bg-success {
+  background-color: #198754;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .course-card img {
+    height: 120px;
+  }
+
+  .course-card .card-title {
+    font-size: 16px;
+  }
+
+  .course-card .card-text {
+    font-size: 12px;
+  }
+
+  .badge {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Transições suaves para os itens do curso */
+.course-item {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+.course-item.hidden {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
 }

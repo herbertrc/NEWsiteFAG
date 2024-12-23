@@ -1,5 +1,5 @@
 // Array das imagens
-const images = ["images/teste6.jpg", "images/teste6.jpg", "images/teste6.jpg"];
+const images = ["images/Prancheta 1.png", "images/Prancheta 2.png", "images/Prancheta 3.png"];
 
 // Referências aos elementos
 const mainImage = document.getElementById("mainImage");
@@ -86,24 +86,5 @@ document.querySelectorAll('.nav-item.dropdown').forEach(function (dropdown) {
       if (menu) menu.classList.remove('show');
     }, 300);
   });
-});
-
-const presencialRadio = document.getElementById("presencial");
-const hibridoRadio = document.getElementById("hibrido");
-const detailsPresencial = document.getElementById("details-presencial");
-const detailsHibrido = document.getElementById("details-hibrido");
-
-presencialRadio.addEventListener("change", () => {
-  if (presencialRadio.checked) {
-    detailsPresencial.style.display = "block";
-    detailsHibrido.style.display = "none";
-  }
-});
-
-hibridoRadio.addEventListener("change", () => {
-  if (hibridoRadio.checked) {
-    detailsPresencial.style.display = "none";
-    detailsHibrido.style.display = "block";
-  }
 });
 
