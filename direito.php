@@ -208,42 +208,89 @@
         Chegou a hora de fazer a <span>DIFERENÇA</span> na sua vida!
     </div>
 
-    <!-- Card Fixo -->
+    <div class="docent-container my-5">
+      <h1 class="market-title text-center mb-5">Corpo Docente</h1>
+      <div class="container">
+        <div class="row">
+          <!-- Selector -->
+          <div class="col-12 text-center mb-4">
+            <div class="selector">
+              <input type="radio" id="option1" name="card-selector" checked>
+              <label for="option1">Opção 1</label>
+              <input type="radio" id="option2" name="card-selector">
+              <label for="option2">Opção 2</label>
+            </div>
+          </div>
+          
+          <!-- Dynamic Card -->
+          <div class="col-12">
+            <div class="card text-center shadow-sm" id="dynamic-card">
+              <div class="card-body">
+                <h5 class="card-title" id="dynamic-title">Prof. Dr. Luís Pereira</h5>
+                <p class="card-text" id="dynamic-text">Doutor em Segurança Pública pela Universidade X. Especialista em Gestão de Crises.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="fixed-card" id="card">
-        <div class="options">
+      <div class="options">
         <input type="radio" name="mode" id="presencial" checked>
         <label for="presencial"> <b>Presencial</b></label>
         <input type="radio" name="mode" id="hibrido">
         <label for="hibrido"> <b>Híbrido</b></label>
-        </div>
+      </div>
 
-        <h2> Últimas vagas </h2>
-        <p>Comece a estudar com <strong>64,06%</strong> de desconto!</p>
-        <h2>Graduação</h2>
-        <p id="original-price"><s>De R$ 1599,85/mês</s><a> por apenas</a></p>
-        <p class="price"><span id="price">R$ 575,00/mês</span></p>
+      <h2> Últimas vagas </h2>
+      <p id="discount">Comece a estudar com <strong>64,06%</strong> de desconto!</p>
+      <h2>Graduação</h2>
+      <p id="original-price"><s>De R$ 1599,85/mês</s><a> por apenas</a></p>
+      <p class="price"><span id="price">R$ 575,00/mês</span></p>
 
-        <!-- Detalhes Presencial -->
-        <ul id="details-presencial" class="details">
+      <!-- Detalhes Presencial -->
+      <ul id="details-presencial" class="details">
         <li> Início Imediato</li>
         <li> Professores mestre e doutores</li>
         <li> Presencial</li>
         <li> Duração de 5 semestres</li>
         <li> Autorizado por MEC</li>
-        </ul>
+      </ul>
 
-        <!-- Detalhes Híbrido -->
-        <ul id="details-hibrido" class="details" style="display: none;">
+      <!-- Detalhes Híbrido -->
+      <ul id="details-hibrido" class="details" style="display: none;">
         <li> Início Flexível</li>
         <li> Professores Online e Presenciais</li>
         <li> Híbrido</li>
         <li> Duração de 5 semestres</li>
         <li> Autorizado por MEC</li>
-        </ul>
+      </ul>
 
-        <!-- Botão -->
-        <a href="index.php#Matricula" class="subscribe-btn">Fazer Inscrição</a>
+      <!-- Botão -->
+      <a href="index.php#Matricula" class="subscribe-btn">Fazer Inscrição</a>
     </div>
+
+    <script>
+      // JavaScript para mudar o conteúdo do card fixo
+      document.getElementById('presencial').addEventListener('change', function() {
+        document.getElementById('discount').innerHTML = 'Comece a estudar com <strong>64,06%</strong> de desconto!';
+        document.getElementById('original-price').innerHTML = '<s>De R$ 1599,85/mês</s><a> por apenas</a>';
+        document.getElementById('price').textContent = 'R$ 575,00/mês';
+
+        document.getElementById('details-presencial').style.display = 'block';
+        document.getElementById('details-hibrido').style.display = 'none';
+      });
+
+      document.getElementById('hibrido').addEventListener('change', function() {
+        document.getElementById('discount').innerHTML = 'Estude com até <strong>75,17%</strong> de desconto!';
+        document.getElementById('original-price').innerHTML = '<s>De R$ 1599,90/mês</s><a> por apenas</a>';
+        document.getElementById('price').textContent = 'R$ 397,20/mês';
+
+        document.getElementById('details-presencial').style.display = 'none';
+        document.getElementById('details-hibrido').style.display = 'block';
+      });
+    </script>
 
     <div class="market-container">
         <h1 class="market-title">Mercado de Trabalho<br>do curso de Direito</h1>

@@ -58,7 +58,7 @@
                             <div class="dropdown-columns">
                                 <div class="column">
                                     <li><a class="dropdown-item" href="direito.html">Direito</a></li>
-                                    <li><a class="dropdown-item" href="#">Segurança Pública</a></li>
+                                    <li><a class="dropdown-item" href="tsp.php">Segurança Pública</a></li>
                                 </div>
                             </div>
                         </ul>
@@ -157,7 +157,7 @@
                     <div class="card-body">
                         <img src="images/aula.png" alt="" class="mb-2" style="width: 40px;">
                         <h6 class="card-title">Aula</h6>
-                        <p class="card-text small">EAD</p>
+                        <p class="card-text small">Presencial <br> EAD</p>
                     </div>
                 </div>
             </div>
@@ -218,41 +218,62 @@
         Chegou a hora de fazer a <span>DIFERENÇA</span> na sua vida!
     </div>
 
-    <!-- Card Fixo -->
     <div class="fixed-card" id="card">
-        <div class="options">
+      <div class="options">
         <input type="radio" name="mode" id="presencial" checked>
-        <label for="presencial"> <b>EAD</b></label>
-        </div>
+        <label for="presencial"> <b>Presencial</b></label>
+        <input type="radio" name="mode" id="hibrido">
+        <label for="hibrido"> <b>EAD</b></label>
+      </div>
 
-        <h2> Últimas vagas </h2>
-        <p>Comece a estudar com <strong>64,06%</strong> de desconto!</p>
-        <h2>Graduação</h2>
-        <p id="original-price"><s>De R$ 1599,85/mês</s><a> por apenas</a></p>
-        <p class="price"><span id="price">R$ 575,00/mês</span></p>
+      <h2> Últimas vagas </h2>
+      <p id="discount">Comece a estudar com <strong>59,87%</strong> de desconto!</p>
+      <h2>Graduação</h2>
+      <p id="original-price"><s>De R$ 1599,85/mês</s><a> por apenas</a></p>
+      <p class="price"><span id="price">R$ 575,00/mês</span></p>
 
-        <!-- Detalhes Presencial -->
-        <ul id="details-presencial" class="details">
+      <!-- Detalhes Presencial -->
+      <ul id="details-presencial" class="details">
         <li> Início Imediato</li>
         <li> Professores mestre e doutores</li>
         <li> Presencial</li>
         <li> Duração de 5 semestres</li>
         <li> Autorizado por MEC</li>
-        </ul>
+      </ul>
 
-        <!-- Detalhes Híbrido -->
-        <ul id="details-hibrido" class="details" style="display: none;">
+      <!-- Detalhes Híbrido -->
+      <ul id="details-hibrido" class="details" style="display: none;">
         <li> Início Flexível</li>
         <li> Professores Online e Presenciais</li>
-        <li> Híbrido</li>
+        <li> EAD</li>
         <li> Duração de 5 semestres</li>
         <li> Autorizado por MEC</li>
-        </ul>
+      </ul>
 
-        <!-- Botão -->
-        <a href="index.php#Matricula" class="subscribe-btn">Fazer Inscrição</a>
+      <!-- Botão -->
+      <a href="index.php#Matricula" class="subscribe-btn">Fazer Inscrição</a>
     </div>
 
+    <script>
+      // JavaScript para mudar o conteúdo do card fixo
+      document.getElementById('presencial').addEventListener('change', function() {
+        document.getElementById('discount').innerHTML = 'Comece a estudar com <strong>59,87%</strong> de desconto!';
+        document.getElementById('original-price').innerHTML = '<s>De R$ 495,90/mês</s><a> por apenas</a>';
+        document.getElementById('price').textContent = 'R$ 199,00/mês';
+
+        document.getElementById('details-presencial').style.display = 'block';
+        document.getElementById('details-hibrido').style.display = 'none';
+      });
+
+      document.getElementById('hibrido').addEventListener('change', function() {
+        document.getElementById('discount').innerHTML = 'Estude com até <strong>69,70%</strong> de desconto!';
+        document.getElementById('original-price').innerHTML = '<s>De R$ 495,90/mês</s><a> por apenas</a>';
+        document.getElementById('price').textContent = 'R$ 150,00/mês';
+
+        document.getElementById('details-presencial').style.display = 'none';
+        document.getElementById('details-hibrido').style.display = 'block';
+      });
+    </script>
     <div class="market-container">
       <h1 class="market-title">Mercado de Trabalho<br>do curso de Tecnólogo em Segurança Pública</h1>
       <p class="market-description">
