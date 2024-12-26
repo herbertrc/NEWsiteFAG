@@ -278,7 +278,6 @@
     <section class="section-ingresso">
       <div class="section-ingresso__left">
           <h1 class="section-ingresso__title">CONHEÇA AS FORMAS DE INGRESSO:</h1>
-          <button class="section-ingresso__button">Ver todas as formas</button>
       </div>
       <div class="section-ingresso__cards">
           <article class="ingresso-card ingresso-card--vestibular">

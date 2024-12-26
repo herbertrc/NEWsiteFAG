@@ -186,20 +186,19 @@
     <div class="content">
         <h1>CONHEÇA O CURSO</h1>
         <p>
-            A faculdade de Direito proporciona uma educação completa para quem deseja entender e atuar no campo jurídico. 
-            O currículo do curso abrange desde os fundamentos do sistema legal até suas aplicações na sociedade. A graduação 
-            prepara os alunos para interpretar e aplicar leis que regulam diversas áreas da vida em sociedade. Ao longo do 
-            curso, eles terão disciplinas que combinam teoria e prática, incluindo Ciência Política e Teoria Geral do Estado, 
-            para compreender a estrutura política e institucional do país.
+        A Faculdade Guerra orgulha-se de oferecer uma Pós-Graduação em Direito que se destaca pela excelência acadêmica e pela formação de profissionais altamente capacitados e preparados para os desafios do mercado de trabalho. Além disso, disponibilizamos diversas especializações online em áreas como Constitucional, Segurança Pública, Dosimetria da Pena, Direito Penal, Direito Público, Direito Civil, Direito Processual Penal, Direitos Humanos, Direito Internacional e Direito Processual Civil, todas com conclusão em até 1 ano e com condições facilitadas de pagamento, sendo 10x de R$ 199,00.
         </p>
         <p>
-            A Guerra oferece laboratórios e um rico acervo bibliográfico, para que o aluno utilize o espaço da faculdade 
-            em todas as atividades. O projeto pedagógico desenvolve profissionais críticos, politicamente conscientes e capazes 
-            de compreender a realidade do país.
+        Com um corpo docente renomado, formado por especialistas, mestres e doutores atuantes na área jurídica, nossa pós-graduação proporciona uma experiência educacional enriquecedora e atualizada com as demandas da prática jurídica contemporânea.
         </p>
         <p>
-            O aluno terá experiências práticas no Núcleo de Prática Jurídica (NPJ), podendo vivenciar o mundo jurídico em 
-            situações simuladas e reais nas áreas: cível, penal, previdenciária e trabalhista.
+        Nossa abordagem pedagógica integra teoria e prática, incentivando o desenvolvimento de habilidades analíticas, críticas e argumentativas essenciais para o exercício profissional no campo do Direito. Os alunos têm acesso a uma ampla gama de disciplinas eletivas e workshops práticos, permitindo a personalização de sua experiência de aprendizado de acordo com seus interesses e objetivos de carreira.
+        </p>
+        <p>
+        Além da qualidade acadêmica, a Faculdade Guerra oferece uma infraestrutura moderna e completa, com biblioteca especializada, salas de aula equipadas e recursos online, garantindo aos nossos alunos o acesso a um ambiente de aprendizado estimulante e propício ao desenvolvimento pessoal e profissional.
+        </p>
+        <p>
+        Ao escolher a Faculdade Guerra para sua pós-graduação em Direito, você estará optando por uma instituição comprometida com a excelência, a ética e a formação de profissionais de destaque no mercado jurídico. Venha fazer parte desta história de sucesso!
         </p>
     </div>
 
@@ -255,7 +254,85 @@
       });
     </script>
 
-      
+<section class="testimonials">
+    <h2>O que nossos alunos dizem sobre a Faculdade Guerra</h2>
+
+    <div class="testimonial">
+        <img src="images/testemunha1.jpg" alt="Aluno 1" class="testimonial-img">
+        <div class="testimonial-text">
+            <h3>Maria Souza</h3>
+            <div class="stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+            <p>Estudar na Faculdade Guerra foi uma das melhores decisões que tomei. Professores qualificados e infraestrutura de qualidade! Recomendo totalmente.</p>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <img src="images/testemunha2.jpg" alt="Aluno 2" class="testimonial-img">
+        <div class="testimonial-text">
+            <h3>João Silva</h3>
+            <div class="stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">☆</span>
+            </div>
+            <p>A faculdade oferece um ambiente de aprendizado estimulante e sempre nos desafia a crescer. A metodologia é inovadora!</p>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <img src="images/testemunha4.jpg" alt="Aluno 3" class="testimonial-img">
+        <div class="testimonial-text">
+            <h3>Luciana Ferreira</h3>
+            <div class="stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+            <p>A Faculdade Guerra me proporcionou uma excelente experiência acadêmica e me ajudou a desenvolver habilidades práticas para o mercado de trabalho.</p>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <img src="images/testemunha3.avif" alt="Aluno 4" class="testimonial-img">
+        <div class="testimonial-text">
+            <h3>Carlos Lima</h3>
+            <div class="stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+            <p>Adorei a experiência acadêmica! A Faculdade Guerra tem uma equipe de professores dedicada e sempre preocupada com nosso aprendizado.</p>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <img src="images/testemunha5.jpg" alt="Aluno 5" class="testimonial-img">
+        <div class="testimonial-text">
+            <h3>Ana Paula Santos</h3>
+            <div class="stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+            <p>Estou muito satisfeita com a qualidade do ensino na Faculdade Guerra. Os programas de estágio e a orientação de carreira são excepcionais.</p>
+        </div>
+    </div>
+
+</section>
 
           <!-- Linha Horizontal -->
     <div class="horizontal-line"></div>

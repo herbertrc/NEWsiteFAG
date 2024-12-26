@@ -129,7 +129,7 @@
         <div class="text-overlay container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 text-content">
-                    <h1>TECNÓLOGO</h1>
+                    <p>TECNÓLOGO</p>
                     <p>EM 
                     <span>SEGURANÇA PÚBLICA</span></p>
                 </div>
@@ -229,8 +229,8 @@
       <h2> Últimas vagas </h2>
       <p id="discount">Comece a estudar com <strong>59,87%</strong> de desconto!</p>
       <h2>Graduação</h2>
-      <p id="original-price"><s>De R$ 1599,85/mês</s><a> por apenas</a></p>
-      <p class="price"><span id="price">R$ 575,00/mês</span></p>
+      <p id="original-price"><s>De R$ 495,95/mês</s><a> por apenas</a></p>
+      <p class="price"><span id="price">R$ 199,00/mês</span></p>
 
       <!-- Detalhes Presencial -->
       <ul id="details-presencial" class="details">
