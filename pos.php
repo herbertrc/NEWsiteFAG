@@ -208,131 +208,136 @@
         Chegou a hora de fazer a <span>DIFERENÇA</span> na sua vida!
     </div>
 
+
     <div class="fixed-card" id="card">
-      <div class="options">
-        <input type="radio" name="mode" id="presencial" checked>
-        <label for="presencial"> <b>EAD</b></label>
-      </div>
+        <div class="options">
+          <input type="radio" name="mode" id="presencial" checked>
+          <label for="presencial"> <b>EAD</b></label>
+        </div>
+  
+        <h2> Últimas vagas </h2>
+        <p id="discount">Comece a estudar com <strong>57,14%</strong> de desconto!</p>
+        <h2>Graduação</h2>
+        <p id="original-price"><s>De R$ 466,33/mês</s><a> por apenas</a></p>
+        <p class="price"><span id="price">R$ 199,90/mês</span></p>
 
-      <h2> Últimas vagas </h2>
-      <p id="discount">Comece a estudar com <strong>64,06%</strong> de desconto!</p>
-      <h2>Graduação</h2>
-      <p id="original-price"><s>De R$ 466,33/mês</s><a> por apenas</a></p>
-      <p class="price"><span id="price">R$ 199,90/mês</span></p>
+    <!-- Detalhes Presencial -->
+    <ul id="details-presencial" class="details">
+        <lu><img src="images/calendario2.jpg" alt="Calendário" style="width: 20px; height: 20px;"> Início Imediato<br></lu>
+        <lu><img src="images/professor.jpg" alt="Professores" style="width: 20px; height: 20px;"> Professores mestre e doutores<br></lu>
+        <lu><img src="images/aula2.jpg" alt="Presencial" style="width: 20px; height: 20px;"> EAD<br></lu>
+        <lu><img src="images/relogio.jpg" alt="Duração" style="width: 20px; height: 20px;"> Duração de 2 semestres<br></lu>
+        <lu><img src="images/certinho.png" alt="MEC" style="width: 20px; height: 20px;"> Autorizado por MEC</lu>
+    </ul>
 
-      <!-- Detalhes Presencial -->
-      <ul id="details-presencial" class="details">
-        <li> Início Imediato</li>
-        <li> Professores mestre e doutores</li>
-        <li> EAD</li>
-        <li> Duração de 2 semestres</li>
-        <li> Autorizado por MEC</li>
-      </ul>
+<!-- Botão -->
+<a href="index.php#Matricula" class="subscribe-btn">Fazer Inscrição</a>
+  </div>
 
-      <!-- Botão -->
-      <a href="index.php#Matricula" class="subscribe-btn">Fazer Inscrição</a>
-    </div>
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // Esconde o detalhe híbrido inicialmente
+        document.getElementById('details-hibrido').style.display = 'none';
 
-    <script>
-      // JavaScript para mudar o conteúdo do card fixo
-      document.getElementById('presencial').addEventListener('change', function() {
-        document.getElementById('discount').innerHTML = 'Comece a estudar com <strong>64,06%</strong> de desconto!';
-        document.getElementById('original-price').innerHTML = '<s>De R$ 1599,85/mês</s><a> por apenas</a>';
-        document.getElementById('price').textContent = 'R$ 575,00/mês';
+        document.getElementById('presencial').addEventListener('change', function() {
+        document.getElementById('discount').innerHTML = 'Comece a estudar com <strong>57,14%</strong> de desconto!';
+        document.getElementById('original-price').innerHTML = '<s>De R$ 466,33/mês</s><a> por apenas</a>';
+        document.getElementById('price').textContent = 'R$ 199,90/mês';
 
         document.getElementById('details-presencial').style.display = 'block';
         document.getElementById('details-hibrido').style.display = 'none';
-      });
+        });
 
-      document.getElementById('hibrido').addEventListener('change', function() {
-        document.getElementById('discount').innerHTML = 'Estude com até <strong>75,17%</strong> de desconto!';
-        document.getElementById('original-price').innerHTML = '<s>De R$ 1599,90/mês</s><a> por apenas</a>';
-        document.getElementById('price').textContent = 'R$ 397,20/mês';
+        document.getElementById('hibrido').addEventListener('change', function() {
+        document.getElementById('discount').innerHTML = 'Comece a estudar com <strong>69,70%</strong> de desconto!';
+        document.getElementById('original-price').innerHTML = '<s>De R$ 495,90/mês</s><a> por apenas</a>';
+        document.getElementById('price').textContent = 'R$ 150,00/mês';
 
         document.getElementById('details-presencial').style.display = 'none';
         document.getElementById('details-hibrido').style.display = 'block';
-      });
+        });
+    });
     </script>
 
-<section class="testimonials">
-    <h2>O que nossos alunos dizem sobre a Faculdade Guerra</h2>
+    <section class="testimonials">
+        <h2>O que nossos alunos dizem sobre a Faculdade Guerra</h2>
 
-    <div class="testimonial">
-        <img src="images/testemunha1.jpg" alt="Aluno 1" class="testimonial-img">
-        <div class="testimonial-text">
-            <h3>Maria Souza</h3>
-            <div class="stars">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
+        <div class="testimonial">
+            <img src="images/testemunha1.jpg" alt="Aluno 1" class="testimonial-img">
+            <div class="testimonial-text">
+                <h3>Maria Souza</h3>
+                <div class="stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Estudar na Faculdade Guerra foi uma das melhores decisões que tomei. Professores qualificados e infraestrutura de qualidade! Recomendo totalmente.</p>
             </div>
-            <p>Estudar na Faculdade Guerra foi uma das melhores decisões que tomei. Professores qualificados e infraestrutura de qualidade! Recomendo totalmente.</p>
         </div>
-    </div>
 
-    <div class="testimonial">
-        <img src="images/testemunha2.jpg" alt="Aluno 2" class="testimonial-img">
-        <div class="testimonial-text">
-            <h3>João Silva</h3>
-            <div class="stars">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">☆</span>
+        <div class="testimonial">
+            <img src="images/testemunha2.jpg" alt="Aluno 2" class="testimonial-img">
+            <div class="testimonial-text">
+                <h3>João Silva</h3>
+                <div class="stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+                <p>A faculdade oferece um ambiente de aprendizado estimulante e sempre nos desafia a crescer. A metodologia é inovadora!</p>
             </div>
-            <p>A faculdade oferece um ambiente de aprendizado estimulante e sempre nos desafia a crescer. A metodologia é inovadora!</p>
         </div>
-    </div>
 
-    <div class="testimonial">
-        <img src="images/testemunha4.jpg" alt="Aluno 3" class="testimonial-img">
-        <div class="testimonial-text">
-            <h3>Luciana Ferreira</h3>
-            <div class="stars">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
+        <div class="testimonial">
+            <img src="images/testemunha4.jpg" alt="Aluno 3" class="testimonial-img">
+            <div class="testimonial-text">
+                <h3>Luciana Ferreira</h3>
+                <div class="stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>A Faculdade Guerra me proporcionou uma excelente experiência acadêmica e me ajudou a desenvolver habilidades práticas para o mercado de trabalho.</p>
             </div>
-            <p>A Faculdade Guerra me proporcionou uma excelente experiência acadêmica e me ajudou a desenvolver habilidades práticas para o mercado de trabalho.</p>
         </div>
-    </div>
 
-    <div class="testimonial">
-        <img src="images/testemunha3.avif" alt="Aluno 4" class="testimonial-img">
-        <div class="testimonial-text">
-            <h3>Carlos Lima</h3>
-            <div class="stars">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
+        <div class="testimonial">
+            <img src="images/testemunha3.avif" alt="Aluno 4" class="testimonial-img">
+            <div class="testimonial-text">
+                <h3>Carlos Lima</h3>
+                <div class="stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Adorei a experiência acadêmica! A Faculdade Guerra tem uma equipe de professores dedicada e sempre preocupada com nosso aprendizado.</p>
             </div>
-            <p>Adorei a experiência acadêmica! A Faculdade Guerra tem uma equipe de professores dedicada e sempre preocupada com nosso aprendizado.</p>
         </div>
-    </div>
 
-    <div class="testimonial">
-        <img src="images/testemunha5.jpg" alt="Aluno 5" class="testimonial-img">
-        <div class="testimonial-text">
-            <h3>Ana Paula Santos</h3>
-            <div class="stars">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
+        <div class="testimonial">
+            <img src="images/testemunha5.jpg" alt="Aluno 5" class="testimonial-img">
+            <div class="testimonial-text">
+                <h3>Ana Paula Santos</h3>
+                <div class="stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Estou muito satisfeita com a qualidade do ensino na Faculdade Guerra. Os programas de estágio e a orientação de carreira são excepcionais.</p>
             </div>
-            <p>Estou muito satisfeita com a qualidade do ensino na Faculdade Guerra. Os programas de estágio e a orientação de carreira são excepcionais.</p>
         </div>
-    </div>
 
-</section>
+    </section>
 
           <!-- Linha Horizontal -->
     <div class="horizontal-line"></div>

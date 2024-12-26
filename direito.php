@@ -222,30 +222,33 @@
       <p id="original-price"><s>De R$ 1599,85/mês</s><a> por apenas</a></p>
       <p class="price"><span id="price">R$ 575,00/mês</span></p>
 
-      <!-- Detalhes Presencial -->
-      <ul id="details-presencial" class="details">
-        <li> Início Imediato</li>
-        <li> Professores mestre e doutores</li>
-        <li> Presencial</li>
-        <li> Duração de 5 semestres</li>
-        <li> Autorizado por MEC</li>
-      </ul>
+  <!-- Detalhes Presencial -->
+  <ul id="details-presencial" class="details">
+      <lu><img src="images/calendario2.jpg" alt="Calendário" style="width: 20px; height: 20px;"> Início Imediato<br></lu>
+      <lu><img src="images/professor.jpg" alt="Professores" style="width: 20px; height: 20px;"> Professores mestre e doutores<br></lu>
+      <lu><img src="images/aula2.jpg" alt="Presencial" style="width: 20px; height: 20px;"> Presencial<br></lu>
+      <lu><img src="images/relogio.jpg" alt="Duração" style="width: 20px; height: 20px;"> Duração de 12 semestres<br></lu>
+      <lu><img src="images/certinho.png" alt="MEC" style="width: 20px; height: 20px;"> Autorizado por MEC</lu>
+  </ul>
 
-      <!-- Detalhes Híbrido -->
-      <ul id="details-hibrido" class="details" style="display: none;">
-        <li> Início Flexível</li>
-        <li> Professores Online e Presenciais</li>
-        <li> Híbrido</li>
-        <li> Duração de 5 semestres</li>
-        <li> Autorizado por MEC</li>
-      </ul>
+  <!-- Detalhes Hibrido -->
+  <ul id="details-hibrido" class="details">
+      <lu><img src="images/calendario2.jpg" alt="Calendário" style="width: 20px; height: 20px;"> Início Imediato<br></lu>
+      <lu><img src="images/professor.jpg" alt="Professores" style="width: 20px; height: 20px;"> Professores mestre e doutores<br></lu>
+      <lu><img src="images/aula2.jpg" alt="Presencial" style="width: 20px; height: 20px;"> Hibrido<br></lu>
+      <lu><img src="images/relogio.jpg" alt="Duração" style="width: 20px; height: 20px;"> Duração de 12 semestres<br></lu>
+      <lu><img src="images/certinho.png" alt="MEC" style="width: 20px; height: 20px;"> Autorizado por MEC</lu>
+  </ul>
 
-      <!-- Botão -->
-      <a href="index.php#Matricula" class="subscribe-btn">Fazer Inscrição</a>
+  <!-- Botão -->
+  <a href="index.php#Matricula" class="subscribe-btn">Fazer Inscrição</a>
     </div>
 
     <script>
-      // JavaScript para mudar o conteúdo do card fixo
+      document.addEventListener("DOMContentLoaded", function() {
+      // Esconde o detalhe híbrido inicialmente
+      document.getElementById('details-hibrido').style.display = 'none';
+
       document.getElementById('presencial').addEventListener('change', function() {
         document.getElementById('discount').innerHTML = 'Comece a estudar com <strong>64,06%</strong> de desconto!';
         document.getElementById('original-price').innerHTML = '<s>De R$ 1599,85/mês</s><a> por apenas</a>';
@@ -256,14 +259,16 @@
       });
 
       document.getElementById('hibrido').addEventListener('change', function() {
-        document.getElementById('discount').innerHTML = 'Estude com até <strong>75,17%</strong> de desconto!';
+        document.getElementById('discount').innerHTML = 'Comece a estudar com <strong>75,17%</strong> de desconto!';
         document.getElementById('original-price').innerHTML = '<s>De R$ 1599,90/mês</s><a> por apenas</a>';
         document.getElementById('price').textContent = 'R$ 397,20/mês';
 
         document.getElementById('details-presencial').style.display = 'none';
         document.getElementById('details-hibrido').style.display = 'block';
       });
-    </script>
+    });
+  </script>
+
 
     <div class="market-container">
         <h1 class="market-title">Mercado de Trabalho<br>do curso de Direito</h1>
