@@ -129,7 +129,7 @@
         <div class="text-overlay container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 text-content">
-                    <h1>BACHAREL</h1>
+                    <h1>Pós</h1>
                     <p>EM 
                     <span>DIREITO</span></p>
                 </div>
@@ -147,7 +147,7 @@
                     <div class="card-body">
                         <img src="images/diploma.png" alt="" class="mb-2" style="width: 40px;">
                         <h6 class="card-title">Formação</h6>
-                        <p class="card-text small">Bacharelado</p>
+                        <p class="card-text small">Pós-Graduação</p>
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
                     <div class="card-body">
                         <img src="images/aula.png" alt="" class="mb-2" style="width: 40px;">
                         <h6 class="card-title">Aula</h6>
-                        <p class="card-text small">Presencial</p>
+                        <p class="card-text small">EAD</p>
                     </div>
                 </div>
             </div>
@@ -171,35 +171,36 @@
                     </div>
                 </div>
             </div>
-            <!-- Card 4 -->
-            <div class="col-md-2 col-sm-6">
-                <div class="card text-center border-0 shadow-sm">
-                    <div class="card-body">
-                        <img src="images/solnoite.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Turnos</h6>
-                        <p class="card-text small">Matutino <br> Noturno</p>
-                    </div>
-                </div>
-            </div>
             <!-- Card 5 -->
             <div class="col-md-2 col-sm-6">
                 <div class="card text-center border-0 shadow-sm">
                     <div class="card-body">
                         <img src="images/calendario.png" alt="" class="mb-2" style="width: 40px;">
                         <h6 class="card-title">Duração</h6>
-                        <p class="card-text small">10 Semestres</p>
+                        <p class="card-text small">2 Semestres</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="content">
-            <h1>CONHEÇA O CURSO</h1>
-            <p>A faculdade de Direito proporciona uma educação completa para quem deseja entender e atuar no campo jurídico. O currículo do curso abrange desde os fundamentos do sistema legal até suas aplicações na sociedade.
-                A graduação prepara os alunos para interpretar e aplicar leis que regulam diversas áreas da vida em sociedade. Ao longo do curso, eles terão disciplinas que combinam teoria e prática, incluindo Ciência Política e Teoria Geral do Estado, para compreender a estrutura política e institucional do país.
-                A Guerra oferece laboratórios e um rico acervo bibliográfico, para que o aluno utilize o espaço da faculdade em todas as atividades. O projeto pedagógico desenvolve profissionais críticos, politicamente conscientes e capazes de compreender a realidade do país.
-                O aluno terá experiências práticas no Núcleo de Prática Jurídica (NPJ), podendo vivenciar o mundo jurídico em situações simuladas e reais nas áreas: cível, penal, previdenciária e trabalhista.</p>
-            
+        <h1>CONHEÇA O CURSO</h1>
+        <p>
+            A faculdade de Direito proporciona uma educação completa para quem deseja entender e atuar no campo jurídico. 
+            O currículo do curso abrange desde os fundamentos do sistema legal até suas aplicações na sociedade. A graduação 
+            prepara os alunos para interpretar e aplicar leis que regulam diversas áreas da vida em sociedade. Ao longo do 
+            curso, eles terão disciplinas que combinam teoria e prática, incluindo Ciência Política e Teoria Geral do Estado, 
+            para compreender a estrutura política e institucional do país.
+        </p>
+        <p>
+            A Guerra oferece laboratórios e um rico acervo bibliográfico, para que o aluno utilize o espaço da faculdade 
+            em todas as atividades. O projeto pedagógico desenvolve profissionais críticos, politicamente conscientes e capazes 
+            de compreender a realidade do país.
+        </p>
+        <p>
+            O aluno terá experiências práticas no Núcleo de Prática Jurídica (NPJ), podendo vivenciar o mundo jurídico em 
+            situações simuladas e reais nas áreas: cível, penal, previdenciária e trabalhista.
+        </p>
     </div>
 
     
@@ -211,32 +212,21 @@
     <div class="fixed-card" id="card">
       <div class="options">
         <input type="radio" name="mode" id="presencial" checked>
-        <label for="presencial"> <b>Presencial</b></label>
-        <input type="radio" name="mode" id="hibrido">
-        <label for="hibrido"> <b>Híbrido</b></label>
+        <label for="presencial"> <b>EAD</b></label>
       </div>
 
       <h2> Últimas vagas </h2>
       <p id="discount">Comece a estudar com <strong>64,06%</strong> de desconto!</p>
       <h2>Graduação</h2>
-      <p id="original-price"><s>De R$ 1599,85/mês</s><a> por apenas</a></p>
-      <p class="price"><span id="price">R$ 575,00/mês</span></p>
+      <p id="original-price"><s>De R$ 466,33/mês</s><a> por apenas</a></p>
+      <p class="price"><span id="price">R$ 199,90/mês</span></p>
 
       <!-- Detalhes Presencial -->
       <ul id="details-presencial" class="details">
         <li> Início Imediato</li>
         <li> Professores mestre e doutores</li>
-        <li> Presencial</li>
-        <li> Duração de 5 semestres</li>
-        <li> Autorizado por MEC</li>
-      </ul>
-
-      <!-- Detalhes Híbrido -->
-      <ul id="details-hibrido" class="details" style="display: none;">
-        <li> Início Flexível</li>
-        <li> Professores Online e Presenciais</li>
-        <li> Híbrido</li>
-        <li> Duração de 5 semestres</li>
+        <li> EAD</li>
+        <li> Duração de 2 semestres</li>
         <li> Autorizado por MEC</li>
       </ul>
 
@@ -265,95 +255,6 @@
       });
     </script>
 
-    <div class="market-container">
-        <h1 class="market-title">Mercado de Trabalho<br>do curso de Direito</h1>
-        <p class="market-description">
-        O salário para advogado na região de Brasília está na faixa dos <strong>R$ 5.500,00</strong> (segundo o portal Glassdoor). Esse valor pode variar conforme a região de atuação, experiência, cargo específico e tipo de contrato.
-        </p>
-        <ul class="market-opportunities">
-        <li>Advocacia;</li>
-        <li>Consultoria jurídica;</li>
-        <li>Magistratura;</li>
-        <li>Ministério público;</li>
-        <li>Setor jurídico de empresas;</li>
-        <li>Órgãos públicos;</li>
-        <li>Organizações sem fins lucrativos.</li>
-        </ul>
-        <p class="market-extra">
-        Os profissionais mais qualificados são os mais valorizados, principalmente aqueles que atuam em áreas específicas, como Direito digital, ambiental e internacional.
-        </p>
-        <p class="market-call-to-action">
-        E então, está preparado para iniciar sua jornada na faculdade de Direito? Inscreva-se na <strong>GUERRA</strong> agora e comece sua trajetória em direção a uma carreira dinâmica! Utilize sua nota do <strong>ENEM</strong> para garantir sua vaga.
-        </p>
-    </div>
-
-
-    <div class="docent-container my-5">
-        <h1 class="market-title text-center mb-5">Corpo Docente</h1>
-        <div class="container">
-          <div class="row">
-            <!-- Docente 1 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-              <div class="card text-center shadow-sm">
-                <img src="images/docente1.jpg" class="card-img-top" alt="Foto do Docente 1">
-                <div class="card-body">
-                  <h5 class="card-title">Prof. Dr. João Silva</h5>
-                  <p class="card-text">Doutor em Direito Constitucional pela Universidade X. Especialista em Direito Penal.</p>
-                  <a href="curriculo_joao.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Docente 2 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-              <div class="card text-center shadow-sm">
-                <img src="images/docente2.jpg" class="card-img-top" alt="Foto do Docente 2">
-                <div class="card-body">
-                  <h5 class="card-title">Profa. Dra. Maria Oliveira</h5>
-                  <p class="card-text">Doutora em Direito Ambiental pela Universidade Y. Experiência em Direito Internacional.</p>
-                  <a href="curriculo_maria.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Docente 3 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-              <div class="card text-center shadow-sm">
-                <img src="images/docente3.jpg" class="card-img-top" alt="Foto do Docente 3">
-                <div class="card-body">
-                  <h5 class="card-title">Prof. Me. Carlos Souza</h5>
-                  <p class="card-text">Mestre em Direito Civil pela Universidade Z. Advogado com mais de 15 anos de experiência.</p>
-                  <a href="curriculo_carlos.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Docente 4 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-              <div class="card text-center shadow-sm">
-                <img src="images/docente4.jpg" class="card-img-top" alt="Foto do Docente 4">
-                <div class="card-body">
-                  <h5 class="card-title">Profa. Dra. Ana Mendes</h5>
-                  <p class="card-text">Doutora em Direito Penal pela Universidade W. Especialista em Criminologia.</p>
-                  <a href="curriculo_ana.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Docente 5 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-              <div class="card text-center shadow-sm">
-                <img src="images/docente5.jpg" class="card-img-top" alt="Foto do Docente 5">
-                <div class="card-body">
-                  <h5 class="card-title">Prof. Me. Pedro Lima</h5>
-                  <p class="card-text">Mestre em Direito Administrativo pela Universidade V. Pesquisador em Políticas Públicas.</p>
-                  <a href="curriculo_pedro.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       
 
           <!-- Linha Horizontal -->

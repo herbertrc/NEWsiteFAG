@@ -864,119 +864,195 @@ body {
 
 
 
-/* Fundo da seção Formas de Ingresso */
-.section-bolsa {
-  background-color: #504040; /* Cor de fundo */
-  padding-top: 100px; /* Espaço superior */
-  padding-bottom: 60px; /* Espaço inferior */
-}
 
-/* Estilo do botão */
-.custom-btn {
-  background-color: #CA0F0F; /* Cor do botão */
-  color: white; /* Cor do texto */
-  padding: 10px 20px; /* Ajuste no tamanho */
-  font-size: 1rem; /* Tamanho da fonte */
-  width: 375px; /* Largura fixa do botão */
-  max-width: 100%; /* Largura máxima para telas pequenas */
-  text-align: center; /* Garante centralização do texto */
-  border: none;
-  border-radius: 5px; /* Bordas arredondadas */
-  box-sizing: border-box;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin: 0 0; /* Centraliza o botão */
-}
-.custom-btn:hover {
-  background-color: #9e0d0d; /* Efeito hover */
-  color: white;
-  transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
-}
-
-/* Container dos cards */
-.card-container {
+/* Seção principal */
+.section-ingresso {
   display: flex;
-  justify-content: flex-end; /* Move os cards para a direita */
-  gap: 20px; /* Espaçamento entre os cards */
-  flex-wrap: wrap; /* Quebra os cards em várias linhas se necessário */
+  flex-wrap: wrap; /* Permite que o conteúdo se ajuste automaticamente */
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 20px;
+  background-color: #504040;
+  border-radius: 10px;
+  min-height: 500px;
+  box-sizing: border-box; /* Garante que padding não afete dimensões totais */
 }
 
-/* Cards */
-.custom-card {
-  width: calc(33.333% - 20px); /* Cards ocupam 3 por linha */
-  max-width: 300px; /* Largura máxima */
-  height: 400px; /* Altura fixa */
-  border-radius: 16px;
-  text-align: center;
-  padding: 20px; /* Padding reduzido */
+.section-ingresso__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  text-align: left;
+}
+
+.section-ingresso__title {
+  font-size: 3.5rem; /* Ajuste automático */
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+}
+
+.section-ingresso__button {
+  padding: 15px 60px;
+  background-color: #CA0F0F;
   color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.section-ingresso__button:hover {
+  background-color: #FF4C4C;
+}
+
+.section-ingresso__cards {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards se ajustem automaticamente */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1.5;
+}
+
+.ingresso-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ingresso-card:hover {
+  transform: scale(1.05);
+}
+
+.ingresso-card__background {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.ingresso-card__content {
+  width: 100%;
+  height: 30%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-direction: column;
 }
 
-.custom-card:hover {
-  transform: scale(1.05); /* Pequeno zoom */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-.custom-card p {
-  margin: 0;
-  font-weight: bold;
+.ingresso-card__title {
   font-size: 1.2rem;
-  line-height: 1.5;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
 }
 
-/* Responsividade */
-@media (max-width: 992px) {
-  .custom-card {
-    width: calc(50% - 20px); /* 2 cards por linha em telas médias */
-    height: 250px; /* Reduz altura */
+/* Responsividade geral */
+@media (max-width: 1366px) {
+  .section-ingresso {
+    padding: 30px;
+    gap: 15px;
+  }
+
+  .section-ingresso__title {
+    font-size: 3rem;
+  }
+
+  .section-ingresso__button {
+    font-size: 1.3rem;
+    padding: 15px 50px;
+  }
+
+  .ingresso-card {
+    width: 280px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-ingresso {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-ingresso__left {
+    align-items: center;
+    padding: 20px;
+  }
+
+  .section-ingresso__title {
+    font-size: 2.5rem;
+  }
+
+  .section-ingresso__button {
+    font-size: 1.2rem;
+    padding: 10px 40px;
+  }
+
+  .section-ingresso__cards {
+    gap: 15px;
+  }
+
+  .ingresso-card {
+    width: 260px;
+    height: 360px;
   }
 }
 
 @media (max-width: 768px) {
-  .section-bolsa {
-    padding-top: 60px;
-    padding-bottom: 40px;
+  .section-ingresso {
+    padding: 20px;
   }
 
-  .card-container {
-    justify-content: center; /* Centraliza os cards */
+  .section-ingresso__title {
+    font-size: 2rem;
   }
 
-  .custom-card {
-    width: calc(50% - 10px); /* 2 cards por linha */
-    height: 220px; /* Altura menor */
-    padding: 15px; /* Padding ajustado */
+  .section-ingresso__button {
+    font-size: 1.1rem;
+    padding: 8px 30px;
   }
 
-  .custom-btn {
-    font-size: 0.9rem; /* Tamanho ajustado */
-    padding: 8px 12px; /* Padding ajustado */
-    width: 90%; /* Ocupa quase toda a largura */
-    margin: 0 auto; /* Centraliza */
+  .ingresso-card {
+    width: 240px;
+    height: 340px;
   }
 }
 
-@media (max-width: 576px) {
-  .custom-card {
-    width: 90%; /* 1 card por linha */
-    height: 200px; /* Altura menor */
-    padding: 10px;
+@media (max-width: 480px) {
+  .section-ingresso__title {
+    font-size: 1.8rem;
   }
 
-  .custom-card p {
-    font-size: 1rem; /* Texto menor */
+  .section-ingresso__button {
+    font-size: 1rem;
+    padding: 8px 20px;
   }
 
-  .custom-btn {
-    font-size: 0.8rem;
-    padding: 6px 10px;
-    width: 100%; /* Ocupa toda a largura */
+  .ingresso-card {
+    width: 200px;
+    height: 300px;
   }
 }
+
+
 
 
 

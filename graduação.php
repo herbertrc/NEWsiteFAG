@@ -202,7 +202,7 @@
           <h5 class="text-uppercase mb-4" style="color: #CA0F0F;">Nossos Cursos</h5>
           <p><a href="direito.php" class="text-white text-decoration-none">Direito</a></p>
           <p><a href="tsp.php" class="text-white text-decoration-none">Segurança Pública</a></p>
-          <p><a href="#" class="text-white text-decoration-none">Pós Graduação</a></p>
+          <p><a href="pos.php" class="text-white text-decoration-none">Pós Graduação</a></p>
           <p><a href="#" class="text-white text-decoration-none">Extensão</a></p>
           <p><a href="#" class="text-white text-decoration-none">Preparatório OAB</a></p>
         </div>

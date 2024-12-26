@@ -198,52 +198,53 @@
 
     <!-- Seção Cursos -->
     <section id="cursos" class="section-card">
-        <div class="cards-container">
-            <article class="card">
-                <img class="card__background" src="images/pos5.jpeg" alt="Imagem 1" width="1920" height="2193" />
-                <div class="card__content | flow">
-                    <div class="card__content--container | flow">
-                        <h2 class="card__title">Pós Graduação</h2>
-                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                    <button class="card__button">Read more</button>
-                </div>
-            </article>
+      <div class="cards-container">
+          <article class="card">
+              <img class="card__background" src="images/Grad.png" alt="Imagem 1" width="1920" height="2193" />
+              <div class="card__content | flow">
+                  <div class="card__content--container | flow">
+                      <h2 class="card__title">Pós Graduação</h2>
+                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                  <button class="card__button">Read more</button>
+              </div>
+          </article>
 
-            <article class="card">
-                <img class="card__background" src="images/bolsas/4.png" alt="Imagem 2" width="1920" height="2193" />
-                <div class="card__content | flow">
-                    <div class="card__content--container | flow">
-                        <h2 class="card__title">Bolsas</h2>
-                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                    <button class="card__button">Read more</button>
-                </div>
-            </article>
+          <article class="card">
+              <img class="card__background" src="images/Pós.png" alt="Imagem 2" width="1920" height="2193" />
+              <div class="card__content | flow">
+                  <div class="card__content--container | flow">
+                      <h2 class="card__title">Bolsas</h2>
+                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                  <button class="card__button">Read more</button>
+              </div>
+          </article>
 
-            <article class="card">
-                <img class="card__background" src="images/bolsas/2.png" alt="Imagem 3" width="1920" height="2193" />
-                <div class="card__content | flow">
-                    <div class="card__content--container | flow">
-                        <h2 class="card__title">Colombia</h2>
-                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                    <button class="card__button">Read more</button>
-                </div>
-            </article>
+          <article class="card">
+              <img class="card__background" src="images/Téc.png" alt="Imagem 3" width="1920" height="2193" />
+              <div class="card__content | flow">
+                  <div class="card__content--container | flow">
+                      <h2 class="card__title">Colombia</h2>
+                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                  <button class="card__button">Read more</button>
+              </div>
+          </article>
 
-            <article class="card">
-                <img class="card__background" src="images/lightbox/7.jpg" alt="Imagem 4" width="1920" height="2193" />
-                <div class="card__content | flow">
-                    <div class="card__content--container | flow">
-                        <h2 class="card__title">Colombia</h2>
-                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                    <button class="card__button">Read more</button>
-                </div>
-            </article>
-        </div>
-    </section>
+          <article class="card">
+              <img class="card__background" src="images/Cursos.png" alt="Imagem 4" width="1920" height="2193" />
+              <div class="card__content | flow">
+                  <div class="card__content--container | flow">
+                      <h2 class="card__title">Colombia</h2>
+                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                  <button class="card__button">Read more</button>
+              </div>
+          </article>
+      </div>
+  </section>
+
 
     <!-- Banner -->
     <div class="highlight-banner">
@@ -276,34 +277,25 @@
   </div>
   
 
-<!-- Seção Formas de Ingresso -->
-<section id="Bolsas" class="section-bolsa py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Texto -->
-      <div class="col-12 col-md-5 mb-4 mb-md-0 text-center text-md-start">
-        <h2 class="text-white fw-bold display-4">CONHEÇA AS<br>FORMAS DE<br>INGRESSO</h2>
-        <a href="#" class="btn mt-3 custom-btn">Ver todas as formas &rarr;</a>
+    <section class="section-ingresso">
+      <div class="section-ingresso__left">
+          <h1 class="section-ingresso__title">CONHEÇA AS FORMAS DE INGRESSO:</h1>
+          <button class="section-ingresso__button">Ver todas as formas</button>
       </div>
+      <div class="section-ingresso__cards">
+          <article class="ingresso-card ingresso-card--vestibular">
+              <img class="ingresso-card__background" src="images/forma1.png" alt="Vestibular" width="1920" height="2193" />
 
-      <!-- Cards com ajuste manual -->
-      <div class="col-12 col-md-7">
-        <div class="card-container">
-          <div class="custom-card" style="background-color: #520808;">
-            <p>VESTIBULAR</p>
-          </div>
-          <div class="custom-card" style="background-color: #6F0C0C;">
-            <p>NOTA DO<br>ENEM</p>
-          </div>
-          <div class="custom-card" style="background-color: #C05353;">
-            <p>TRANSFERÊNCIA OU SEGUNDA GRADUAÇÃO</p>
-          </div>
-        </div>
+          </article>
+          <article class="ingresso-card ingresso-card--enem">
+              <img class="ingresso-card__background" src="images/forma2.png" alt="Nota do Enem" width="1920" height="2193" />
+
+          </article>
+          <article class="ingresso-card ingresso-card--transferencia">
+              <img class="ingresso-card__background" src="images/forma3.png" alt="Transferência ou Segunda Graduação" width="1920" height="2193" />
+          </article>
       </div>
-    </div>
-  </div>
-</section>
-
+  </section>
 
 <!-- Seção Matrícula -->
 <section id="Matricula" class="section-matricula py-5" style="background: linear-gradient(to bottom, #000000, #333333); color: white;">
@@ -388,7 +380,7 @@
           <h5 class="text-uppercase mb-4" style="color: #CA0F0F;">Nossos Cursos</h5>
           <p><a href="direito.php" class="text-white text-decoration-none">Direito</a></p>
           <p><a href="tsp.php" class="text-white text-decoration-none">Segurança Pública</a></p>
-          <p><a href="#" class="text-white text-decoration-none">Pós Graduação</a></p>
+          <p><a href="pos.php" class="text-white text-decoration-none">Pós Graduação</a></p>
           <p><a href="#" class="text-white text-decoration-none">Extensão</a></p>
           <p><a href="#" class="text-white text-decoration-none">Preparatório OAB</a></p>
         </div>
