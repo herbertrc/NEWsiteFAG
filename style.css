@@ -571,7 +571,7 @@ body {
 }
 
 .card-text {
-  color: #6c757d; /* Cinza claro */
+  color: #ffffff; /* Cinza claro */
 }
 
 .btn-danger {
@@ -681,7 +681,6 @@ body {
   left: -1.25rem;
   background-color: var(--brand-color);
 }
-
 .card__button {
   padding: 0.75em 1.6em;
   width: fit-content;
@@ -693,12 +692,21 @@ body {
   background-color: var(--brand-color);
   font-family: var(--font-title);
   font-size: 1.125rem;
-  color: var(--black);
+  color: white;
 }
+
+.card__button:focus {
+  outline: 2px solid rgb(255, 255, 255);
+  outline-offset: -5px;
+}
+
 
 .card__button:focus {
   outline: 2px solid black;
   outline-offset: -5px;
+}
+.card__title, .card__description, .card__button {
+  color: #ffffff; /* Define a cor branca para os textos */
 }
 
 @media (any-hover: hover) and (any-pointer: fine) {
@@ -891,7 +899,7 @@ body {
 }
 
 .section-ingresso__title {
-  font-size: 3.5rem; /* Ajuste automático */
+  font-size: 3.0rem; /* Ajuste automático */
   font-weight: bold;
   color: #ffffff;
   margin: 0;
@@ -916,24 +924,31 @@ body {
 
 .section-ingresso__cards {
   display: flex;
-  flex-wrap: wrap; /* Permite que os cards se ajustem automaticamente */
-  justify-content: center;
+  flex-wrap: wrap; /* Permite que os cards se reorganizem em telas menores */
+  justify-content: space-evenly; /* Garante espaçamento uniforme entre os cards */
   align-items: flex-start;
   gap: 20px;
-  flex: 1.5;
 }
 
 .ingresso-card {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 350px; /* Tamanho padrão do card */
+  height: 400px; /* Altura padrão do card */
   border-radius: 10px;
-  overflow: hidden;
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites do card */
   text-align: center;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex; /* Flexível para conteúdo interno */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
 }
-
+.ingresso-card img {
+  width: 100%; /* Largura total do card */
+  height: 100%; /* Altura total do card */
+  object-fit: cover; /* Faz a imagem cobrir o card inteiro sem distorção */
+  object-position: center; /* Centraliza a imagem dentro do card */
+}
 .ingresso-card:hover {
   transform: scale(1.05);
 }
@@ -963,7 +978,6 @@ body {
   margin: 0;
 }
 
-/* Responsividade geral */
 @media (max-width: 1366px) {
   .section-ingresso {
     padding: 30px;
@@ -980,16 +994,21 @@ body {
   }
 
   .ingresso-card {
-    width: 280px;
-    height: 380px;
+    width: 90%; /* Aumenta a largura para ocupar mais espaço */
+    max-width: 320px; /* Limita o tamanho máximo do card */
+    height: 400px; /* Aumenta ligeiramente a altura */
   }
 }
 
 @media (max-width: 1024px) {
-  .section-ingresso {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .section-ingresso__cards {
+    justify-content: center; /* Centraliza os cards no espaço disponível */
+  }
+
+  .ingresso-card {
+    width: 90%; /* Aumenta a largura para 90% da tela */
+    max-width: 300px; /* Limita o tamanho máximo */
+    height: 380px; /* Ajusta a altura para manter a proporção */
   }
 
   .section-ingresso__left {
@@ -1009,11 +1028,6 @@ body {
   .section-ingresso__cards {
     gap: 15px;
   }
-
-  .ingresso-card {
-    width: 260px;
-    height: 360px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1030,27 +1044,46 @@ body {
     padding: 8px 30px;
   }
 
+  .section-ingresso__cards {
+    flex-wrap: wrap; /* Reorganiza os cards em telas menores */
+    justify-content: center;
+  }
+
   .ingresso-card {
-    width: 240px;
-    height: 340px;
+    width: 100%; /* Aumenta a largura para quase toda a tela */
+    max-width: 300px; /* Limita o tamanho máximo do card */
+    height: 360px; /* Ajusta a altura */
   }
 }
 
+
 @media (max-width: 480px) {
+  .section-ingresso__cards {
+    flex-direction: column; /* Empilha os cards verticalmente */
+    align-items: center; /* Centraliza os cards no eixo principal */
+    gap: 20px; /* Aumenta o espaçamento entre os cards */
+    padding: 0 20px; /* Adiciona espaçamento lateral na seção */
+  }
+
+  .ingresso-card {
+    width: 90%; /* Faz o card ocupar 90% da largura da tela */
+    max-width: 320px; /* Limita o tamanho máximo do card */
+    height: auto; /* Ajusta a altura automaticamente */
+    border-radius: 10px; /* Mantém os cantos arredondados */
+  }
+
   .section-ingresso__title {
     font-size: 1.8rem;
+    text-align: center; /* Centraliza o título no dispositivo móvel */
   }
 
   .section-ingresso__button {
     font-size: 1rem;
     padding: 8px 20px;
-  }
-
-  .ingresso-card {
-    width: 200px;
-    height: 300px;
+    align-self: center; /* Centraliza o botão */
   }
 }
+
 
 
 

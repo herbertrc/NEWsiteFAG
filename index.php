@@ -196,55 +196,53 @@
         </div>
     </section>
 
-    <!-- Seção Cursos -->
     <section id="cursos" class="section-card">
       <div class="cards-container">
-          <article class="card">
-              <img class="card__background" src="images/Grad.png" alt="Imagem 1" width="1920" height="2193" />
-              <div class="card__content | flow">
-                  <div class="card__content--container | flow">
-                      <h2 class="card__title">Pós Graduação</h2>
-                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  </div>
-                  <button class="card__button">Read more</button>
-              </div>
-          </article>
-
-          <article class="card">
-              <img class="card__background" src="images/Pós.png" alt="Imagem 2" width="1920" height="2193" />
-              <div class="card__content | flow">
-                  <div class="card__content--container | flow">
-                      <h2 class="card__title">Bolsas</h2>
-                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  </div>
-                  <button class="card__button">Read more</button>
-              </div>
-          </article>
-
-          <article class="card">
-              <img class="card__background" src="images/Téc.png" alt="Imagem 3" width="1920" height="2193" />
-              <div class="card__content | flow">
-                  <div class="card__content--container | flow">
-                      <h2 class="card__title">Colombia</h2>
-                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  </div>
-                  <button class="card__button">Read more</button>
-              </div>
-          </article>
-
-          <article class="card">
-              <img class="card__background" src="images/Cursos.png" alt="Imagem 4" width="1920" height="2193" />
-              <div class="card__content | flow">
-                  <div class="card__content--container | flow">
-                      <h2 class="card__title">Colombia</h2>
-                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  </div>
-                  <button class="card__button">Read more</button>
-              </div>
-          </article>
+        <article class="card">
+          <img class="card__background" src="images/Grad.png" alt="Imagem 1" width="1920" height="2193" />
+          <div class="card__content | flow">
+            <div class="card__content--container | flow">
+              <h2 class="card__title">Graduações</h2>
+              <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <a href="graduação.php" class="card__button">Veja mais</a> <!-- Link para a página de graduações -->
+          </div>
+        </article>
+    
+        <article class="card">
+          <img class="card__background" src="images/Pós.png" alt="Imagem 2" width="1920" height="2193" />
+          <div class="card__content | flow">
+            <div class="card__content--container | flow">
+              <h2 class="card__title">Pós-graduação</h2>
+              <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <a href="pos.php" class="card__button">Veja mais</a> <!-- Link para a página de pós-graduações -->
+          </div>
+        </article>
+    
+        <article class="card">
+          <img class="card__background" src="images/Téc.png" alt="Imagem 3" width="1920" height="2193" />
+          <div class="card__content | flow">
+            <div class="card__content--container | flow">
+              <h2 class="card__title">Segurança Pública</h2>
+              <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <a href="tsp.php" class="card__button">Veja mais</a> <!-- Link para a página do tecnólogo -->
+          </div>
+        </article>
+    
+        <article class="card">
+          <img class="card__background" src="images/Cursos.png" alt="Imagem 4" width="1920" height="2193" />
+          <div class="card__content | flow">
+            <div class="card__content--container | flow">
+              <h2 class="card__title">Concursos</h2>
+              <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <a href="concursos.html" class="card__button">Veja mais</a> <!-- Link para a página de concursos -->
+          </div>
+        </article>
       </div>
-  </section>
-
+    </section>
 
     <!-- Banner -->
     <div class="highlight-banner">
@@ -389,7 +387,7 @@
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
           <h5 class="text-uppercase mb-4" style="color: #CA0F0F;">Acesso Rápido</h5>
           <p><a href="https://faculdadeguerra.com.br/ava/" class="text-white text-decoration-none">Acesso ao AVA</a></p>
-          <p><a href="graduação.php" class="text-white text-decoration-none">Matrícula</a></p>
+          <p><a href="#" class="text-white text-decoration-none">Matrícula</a></p>
           <p><a href="#" class="text-white text-decoration-none">Calendário</a></p>
         </div>
   
