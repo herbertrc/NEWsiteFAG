@@ -1272,6 +1272,8 @@ body {
   border: none;
   border-radius: 8px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.3s ease;
 }
 
@@ -1280,18 +1282,37 @@ body {
 }
 
 .card-img-top {
-  height: 200px;
-  object-fit: cover;
+  width: 100%; /* Ajusta a largura da imagem para o tamanho do card */
+  height: 300px; /* Altura fixa para a imagem */
+  object-fit: cover; /* A imagem vai cobrir a área sem distorcer */
+  object-position: center top; /* Ajusta a posição da imagem para o centro superior */
+}
+
+.card-docent {
+  padding: 1rem;
+  height: 300px; /* Define uma altura fixa para a parte do conteúdo */
+  overflow-y: auto; /* Permite a rolagem vertical quando o conteúdo for maior que a altura do card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribui o conteúdo do card de forma mais equilibrada */
 }
 
 .card-title {
-  font-size: 1.25rem;
+  font-size: 1.20rem;
   color: #CA0F0F;
+  margin-bottom: 10px; /* Adiciona um espaçamento abaixo do título */
 }
 
-.card-text {
-  font-size: 0.9rem;
+.card-text{
+  font-size: 1rem;
   color: #333;
+  line-height: 1.5;
+}
+
+.card-texto {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
 }
 
 .btn-outline-danger {
@@ -1300,9 +1321,31 @@ body {
 }
 
 .btn-outline-danger:hover {
-  background-color: #CA0F0F;
+  background-color: #847575;
   color: #fff;
 }
+
+/* Adiciona uma margem para garantir que as colunas se alinhem corretamente */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.col-md-4 {
+  padding-left: 10px; /* Adiciona um pequeno espaçamento à esquerda das colunas */
+  padding-right: 10px; /* Adiciona um pequeno espaçamento à direita das colunas */
+}
+
+/* Adiciona clearfix para garantir que as colunas não se sobreponham */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
 
 @media (min-width: 992px) { /* Aplica a margem apenas em telas grandes */
   .docent-container .row .col-md-4:nth-child(4),
@@ -1495,4 +1538,246 @@ body {
   position: absolute;
   bottom: -10px;
   right: -15px;
+}
+
+/* Container principal */
+.market-container {
+  background-color: #f9f9f9; /* Cor de fundo suave */
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Título */
+.market-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #CA0F0F; /* Cor de destaque */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Descrição do mercado */
+.market-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Lista de oportunidades */
+.market-opportunities {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.market-opportunities li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.market-opportunities li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #CA0F0F;
+}
+
+/* Informações extras */
+.market-extra {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Chamada para ação */
+.market-call-to-action {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #CA0F0F;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.market-call-to-action:hover {
+  background-color: #b80909; /* Efeito de hover */
+}
+
+.market-call-to-action strong {
+  font-size: 1.3rem;
+}
+
+/* Contêiner do conteúdo */
+.content {
+  max-width: 800px; /* Limita a largura do conteúdo para que não ocupe toda a tela */
+  margin: 50px auto; /* Centraliza o conteúdo com espaçamento superior */
+  padding: 20px;
+  background-color: #ffffff; /* Fundo branco para contraste */
+  border-radius: 12px; /* Bordas arredondadas para suavizar o design */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para profundidade */
+  font-family: 'Roboto', sans-serif; /* Fonte moderna e limpa */
+  line-height: 1.8; /* Aumenta o espaçamento entre as linhas para legibilidade */
+  color: #333; /* Cor do texto */
+  position: relative;
+}
+
+/* Título */
+.content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #CA0F0F; /* Cor vermelha para destaque */
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+/* Parágrafo */
+.content p {
+  font-size: 1.1rem;
+  color: #555; /* Cor mais suave para o texto */
+  margin-bottom: 20px;
+  text-align: justify;
+  letter-spacing: 0.5px; /* Espaçamento nas letras para uma leitura mais fluida */
+  line-height: 1.8; /* Aumenta o espaçamento entre as linhas */
+}
+
+/* Ajusta a largura do conteúdo para ocupar a metade esquerda da tela */
+@media (min-width: 1024px) {
+  .content {
+      width: 50%; /* Faz o conteúdo ocupar a metade da tela */
+      position: absolute;
+      left: 0;
+  }
+}
+
+/* Responsividade: ajusta o layout para telas menores */
+@media (max-width: 1024px) {
+  .content {
+      width: 90%; /* Para dispositivos móveis, o conteúdo ocupa 90% da largura */
+      margin: 20px auto; /* Centraliza o conteúdo */
+  }
+}
+
+/* Estilo principal do bloco */
+.cursinho {
+  position: relative;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px 20px;
+  background-color: transparent; /* Fundo transparente */
+  color: #333; /* Cor do texto padrão */
+  font-family: 'Roboto', sans-serif; /* Fonte moderna e clean */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: justify;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards; /* Animação de entrada */
+  transform: translateY(30px); /* Animação de subida */
+}
+
+/* Animação para fazer o conteúdo aparecer suavemente */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Título com tipografia moderna e grande */
+.cursinho h1 {
+  font-size: 3rem;
+  color: #222; /* Cor escura e elegante para o título */
+  margin-bottom: 20px;
+  letter-spacing: 1px; /* Aumenta o espaçamento entre letras para uma sensação de amplitude */
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInTitle 1.5s ease-out forwards;
+}
+
+/* Efeito de animação para o título */
+@keyframes fadeInTitle {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Subtítulo com efeito de destaque */
+.cursinho p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #555;
+  opacity: 0;
+  animation: fadeInText 2s ease-out forwards;
+  animation-delay: 0.5s; /* Delay para o texto aparecer após o título */
+}
+
+/* Animação do texto */
+@keyframes fadeInText {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Efeito de cor suave no hover do título */
+.cursinho h1:hover {
+  color: #CA0F0F; /* Altera a cor do título ao passar o mouse */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* Efeito de foco para o texto */
+.cursinho p:hover {
+  color: #CA0F0F; /* Foco no texto quando o mouse passa sobre */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .cursinho {
+      padding: 20px 15px; /* Ajusta o padding para telas menores */
+      max-width: 90%;
+  }
+
+  .cursinho h1 {
+      font-size: 2.5rem; /* Reduz o tamanho do título */
+  }
+
+  .cursinho p {
+      font-size: 1rem; /* Diminui o tamanho do texto */
+  }
 }

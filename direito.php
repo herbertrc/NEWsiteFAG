@@ -125,7 +125,7 @@
 
     <!-- Banner com Texto -->
     <div class="image-banner">
-        <img src="images/direito.jpg" alt="Bacharel em Direito" class="banner-img">
+        <img src="images/direitolarge.jpg" alt="Bacharel em Direito" class="banner-img">
         <div class="text-overlay container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 text-content">
@@ -193,7 +193,7 @@
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="cursinho">
             <h1>CONHEÇA O CURSO</h1>
             <p>A faculdade de Direito proporciona uma educação completa para quem deseja entender e atuar no campo jurídico. O currículo do curso abrange desde os fundamentos do sistema legal até suas aplicações na sociedade.
                 A graduação prepara os alunos para interpretar e aplicar leis que regulam diversas áreas da vida em sociedade. Ao longo do curso, eles terão disciplinas que combinam teoria e prática, incluindo Ciência Política e Teoria Geral do Estado, para compreender a estrutura política e institucional do país.
@@ -270,95 +270,108 @@
   </script>
 
 
-    <div class="market-container">
-        <h1 class="market-title">Mercado de Trabalho<br>do curso de Direito</h1>
-        <p class="market-description">
+  <div class="market-container">
+    <h1 class="market-title">Mercado de Trabalho<br>do Curso de Direito</h1>
+    <p class="market-description">
         O salário para advogado na região de Brasília está na faixa dos <strong>R$ 5.500,00</strong> (segundo o portal Glassdoor). Esse valor pode variar conforme a região de atuação, experiência, cargo específico e tipo de contrato.
-        </p>
-        <ul class="market-opportunities">
+    </p>
+    <ul class="market-opportunities">
         <li>Advocacia;</li>
         <li>Consultoria jurídica;</li>
         <li>Magistratura;</li>
-        <li>Ministério público;</li>
+        <li>Ministério Público;</li>
         <li>Setor jurídico de empresas;</li>
         <li>Órgãos públicos;</li>
         <li>Organizações sem fins lucrativos.</li>
-        </ul>
-        <p class="market-extra">
+    </ul>
+    <p class="market-extra">
         Os profissionais mais qualificados são os mais valorizados, principalmente aqueles que atuam em áreas específicas, como Direito digital, ambiental e internacional.
-        </p>
-        <p class="market-call-to-action">
+    </p>
+    <p class="market-call-to-action">
         E então, está preparado para iniciar sua jornada na faculdade de Direito? Inscreva-se na <strong>GUERRA</strong> agora e comece sua trajetória em direção a uma carreira dinâmica! Utilize sua nota do <strong>ENEM</strong> para garantir sua vaga.
-        </p>
-    </div>
+    </p>
+</div>
+
 
 
     <div class="docent-container my-5">
-        <h1 class="market-title text-center mb-5">Corpo Docente</h1>
-        <div class="container">
-          <div class="row">
-            <!-- Docente 1 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-              <div class="card text-center shadow-sm">
-                <img src="images/docente1.jpg" class="card-img-top" alt="Foto do Docente 1">
-                <div class="card-body">
-                  <h5 class="card-title">Prof. Dr. João Silva</h5>
-                  <p class="card-text">Doutor em Direito Constitucional pela Universidade X. Especialista em Direito Penal.</p>
-                  <a href="curriculo_joao.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Docente 2 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-              <div class="card text-center shadow-sm">
-                <img src="images/docente2.jpg" class="card-img-top" alt="Foto do Docente 2">
-                <div class="card-body">
-                  <h5 class="card-title">Profa. Dra. Maria Oliveira</h5>
-                  <p class="card-text">Doutora em Direito Ambiental pela Universidade Y. Experiência em Direito Internacional.</p>
-                  <a href="curriculo_maria.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Docente 3 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-              <div class="card text-center shadow-sm">
-                <img src="images/docente3.jpg" class="card-img-top" alt="Foto do Docente 3">
-                <div class="card-body">
-                  <h5 class="card-title">Prof. Me. Carlos Souza</h5>
-                  <p class="card-text">Mestre em Direito Civil pela Universidade Z. Advogado com mais de 15 anos de experiência.</p>
-                  <a href="curriculo_carlos.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Docente 4 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-              <div class="card text-center shadow-sm">
-                <img src="images/docente4.jpg" class="card-img-top" alt="Foto do Docente 4">
-                <div class="card-body">
-                  <h5 class="card-title">Profa. Dra. Ana Mendes</h5>
-                  <p class="card-text">Doutora em Direito Penal pela Universidade W. Especialista em Criminologia.</p>
-                  <a href="curriculo_ana.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Docente 5 -->
-            <div class="col-md-4 col-sm-6 mb-4">
-              <div class="card text-center shadow-sm">
-                <img src="images/docente5.jpg" class="card-img-top" alt="Foto do Docente 5">
-                <div class="card-body">
-                  <h5 class="card-title">Prof. Me. Pedro Lima</h5>
-                  <p class="card-text">Mestre em Direito Administrativo pela Universidade V. Pesquisador em Políticas Públicas.</p>
-                  <a href="curriculo_pedro.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
-                </div>
+      <h1 class="market-title text-center mb-5">Corpo Docente</h1>
+      <div class="container">
+        <div class="row">
+          <!-- Docente 1 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm">
+              <img src="images/heronprof.jpg" class="card-img-top" alt="Foto do Docente 1">
+              <div class="card-docent">
+                <h5 class="card-title">Prof. Heron Renato Fernandes</h5>
+                <p class="card-texto">Doutorando em Direito Penal, 
+                  Bacharel em Direito, Graduado em Geografia, Pós-Graduado em Direito Público.</p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+    
+          <!-- Docente 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm">
+              <img src="images/geraldoprof.jpg" class="card-img-top" alt="Foto do Docente 2">
+              <div class="card-docent">
+                <h5 class="card-title">Prof. Geraldo Nunes de Arruda</h5>
+                <p class="card-texto">Pós-Graduado em Direito Tributário e Finanças Públicas, e em Direito Processual Civil e Direito Civil.
+                 Vice-Presidente da OAB eleito da Subseção de Taguatinga - DF. Empresário, mentor e palestrante.</p>
+              
+              </div>
+            </div>
+          </div>
+    
+          <!-- Docente 3 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm">
+              <img src="images/leandroprof.jpg" class="card-img-top" alt="Foto do Docente 3">
+              <div class="card-docent">
+                <h5 class="card-title">Prof. Leandro Henrique Peres Araujo Piau</h5>
+                <p class="card-texto">Mestre em Direito Econômico e Desenvolvimento e Especialista em Direito da Regulação. Especialista em Direito Público e Processual.
+
+                  Atuou como docente de graduação e pós-graduação, além de coordenador adjunto de graduação e coordenador do Núcleo de Prática Jurídica.</p>
+                
+              </div>
+            </div>
+          </div>
+    
+          <!-- Docente 4 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm">
+              <img src="images/timoteo.png" class="card-img-top" alt="Foto do Docente 4">
+              <div class="card-docent">
+                <h5 class="card-title">Prof. Timoteo Carneiro Ferreira</h5>
+                <p class="card-texto">Graduado em Direito e Mestre em LL.M.EUR European Legal Practice Joint Degree (Universidade Católica Portuguesa, 2010).
+
+                  Professor de Direito Penal, Processual Penal, Administrativo, Constitucional e Direito Criminal </p>
+             
+              </div>
+            </div>
+          </div>
+    
+          <!-- Docente 5 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm">
+              <img src="images/kellenprof.jpeg" class="card-img-top" alt="Foto do Docente 5">
+              <div class="card-docent">
+                <h5 class="card-title">Profa. Kellen Margareth Peres Pamplona Guerra</h5>
+                <p class="card-texto"> Analista Judiciário na área Judiciária do Superior Tribunal de Justiça (STJ).
+
+                  Especialista em Direito Penal e Direito Processual Penal, pós-graduada em Gestão de Pessoas, Educação a Distância, Docência do Ensino Superior e Direitos do Consumidor aplicados à Educação. Mestre em Ciências Sociais Aplicadas e doutoranda pela Faculdade Unida de Vitória.
+                  
+                  Nomeada Juíza de Paz suplente pelo Provimento Geral da Corregedoria de Brasília (Portaria GPR 287/2018) no 1º Ofício de Registro Civil das Pessoas Naturais e Jurídicas e Registro de Títulos de Brasília.
+                  
+                  </p>
+              
+              </div>
+            </div>
+          </div>
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+    </div> <!-- .docent-container -->
+    
       
 
           <!-- Linha Horizontal -->
