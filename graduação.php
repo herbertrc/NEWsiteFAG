@@ -119,55 +119,57 @@
     </nav>
 
 
-
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Encontre o seu curso de Graduação</h1>
-        <p class="text-center">Use os filtros abaixo ou pesquise diretamente pelo nome do curso.</p>
-        <div class="row mb-4">
-            <div class="col-md-3">
-                <h5>Filtros</h5>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Bacharelado" id="bacharelado">
-                    <label class="form-check-label" for="bacharelado">Bacharelado</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Tecnológico" id="tecnologico">
-                    <label class="form-check-label" for="tecnologico">Tecnológico</label>
-                </div>
-                <h5 class="mt-3">Duração</h5>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="4 semestres" id="4semestres">
-                    <label class="form-check-label" for="4semestres">4 semestres</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="10 semestres" id="10semestres">
-                    <label class="form-check-label" for="10semestres">10 semestres</label>
-                </div>
-                <h5 class="mt-3">Modalidade</h5>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="EAD" id="ead">
-                    <label class="form-check-label" for="ead">EAD</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Híbrido" id="hibrido">
-                    <label class="form-check-label" for="hibrido">Híbrido</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Presencial" id="presencial">
-                    <label class="form-check-label" for="presencial">Presencial</label>
-                </div>
+    <div class="grad-container mt-5">
+    <h1 class="grad-title text-center mb-4">Encontre o seu curso de Graduação</h1>
+    <p class="grad-description text-center">Use os filtros abaixo ou pesquise diretamente pelo nome do curso.</p>
+    <div class="row mb-4">
+        <!-- Coluna de Filtros -->
+        <div class="grad-filters col-md-3">
+            <h5 class="grad-filters-title">Filtros</h5>
+            <div class="grad-filter-item form-check">
+                <input class="grad-filter-input form-check-input" type="checkbox" value="Bacharelado" id="bacharelado">
+                <label class="grad-filter-label form-check-label" for="bacharelado">Bacharelado</label>
             </div>
-            <div class="col-md-9">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="searchInput" placeholder="Pesquise pelo nome do curso">
-                    <button class="btn btn-outline-primary" id="searchButton">Pesquisar</button>
-                </div>
-                <div class="row" id="coursesContainer">
-                    <!-- Os cursos serão carregados aqui -->
-                </div>
+            <div class="grad-filter-item form-check">
+                <input class="grad-filter-input form-check-input" type="checkbox" value="Tecnológico" id="tecnologico">
+                <label class="grad-filter-label form-check-label" for="tecnologico">Tecnológo</label>
+            </div>
+            <h5 class="grad-filters-title mt-3">Duração</h5>
+            <div class="grad-filter-item form-check">
+                <input class="grad-filter-input form-check-input" type="checkbox" value="4 semestres" id="4semestres">
+                <label class="grad-filter-label form-check-label" for="4semestres">4 semestres</label>
+            </div>
+            <div class="grad-filter-item form-check">
+                <input class="grad-filter-input form-check-input" type="checkbox" value="10 semestres" id="10semestres">
+                <label class="grad-filter-label form-check-label" for="10semestres">10 semestres</label>
+            </div>
+            <h5 class="grad-filters-title mt-3">Modalidade</h5>
+            <div class="grad-filter-item form-check">
+                <input class="grad-filter-input form-check-input" type="checkbox" value="EAD" id="ead">
+                <label class="grad-filter-label form-check-label" for="ead">EAD</label>
+            </div>
+            <div class="grad-filter-item form-check">
+                <input class="grad-filter-input form-check-input" type="checkbox" value="Híbrido" id="hibrido">
+                <label class="grad-filter-label form-check-label" for="hibrido">Híbrido</label>
+            </div>
+            <div class="grad-filter-item form-check">
+                <input class="grad-filter-input form-check-input" type="checkbox" value="Presencial" id="presencial">
+                <label class="grad-filter-label form-check-label" for="presencial">Presencial</label>
+            </div>
+        </div>
+        <!-- Coluna de Pesquisa e Resultados -->
+        <div class="grad-results col-md-9">
+            <div class="grad-search-bar input-group mb-4">
+                <input type="text" class="grad-search-input form-control" id="searchInput" placeholder="Pesquise pelo nome do curso">
+                <button class="grad-search-button btn btn-primary" id="searchButton">Pesquisar</button>
+            </div>
+            <div class="grad-courses-container row" id="coursesContainer">
+                <!-- Os cursos serão carregados aqui -->
             </div>
         </div>
     </div>
+</div>
+
     
 
 

@@ -146,8 +146,8 @@
                 <div class="card text-center border-0 shadow-sm">
                     <div class="card-body">
                         <img src="images/diploma.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Formação</h6>
-                        <p class="card-text small">Tecnologo</p>
+                        <h6 class="info-card-title">Formação</h6>
+                        <p class="info-card-text small">Tecnologo</p>
                     </div>
                 </div>
             </div>
@@ -156,8 +156,8 @@
                 <div class="card text-center border-0 shadow-sm">
                     <div class="card-body">
                         <img src="images/aula.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Aula</h6>
-                        <p class="card-text small">Presencial <br> EAD</p>
+                        <h6 class="info-card-title">Aula</h6>
+                        <p class="info-card-text small">Presencial <br> EAD</p>
                     </div>
                 </div>
             </div>
@@ -166,8 +166,8 @@
                 <div class="card text-center border-0 shadow-sm">
                     <div class="card-body">
                         <img src="images/predio.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Campus</h6>
-                        <p class="card-text small">Taguatinga Centro</p>
+                        <h6 class="info-card-title">Campus</h6>
+                        <p class="info-card-text small">Taguatinga Centro</p>
                     </div>
                 </div>
             </div>
@@ -176,8 +176,8 @@
                 <div class="card text-center border-0 shadow-sm">
                     <div class="card-body">
                         <img src="images/solnoite.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Turnos</h6>
-                        <p class="card-text small">Matutino <br> Noturno</p>
+                        <h6 class="info-card-title">Turnos</h6>
+                        <p class="info-card-text small">Matutino <br> Noturno</p>
                     </div>
                 </div>
             </div>
@@ -186,14 +186,14 @@
                 <div class="card text-center border-0 shadow-sm">
                     <div class="card-body">
                         <img src="images/calendario.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Duração</h6>
-                        <p class="card-text small">4 Semestres</p>
+                        <h6 class="info-card-title">Duração</h6>
+                        <p class="info-card-text small">4 Semestres</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="cursinho">
       <h1>CONHEÇA O CURSO</h1>
       <p>
           O curso de <strong>Tecnólogo em Segurança Pública</strong> da Faculdade Guerra é ideal para quem busca capacitação completa para atuar no setor de proteção e ordem pública. 
@@ -302,71 +302,82 @@
 
 
   <div class="docent-container my-5">
-    <h1 class="market-title text-center mb-5">Corpo Docente</h1>
-    <div class="container">
-      <div class="row">
-        <!-- Docente 1 -->
-        <div class="col-md-4 col-sm-6 mb-4">
-          <div class="card text-center shadow-sm">
-            <img src="images/docente1.jpg" class="card-img-top" alt="Foto do Docente 1">
-            <div class="card-body">
-              <h5 class="card-title">Prof. Dr. Luís Pereira</h5>
-              <p class="card-text">Doutor em Segurança Pública pela Universidade X. Especialista em Gestão de Crises.</p>
-              <a href="curriculo_luis.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
+      <h1 class="market-title text-center mb-5">Corpo Docente</h1>
+      <div class="container">
+        <div class="row">
+          <!-- Docente 1 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm">
+              <img src="images/heronprof.jpg" class="card-img-top" alt="Foto do Docente 1">
+              <div class="card-docent">
+                <h5 class="card-title">Prof. Heron Renato Fernandes</h5>
+                <p class="card-texto">Doutorando em Direito Penal, 
+                  Bacharel em Direito, Graduado em Geografia, Pós-Graduado em Direito Público.</p>
+              </div>
             </div>
           </div>
-        </div>
-  
-        <!-- Docente 2 -->
-        <div class="col-md-4 col-sm-6 mb-4">
-          <div class="card text-center shadow-sm">
-            <img src="images/docente2.jpg" class="card-img-top" alt="Foto do Docente 2">
-            <div class="card-body">
-              <h5 class="card-title">Profa. Dra. Clara Nogueira</h5>
-              <p class="card-text">Doutora em Direitos Humanos pela Universidade Y. Experiência em Mediação de Conflitos.</p>
-              <a href="curriculo_clara.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
+    
+          <!-- Docente 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm">
+              <img src="images/geraldoprof.jpg" class="card-img-top" alt="Foto do Docente 2">
+              <div class="card-docent">
+                <h5 class="card-title">Prof. Geraldo Nunes de Arruda</h5>
+                <p class="card-texto">Pós-Graduado em Direito Tributário e Finanças Públicas, e em Direito Processual Civil e Direito Civil.
+                 Vice-Presidente da OAB eleito da Subseção de Taguatinga - DF. Empresário, mentor e palestrante.</p>
+              
+              </div>
             </div>
           </div>
-        </div>
-  
-        <!-- Docente 3 -->
-        <div class="col-md-4 col-sm-6 mb-4">
-          <div class="card text-center shadow-sm">
-            <img src="images/docente3.jpg" class="card-img-top" alt="Foto do Docente 3">
-            <div class="card-body">
-              <h5 class="card-title">Prof. Me. Ricardo Alves</h5>
-              <p class="card-text">Mestre em Políticas de Segurança pela Universidade Z. Especialista em Prevenção Criminal.</p>
-              <a href="curriculo_ricardo.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
+    
+          <!-- Docente 3 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm">
+              <img src="images/leandroprof.jpg" class="card-img-top" alt="Foto do Docente 3">
+              <div class="card-docent">
+                <h5 class="card-title">Prof. Leandro Henrique Peres Araujo Piau</h5>
+                <p class="card-texto">Mestre em Direito Econômico e Desenvolvimento e Especialista em Direito da Regulação. Especialista em Direito Público e Processual.
+
+                  Atuou como docente de graduação e pós-graduação, além de coordenador adjunto de graduação e coordenador do Núcleo de Prática Jurídica.</p>
+                
+              </div>
             </div>
           </div>
-        </div>
-  
-        <!-- Docente 4 -->
-        <div class="col-md-4 col-sm-6 mb-4">
-          <div class="card text-center shadow-sm">
-            <img src="images/docente4.jpg" class="card-img-top" alt="Foto do Docente 4">
-            <div class="card-body">
-              <h5 class="card-title">Profa. Dra. Mariana Souza</h5>
-              <p class="card-text">Doutora em Criminologia pela Universidade W. Especialista em Segurança Cibernética.</p>
-              <a href="curriculo_mariana.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
+    
+          <!-- Docente 4 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm">
+              <img src="images/timoteo.png" class="card-img-top" alt="Foto do Docente 4">
+              <div class="card-docent">
+                <h5 class="card-title">Prof. Timoteo Carneiro Ferreira</h5>
+                <p class="card-texto">Graduado em Direito e Mestre em LL.M.EUR European Legal Practice Joint Degree (Universidade Católica Portuguesa, 2010).
+
+                  Professor de Direito Penal, Processual Penal, Administrativo, Constitucional e Direito Criminal </p>
+             
+              </div>
             </div>
           </div>
-        </div>
-  
-        <!-- Docente 5 -->
-        <div class="col-md-4 col-sm-6 mb-4">
-          <div class="card text-center shadow-sm">
-            <img src="images/docente5.jpg" class="card-img-top" alt="Foto do Docente 5">
-            <div class="card-body">
-              <h5 class="card-title">Prof. Me. Thiago Mendes</h5>
-              <p class="card-text">Mestre em Gestão Pública pela Universidade V. Pesquisador em Políticas de Segurança.</p>
-              <a href="curriculo_thiago.pdf" class="btn btn-outline-danger" target="_blank">Ver Currículo</a>
+    
+          <!-- Docente 5 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm">
+              <img src="images/kellenprof.jpeg" class="card-img-top" alt="Foto do Docente 5">
+              <div class="card-docent">
+                <h5 class="card-title">Profa. Kellen Margareth Peres Pamplona Guerra</h5>
+                <p class="card-texto"> Analista Judiciário na área Judiciária do Superior Tribunal de Justiça (STJ).
+
+                  Especialista em Direito Penal e Direito Processual Penal, pós-graduada em Gestão de Pessoas, Educação a Distância, Docência do Ensino Superior e Direitos do Consumidor aplicados à Educação. Mestre em Ciências Sociais Aplicadas e doutoranda pela Faculdade Unida de Vitória.
+                  
+                  Nomeada Juíza de Paz suplente pelo Provimento Geral da Corregedoria de Brasília (Portaria GPR 287/2018) no 1º Ofício de Registro Civil das Pessoas Naturais e Jurídicas e Registro de Títulos de Brasília.
+                  
+                  </p>
+              
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+    </div> <!-- .docent-container -->
 
       
 

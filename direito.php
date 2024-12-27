@@ -137,62 +137,61 @@
         </div>
     </div>
 
-    <!-- Container Principal -->
     <div class="container my-5">
-        <!-- Linha para os 5 Cards -->
-        <div class="row g-4">
-            <!-- Card 1 -->
-            <div class="col-md-2 col-sm-6">
-                <div class="card text-center border-0 shadow-sm">
-                    <div class="card-body">
-                        <img src="images/diploma.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Formação</h6>
-                        <p class="card-text small">Bacharelado</p>
-                    </div>
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-2 col-sm-6">
+            <div class="card text-center border-0 shadow-sm">
+                <div class="card-body">
+                    <img src="images/diploma.png" alt="" class="mb-2" style="width: 40px;">
+                    <h6 class="info-card-title">Formação</h6>
+                    <p class="info-card-text small">Bacharelado</p>
                 </div>
             </div>
-            <!-- Card 2 -->
-            <div class="col-md-2 col-sm-6">
-                <div class="card text-center border-0 shadow-sm">
-                    <div class="card-body">
-                        <img src="images/aula.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Aula</h6>
-                        <p class="card-text small">Presencial</p>
-                    </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-2 col-sm-6">
+            <div class="card text-center border-0 shadow-sm">
+                <div class="card-body">
+                    <img src="images/aula.png" alt="" class="mb-2" style="width: 40px;">
+                    <h6 class="info-card-title">Aula</h6>
+                    <p class="info-card-text small">Presencial <br> Hibrido</p>
                 </div>
             </div>
-            <!-- Card 3 -->
-            <div class="col-md-2 col-sm-6">
-                <div class="card text-center border-0 shadow-sm">
-                    <div class="card-body">
-                        <img src="images/predio.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Campus</h6>
-                        <p class="card-text small">Taguatinga Centro</p>
-                    </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-2 col-sm-6">
+            <div class="card text-center border-0 shadow-sm">
+                <div class="card-body">
+                    <img src="images/predio.png" alt="" class="mb-2" style="width: 40px;">
+                    <h6 class="info-card-title">Campus</h6>
+                    <p class="info-card-text small">Taguatinga Centro</p>
                 </div>
             </div>
-            <!-- Card 4 -->
-            <div class="col-md-2 col-sm-6">
-                <div class="card text-center border-0 shadow-sm">
-                    <div class="card-body">
-                        <img src="images/solnoite.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Turnos</h6>
-                        <p class="card-text small">Matutino <br> Noturno</p>
-                    </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-2 col-sm-6">
+            <div class="card text-center border-0 shadow-sm">
+                <div class="card-body">
+                    <img src="images/solnoite.png" alt="" class="mb-2" style="width: 40px;">
+                    <h6 class="info-card-title">Turnos</h6>
+                    <p class="info-card-text small">Matutino <br> Noturno</p>
                 </div>
             </div>
-            <!-- Card 5 -->
-            <div class="col-md-2 col-sm-6">
-                <div class="card text-center border-0 shadow-sm">
-                    <div class="card-body">
-                        <img src="images/calendario.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Duração</h6>
-                        <p class="card-text small">10 Semestres</p>
-                    </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-md-2 col-sm-6">
+            <div class="card text-center border-0 shadow-sm">
+                <div class="card-body">
+                    <img src="images/calendario.png" alt="" class="mb-2" style="width: 40px;">
+                    <h6 class="info-card-title">Duração</h6>
+                    <p class="info-card-text small">10 Semestres</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
     <div class="cursinho">
             <h1>CONHEÇA O CURSO</h1>
             <p>A faculdade de Direito proporciona uma educação completa para quem deseja entender e atuar no campo jurídico. O currículo do curso abrange desde os fundamentos do sistema legal até suas aplicações na sociedade.

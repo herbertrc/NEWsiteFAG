@@ -569,7 +569,15 @@ body {
   font-size: 1rem;
   font-weight: bold;
 }
+.info-card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #CA0F0F;
+}
 
+.info-card-text {
+  color: #000000; /* Cinza claro */
+}
 .card-text {
   color: #ffffff; /* Cinza claro */
 }
@@ -899,10 +907,11 @@ body {
 }
 
 .section-ingresso__title {
-  font-size: 3.5rem; /* Ajuste automático */
+  font-size: 4.5rem; /* Ajuste automático */
   font-weight: bold;
   color: #ffffff;
   margin: 0;
+  margin-bottom: 200px;
   text-align: left;
 }
 
@@ -1268,7 +1277,7 @@ body {
   border-radius: 8px;
 }
 
-.card {
+.docent-container .card {
   border: none;
   border-radius: 8px;
   overflow: hidden;
@@ -1276,19 +1285,18 @@ body {
   flex-direction: column;
   transition: transform 0.3s ease;
 }
-
-.card:hover {
+.docent-container .card:hover {
   transform: scale(1.05);
 }
 
-.card-img-top {
+.docent-container .card-img-top {
   width: 100%; /* Ajusta a largura da imagem para o tamanho do card */
   height: 300px; /* Altura fixa para a imagem */
   object-fit: cover; /* A imagem vai cobrir a área sem distorcer */
   object-position: center top; /* Ajusta a posição da imagem para o centro superior */
 }
 
-.card-docent {
+.docent-container .card-docent {
   padding: 1rem;
   height: 300px; /* Define uma altura fixa para a parte do conteúdo */
   overflow-y: auto; /* Permite a rolagem vertical quando o conteúdo for maior que a altura do card */
@@ -1297,19 +1305,19 @@ body {
   justify-content: space-between; /* Distribui o conteúdo do card de forma mais equilibrada */
 }
 
-.card-title {
+.docent-container .card-title {
   font-size: 1.20rem;
   color: #CA0F0F;
   margin-bottom: 10px; /* Adiciona um espaçamento abaixo do título */
 }
 
-.card-text{
+.docent-container .card-text {
   font-size: 1rem;
   color: #333;
   line-height: 1.5;
 }
 
-.card-texto {
+.docent-container .card-texto {
   font-size: 1rem;
   color: #333;
   line-height: 1.5;
@@ -1325,24 +1333,22 @@ body {
   color: #fff;
 }
 
-/* Adiciona uma margem para garantir que as colunas se alinhem corretamente */
-.row {
+.docent-container .row {
   margin-left: 0;
   margin-right: 0;
 }
 
-.col-md-4 {
+.docent-container .col-md-4 {
   padding-left: 10px; /* Adiciona um pequeno espaçamento à esquerda das colunas */
   padding-right: 10px; /* Adiciona um pequeno espaçamento à direita das colunas */
 }
 
 /* Adiciona clearfix para garantir que as colunas não se sobreponham */
-.clearfix::after {
+.docent-container .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
-
 
 
 
@@ -1421,6 +1427,12 @@ body {
 .bg-success {
   background-color: #198754;
 }
+.badge.bg-danger {
+  background-color: #dc3545; /* Vermelho */
+  color: #fff !important; /* Força o branco na cor da fonte */
+  font-weight: bold;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -1441,6 +1453,210 @@ body {
     font-size: 12px;
   }
 }
+
+
+/* Contêiner Principal */
+.grad-container {
+  padding: 20px;
+}
+
+/* Títulos */
+.grad-title {
+  font-weight: bold;
+  color: #CA0F0F;
+}
+
+.grad-description {
+  color: #555;
+}
+
+/* Barra de Pesquisa */
+.grad-search-bar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px; /* Aumenta o tamanho horizontal */
+  margin: 20px auto; /* Centraliza horizontalmente */
+}
+
+.grad-search-input {
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 1.2rem; /* Maior */
+  border-radius: 0;
+}
+
+.grad-search-input::placeholder {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.grad-search-button {
+  background-color: #CA0F0F;
+  color: white;
+  border: none;
+  font-weight: 600;
+  padding: 15px 20px;
+  font-size: 1.1rem; /* Maior */
+  transition: all 0.3s ease-in-out;
+}
+
+.grad-search-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Filtros */
+.grad-filters {
+  background-color: white;
+  padding: 30px; /* Aumentado */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem; /* Tamanho do texto maior */
+  width: 300px; /* Diminui o tamanho horizontal */
+}
+
+.grad-filters-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #555;
+  font-size: 1.3rem; /* Maior */
+}
+
+.grad-filter-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Aumentado */
+}
+
+.grad-filter-input {
+  width: 25px; /* Maior */
+  height: 25px; /* Maior */
+  margin-right: 15px;
+  accent-color: #CA0F0F;
+  cursor: pointer;
+}
+
+.grad-filter-label {
+  font-size: 1.1rem; /* Maior */
+  color: #555;
+}
+
+/* Transições para interatividade */
+.grad-filter-input:hover {
+  transform: scale(1.2);
+}
+
+.grad-filter-label:hover {
+  color: #CA0F0F;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Resultados */
+.grad-courses-container {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os cards */
+  gap: 20px; /* Adiciona espaço entre os cards */
+}
+
+.grad-courses-container .grad-card {
+  flex: 0 1 calc(300px - 20px); /* Mantém o tamanho fixo dos cards */
+  max-width: calc(300px - 20px);
+}
+
+/* Responsividade */
+
+/* Telas médias (tablets) */
+@media (max-width: 992px) {
+  .grad-filters {
+      font-size: 1rem; /* Ajuste de tamanho */
+      padding: 20px;
+      width: 250px; /* Reduz tamanho horizontal em telas menores */
+  }
+
+  .grad-filter-input {
+      width: 20px;
+      height: 20px;
+  }
+
+  .grad-filters-title {
+      font-size: 1.2rem;
+  }
+
+  .grad-filter-label {
+      font-size: 1rem;
+  }
+
+  .grad-search-bar {
+      max-width: 600px; /* Ajusta a largura */
+  }
+
+  .grad-search-input {
+      font-size: 1rem;
+      padding: 12px;
+  }
+
+  .grad-search-button {
+      font-size: 1rem;
+      padding: 12px 18px;
+  }
+
+  .grad-courses-container .grad-card {
+      flex: 0 1 calc(250px - 20px); /* Ajusta tamanho dos cards */
+      max-width: calc(250px - 20px);
+  }
+}
+
+/* Telas pequenas (celulares) */
+@media (max-width: 576px) {
+  .grad-filters {
+      font-size: 0.9rem; /* Ajuste de tamanho */
+      padding: 15px;
+      width: 200px; /* Reduz tamanho horizontal em telas menores */
+  }
+
+  .grad-filter-input {
+      width: 18px;
+      height: 18px;
+  }
+
+  .grad-filters-title {
+      font-size: 1rem;
+  }
+
+  .grad-filter-label {
+      font-size: 0.9rem;
+  }
+
+  .grad-search-bar {
+      max-width: 400px; /* Ajusta a largura */
+  }
+
+  .grad-search-input {
+      font-size: 0.9rem;
+      padding: 10px;
+  }
+
+  .grad-search-button {
+      font-size: 0.9rem;
+      padding: 10px 15px;
+  }
+
+  .grad-courses-container .grad-card {
+      flex: 0 1 calc(200px - 20px); /* Ajusta tamanho dos cards */
+      max-width: calc(200px - 20px);
+  }
+}
+
 
 /* Transições suaves para os itens do curso */
 .course-item {

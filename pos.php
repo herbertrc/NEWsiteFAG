@@ -146,8 +146,8 @@
                 <div class="card text-center border-0 shadow-sm">
                     <div class="card-body">
                         <img src="images/diploma.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Formação</h6>
-                        <p class="card-text small">Pós-Graduação</p>
+                        <h6 class="info-card-title">Formação</h6>
+                        <p class="info-card-text small">Pós-Graduação</p>
                     </div>
                 </div>
             </div>
@@ -156,8 +156,8 @@
                 <div class="card text-center border-0 shadow-sm">
                     <div class="card-body">
                         <img src="images/aula.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Aula</h6>
-                        <p class="card-text small">EAD</p>
+                        <h6 class="info-card-title">Aula</h6>
+                        <p class="info-card-text small">EAD</p>
                     </div>
                 </div>
             </div>
@@ -166,8 +166,8 @@
                 <div class="card text-center border-0 shadow-sm">
                     <div class="card-body">
                         <img src="images/predio.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Campus</h6>
-                        <p class="card-text small">Taguatinga Centro</p>
+                        <h6 class="info-card-title">Campus</h6>
+                        <p class="info-card-text small">Taguatinga Centro</p>
                     </div>
                 </div>
             </div>
@@ -176,14 +176,14 @@
                 <div class="card text-center border-0 shadow-sm">
                     <div class="card-body">
                         <img src="images/calendario.png" alt="" class="mb-2" style="width: 40px;">
-                        <h6 class="card-title">Duração</h6>
-                        <p class="card-text small">2 Semestres</p>
+                        <h6 class="info-card-title">Duração</h6>
+                        <p class="info-card-text small">2 Semestres</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="cursinho">
         <h1>CONHEÇA O CURSO</h1>
         <p>
         A Faculdade Guerra orgulha-se de oferecer uma Pós-Graduação em Direito que se destaca pela excelência acadêmica e pela formação de profissionais altamente capacitados e preparados para os desafios do mercado de trabalho. Além disso, disponibilizamos diversas especializações online em áreas como Constitucional, Segurança Pública, Dosimetria da Pena, Direito Penal, Direito Público, Direito Civil, Direito Processual Penal, Direitos Humanos, Direito Internacional e Direito Processual Civil, todas com conclusão em até 1 ano e com condições facilitadas de pagamento, sendo 10x de R$ 199,00.
